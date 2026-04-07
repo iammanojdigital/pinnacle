@@ -48,15 +48,18 @@ const AdvancedHUDCursor = () => {
   useEffect(() => {
     setHasMounted(true);
     let sparkId = 0;
-    const handleMouseMove = (e: MouseEvent) => {
-      mouseX.set(e.clientX);
-      mouseY.set(e.clientY);
+    const handleMouseMove = (e: MouseEvent | TouchEvent) => {
+      const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+      const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
 
-      const lat = (e.clientY / window.innerHeight) * 180 - 90;
-      const long = (e.clientX / window.innerWidth) * 360 - 180;
+      mouseX.set(clientX);
+      mouseY.set(clientY);
+
+      const lat = (clientY / window.innerHeight) * 180 - 90;
+      const long = (clientX / window.innerWidth) * 360 - 180;
       setCoords({
-        x: Math.round(e.clientX),
-        y: Math.round(e.clientY),
+        x: Math.round(clientX),
+        y: Math.round(clientY),
         lat: Number(lat.toFixed(2)),
         long: Number(long.toFixed(2))
       });
@@ -65,14 +68,18 @@ const AdvancedHUDCursor = () => {
       if (Math.random() > 0.75) {
         const id = sparkId++;
         const isOrange = Math.random() > 0.7;
-        setSparks(prev => [...prev.slice(-20), { id, x: e.clientX, y: e.clientY, color: isOrange ? "#f97316" : "#60a5fa" }]);
+        setSparks(prev => [...prev.slice(-20), { id, x: clientX, y: clientY, color: isOrange ? "#f97316" : "#60a5fa" }]);
         setTimeout(() => {
           setSparks(prev => prev.filter(s => s.id !== id));
         }, 1000);
       }
     };
     window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleMouseMove, { passive: true });
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleMouseMove);
+    };
   }, [mouseX, mouseY]);
 
   return (
@@ -412,8 +419,11 @@ const MainEngineHero = ({ mouseX, mouseY }: { mouseX: any, mouseY: any }) => {
     const targetRotateX = (mouseY.get() / (typeof window !== "undefined" ? window.innerHeight : 800) - 0.5) * 0.4;
     const targetRotateY = (mouseX.get() / (typeof window !== "undefined" ? window.innerWidth : 1200) - 0.5) * 0.4;
 
+    // Mobile specific dramatic scroll rotation
+    const scrollEffect = isMobile ? (window.scrollY * 0.003) : 0;
+
     engineRef.current.rotation.x = THREE.MathUtils.lerp(engineRef.current.rotation.x, targetRotateX, 0.08);
-    engineRef.current.rotation.y = THREE.MathUtils.lerp(engineRef.current.rotation.y, targetRotateY + state.clock.getElapsedTime() * 0.1, 0.08);
+    engineRef.current.rotation.y = THREE.MathUtils.lerp(engineRef.current.rotation.y, targetRotateY + state.clock.getElapsedTime() * 0.1 + scrollEffect, 0.08);
   });
 
   useEffect(() => {
@@ -443,21 +453,27 @@ const MainEngineHero = ({ mouseX, mouseY }: { mouseX: any, mouseY: any }) => {
   );
 };
 
-const HolographicModel3D = () => {
+const HolographicModel3D = ({ styleY }: { styleY?: any }) => {
   const mouseX = useMotionValue(typeof window !== "undefined" ? window.innerWidth / 2 : 0);
   const mouseY = useMotionValue(typeof window !== "undefined" ? window.innerHeight / 2 : 0);
 
   useEffect(() => {
-    const handleMove = (e: MouseEvent) => {
-      mouseX.set(e.clientX);
-      mouseY.set(e.clientY);
+    const handleMove = (e: MouseEvent | TouchEvent) => {
+      const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+      const clientY = 'touches' in e ? e.touches[0].clientY : e.clientY;
+      mouseX.set(clientX);
+      mouseY.set(clientY);
     };
     window.addEventListener("mousemove", handleMove);
-    return () => window.removeEventListener("mousemove", handleMove);
+    window.addEventListener("touchmove", handleMove, { passive: true });
+    return () => {
+      window.removeEventListener("mousemove", handleMove);
+      window.removeEventListener("touchmove", handleMove);
+    };
   }, [mouseX, mouseY]);
 
   return (
-    <div className="relative lg:absolute lg:inset-0 w-full h-[40vh] lg:h-full z-10 pointer-events-none">
+    <motion.div style={{ y: styleY }} className="relative -mt-24 lg:mt-0 lg:absolute lg:inset-0 w-full h-[40vh] lg:h-full z-10 pointer-events-none">
       <Canvas
         dpr={[1, 1.5]}
         camera={{ position: [0, 0, 5], fov: 45 }}
@@ -484,12 +500,18 @@ const HolographicModel3D = () => {
 
       {/* Overlay Scanlines */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[size:100%_2px,3px_100%] pointer-events-none opacity-10" />
-    </div>
+    </motion.div>
   );
 };
 
 export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
   const sectionRef = useRef<HTMLElement>(null);
+  const [ripples, setRipples] = useState<{ id: number; x: number; y: number }[]>([]);
+
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
+  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const modelY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
 
   return (
     <section ref={sectionRef} className="relative w-full min-h-[100svh] overflow-hidden bg-[#05070a]">
@@ -509,7 +531,10 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
       <div className="z-30 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-16 items-center lg:min-h-[100svh] pt-32 pb-16 lg:pt-24 lg:pb-24">
 
-          <div className="lg:col-span-7 flex flex-col items-start translate-y-[-5%] sm:translate-y-0 text-left relative z-30">
+          <motion.div 
+            style={{ y: textY, opacity: textOpacity }}
+            className="lg:col-span-7 flex flex-col items-start translate-y-[-5%] sm:translate-y-0 text-left relative z-30"
+          >
 
             {/* Content Body ... */}
             {/* Same as before but nested correctly in col-span-8 */}
@@ -518,7 +543,7 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
               {/* THE PINNACLE BRAND: ORANGE LASER SCAN Reveal */}
               <div className="relative group overflow-visible">
                 <motion.h1
-                  className="text-5xl sm:text-7xl md:text-8xl lg:text-[9rem] xl:text-[11rem] font-black tracking-[-0.06em] text-white flex flex-wrap"
+                  className="text-7xl sm:text-9xl md:text-[9rem] lg:text-[12rem] xl:text-[14rem] leading-[0.85] scale-y-110 font-black tracking-[-0.06em] text-white flex flex-wrap"
                 >
                   {"Pinnacle".split("").map((char, index) => (
                     <motion.span
@@ -573,7 +598,7 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
                 className="flex items-center gap-4 mt-2 sm:mt-0 pl-1"
               >
                 <div className="h-[1.5px] w-8 sm:w-16 bg-orange-500/30" />
-                <span className="text-[14px] sm:text-[18px] md:text-[22px] font-mono font-black uppercase tracking-[0.3em] text-orange-500/80">
+                <span className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-mono font-black uppercase tracking-[0.2em] text-orange-500/80">
                   for Manufacturing
                 </span>
                 <motion.div
@@ -584,56 +609,104 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
               </motion.div>
             </div>
 
-            <div className="relative mt-10">
-              {/* Localized Technical Grid for Text Anchor */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 0.15, 0.1] }}
-                transition={{ duration: 2, delay: 2 }}
-                className="absolute -inset-4 z-[-1] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] bg-[size:20px_20px] opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]"
-              />
+            <div 
+              className="relative mt-2 lg:mt-6 -mx-4 px-4 py-4"
+              onPointerDown={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const id = Date.now() + Math.random();
+                setRipples(prev => [...prev.slice(-5), { id, x, y }]);
+                setTimeout(() => setRipples(prev => prev.filter(r => r.id !== id)), 2500);
+              }}
+            >
+              {/* Touch Ripple Container - EXPLOSIVE INTENSITY */}
+              <div className="absolute inset-0 z-[1] pointer-events-none overflow-hidden rounded-2xl [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)]">
+                {ripples.map((r) => (
+                  <div key={r.id}>
+                    {/* Inner high-energy flare */}
+                    <motion.div
+                      initial={{ width: 0, height: 0, opacity: 1, x: r.x, y: r.y }}
+                      animate={{ 
+                        width: 1000, height: 1000, opacity: 0, 
+                        x: r.x - 500, y: r.y - 500 
+                      }}
+                      transition={{ duration: 2.0, ease: "easeOut" }}
+                      className="absolute rounded-full border-[3px] border-cyan-400 bg-cyan-500/30 shadow-[0_0_80px_rgba(6,182,212,1)]"
+                    />
+                    
+                    {/* Outer sonic boom ring */}
+                    <motion.div
+                      initial={{ width: 0, height: 0, opacity: 0.8, x: r.x, y: r.y }}
+                      animate={{ 
+                        width: 1500, height: 1500, opacity: 0, 
+                        x: r.x - 750, y: r.y - 750 
+                      }}
+                      transition={{ duration: 2.5, ease: "easeOut", delay: 0.1 }}
+                      className="absolute rounded-full border-[5px] border-blue-500/60 shadow-[0_0_150px_rgba(59,130,246,1)]"
+                    />
 
-              <motion.div
-                {...fadeUp(0.2)}
-                className="max-w-2xl text-lg sm:text-xl lg:text-2xl leading-relaxed text-white/40 font-medium font-mono relative"
-              >
-                <strong className="text-white/80">Manufacturing Redefined.</strong> One Partner. Every Process. Pinnacle empowers you to move from concept to component with speed and confidence.
+                    {/* Blinding Core blast point */}
+                    <motion.div
+                      initial={{ width: 40, height: 40, opacity: 1, x: r.x - 20, y: r.y - 20, scale: 1 }}
+                      animate={{ scale: 5, opacity: 0 }}
+                      transition={{ duration: 1.0, ease: "easeOut" }}
+                      className="absolute rounded-full bg-white blur-[4px] shadow-[0_0_80px_white]"
+                    />
+                  </div>
+                ))}
+              </div>
 
-                {/* Subtle Horizontal Scanner Line for Text */}
+              <div className="relative z-10">
+                {/* Localized Technical Grid for Text Anchor */}
                 <motion.div
-                  animate={{ y: [0, 40, 0], opacity: [0, 0.3, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute top-0 left-0 w-full h-[1px] bg-blue-500/50 blur-[1px]"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: [0, 0.15, 0.1] }}
+                  transition={{ duration: 2, delay: 2 }}
+                  className="absolute -inset-4 z-[-1] bg-[radial-gradient(#3b82f6_1px,transparent_1px)] bg-[size:20px_20px] opacity-20 [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]"
                 />
+
+                <motion.div
+                  {...fadeUp(0.2)}
+                  className="max-w-3xl text-xl sm:text-2xl lg:text-3xl leading-relaxed text-white/50 font-medium font-mono relative"
+                >
+                  <strong className="text-white/80">Manufacturing Redefined.</strong> One Partner. Every Process. Pinnacle empowers you to move from concept to component with speed and confidence.
+
+                  {/* Subtle Horizontal Scanner Line for Text */}
+                  <motion.div
+                    animate={{ y: [0, 40, 0], opacity: [0, 0.3, 0] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    className="absolute top-0 left-0 w-full h-[1px] bg-blue-500/50 blur-[1px]"
+                  />
+                </motion.div>
+              </div>
+
+              <motion.div
+                {...fadeUp(0.35)}
+                className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-6 w-auto relative z-30"
+              >
+                <button
+                  onClick={onCallbackClick}
+                  className="group relative flex items-center justify-center gap-4 rounded-full bg-blue-600 px-8 py-3.5 sm:px-12 sm:py-5 text-[16px] font-black text-white shadow-[0_0_50px_rgba(37,99,235,0.4)] transition-all hover:shadow-[0_0_80px_rgba(37,99,235,0.6)] hover:-translate-y-1 overflow-hidden"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                  <ArrowRight className="h-5 w-5" />
+                  <span>Get a Quote</span>
+                </button>
+
+                <a
+                  href="https://wa.me/919481763083"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-center gap-4 rounded-full border-2 border-white/10 bg-white/5 backdrop-blur-xl px-8 py-3.5 sm:px-12 sm:py-5 text-[16px] font-bold text-white transition-all hover:bg-white/10 hover:-translate-y-1"
+                >
+                  <MessageCircle className="h-5 w-5 text-[#25D366]" />
+                  WhatsApp
+                </a>
               </motion.div>
             </div>
-
-            <motion.div
-              {...fadeUp(0.35)}
-              className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-6 w-auto"
-            >
-              <button
-                onClick={onCallbackClick}
-                className="group relative flex items-center justify-center gap-4 rounded-full bg-blue-600 px-8 py-3.5 sm:px-12 sm:py-5 text-[16px] font-black text-white shadow-[0_0_50px_rgba(37,99,235,0.4)] transition-all hover:shadow-[0_0_80px_rgba(37,99,235,0.6)] hover:-translate-y-1 overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                <ArrowRight className="h-5 w-5" />
-                <span>Get a Quote</span>
-              </button>
-
-              <a
-                href="https://wa.me/919481763083"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-4 rounded-full border-2 border-white/10 bg-white/5 backdrop-blur-xl px-8 py-3.5 sm:px-12 sm:py-5 text-[16px] font-bold text-white transition-all hover:bg-white/10 hover:-translate-y-1"
-              >
-                <MessageCircle className="h-5 w-5 text-[#25D366]" />
-                WhatsApp
-              </a>
-            </motion.div>
-          </div>
-
-          <HolographicModel3D />
+          </motion.div>
+          <HolographicModel3D styleY={modelY} />
         </div>
       </div>
 
