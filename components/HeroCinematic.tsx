@@ -506,7 +506,6 @@ const HolographicModel3D = ({ styleY }: { styleY?: any }) => {
 
 export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
   const sectionRef = useRef<HTMLElement>(null);
-  const [ripples, setRipples] = useState<{ id: number; x: number; y: number }[]>([]);
 
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start start", "end start"] });
   const textY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
@@ -609,54 +608,7 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
               </motion.div>
             </div>
 
-            <div 
-              className="relative mt-2 lg:mt-6 -mx-4 px-4 py-4"
-              onPointerDown={(e) => {
-                const rect = e.currentTarget.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const id = Date.now() + Math.random();
-                setRipples(prev => [...prev.slice(-5), { id, x, y }]);
-                setTimeout(() => setRipples(prev => prev.filter(r => r.id !== id)), 2500);
-              }}
-            >
-              {/* Touch Ripple Container - EXPLOSIVE INTENSITY */}
-              <div className="absolute inset-0 z-[1] pointer-events-none overflow-hidden rounded-2xl [mask-image:radial-gradient(ellipse_at_center,black_40%,transparent_100%)]">
-                {ripples.map((r) => (
-                  <div key={r.id}>
-                    {/* Inner high-energy flare */}
-                    <motion.div
-                      initial={{ width: 0, height: 0, opacity: 1, x: r.x, y: r.y }}
-                      animate={{ 
-                        width: 1000, height: 1000, opacity: 0, 
-                        x: r.x - 500, y: r.y - 500 
-                      }}
-                      transition={{ duration: 2.0, ease: "easeOut" }}
-                      className="absolute rounded-full border-[3px] border-cyan-400 bg-cyan-500/30 shadow-[0_0_80px_rgba(6,182,212,1)]"
-                    />
-                    
-                    {/* Outer sonic boom ring */}
-                    <motion.div
-                      initial={{ width: 0, height: 0, opacity: 0.8, x: r.x, y: r.y }}
-                      animate={{ 
-                        width: 1500, height: 1500, opacity: 0, 
-                        x: r.x - 750, y: r.y - 750 
-                      }}
-                      transition={{ duration: 2.5, ease: "easeOut", delay: 0.1 }}
-                      className="absolute rounded-full border-[5px] border-blue-500/60 shadow-[0_0_150px_rgba(59,130,246,1)]"
-                    />
-
-                    {/* Blinding Core blast point */}
-                    <motion.div
-                      initial={{ width: 40, height: 40, opacity: 1, x: r.x - 20, y: r.y - 20, scale: 1 }}
-                      animate={{ scale: 5, opacity: 0 }}
-                      transition={{ duration: 1.0, ease: "easeOut" }}
-                      className="absolute rounded-full bg-white blur-[4px] shadow-[0_0_80px_white]"
-                    />
-                  </div>
-                ))}
-              </div>
-
+            <div className="relative mt-2 lg:mt-6 -mx-4 px-4 py-4">
               <div className="relative z-10">
                 {/* Localized Technical Grid for Text Anchor */}
                 <motion.div
