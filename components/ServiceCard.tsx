@@ -22,7 +22,7 @@ import {
   Box,
 } from "lucide-react";
 
-const ICONS: Record<string, React.ElementType> = {
+const ICONS = {
   megaphone: Megaphone,
   chart: BarChart3,
   layout: LayoutTemplate,
