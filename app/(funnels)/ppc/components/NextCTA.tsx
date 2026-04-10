@@ -12,7 +12,7 @@ export default function NextCTA() {
             bg-white
             px-6 py-10 sm:px-10 sm:py-14
             transition-colors duration-300
-            hover:bg-yellow-400
+            hover:bg-blue-500
           "
         >
           <div className="grid gap-8 md:grid-cols-[1.5fr_1fr] items-center">

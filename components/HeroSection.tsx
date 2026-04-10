@@ -24,8 +24,8 @@ export default function HeroSection({ onCallbackClick }: HeroSectionProps) {
 
         {/* Authority / trust badge */}
         <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-gray-200 bg-white/80 px-4 py-2 text-sm font-medium text-gray-700 backdrop-blur">
-          <Sparkles size={14} className="text-yellow-500" />
-          From Udupi to the world • Trusted by 50+ growing brands
+          <Sparkles size={14} className="text-blue-500" />
+          From Shimoga to the world • Trusted by globally recognized industrial partners
         </div>
 
         {/* Headline */}
@@ -49,11 +49,11 @@ export default function HeroSection({ onCallbackClick }: HeroSectionProps) {
             onClick={onCallbackClick}
             className="
               group inline-flex items-center gap-3
-              rounded-2xl bg-yellow-400 px-8 py-4
+              rounded-2xl bg-blue-500 px-8 py-4
               font-semibold text-black
               transition-all duration-300
-              hover:bg-yellow-500 hover:-translate-y-0.5 hover:shadow-xl
-              focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-400
+              hover:bg-blue-500 hover:-translate-y-0.5 hover:shadow-xl
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500
             "
           >
             {/* Animated intent icon (hover only) */}

@@ -42,7 +42,7 @@ const videoFaqs = [
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "Social Media Video & Reels Creation Services in India | Clever Crow",
+  title: "Social Media Video & Reels Creation Services in India | Pinnacle",
   description:
     "High-performing social media video creation services in India. Reels, Shorts, and brand videos designed for engagement, reach, and growth.",
   keywords: [
@@ -126,13 +126,13 @@ export default function SocialMediaVideosPage() {
       <WebPageSchema
         title="Social Media Video Creation Services in India"
         description="Professional social media video creation services in India focused on engagement, reach, and brand growth."
-        url="https://clevercrow.in/services/social-media-videos"
+        url="https://pinnacledesign.in/services/social-media-videos"
       />
 
       <ServiceSchema
         serviceName="Social Media Video Creation Services"
         serviceDescription="Social media video and reels creation services in India for brands and businesses."
-        pageUrl="https://clevercrow.in/services/social-media-videos"
+        pageUrl="https://pinnacledesign.in/services/social-media-videos"
       />
 
       <FaqSchema faqs={videoFaqs} />

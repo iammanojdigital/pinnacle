@@ -119,7 +119,7 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
   }
 
   return (
-    <main className="bg-white selection:bg-yellow-500/30 min-h-screen pt-32 pb-20 overflow-x-hidden">
+    <main className="bg-white selection:bg-blue-700/30 min-h-screen pt-32 pb-20 overflow-x-hidden">
       <div className="max-w-4xl mx-auto px-6">
         <SectionHeader
           badge="Apply Now"
@@ -135,15 +135,15 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
           className="relative mt-8 sm:mt-12 bg-white rounded-[2rem] sm:rounded-[2.5rem] border border-gray-100 p-6 sm:p-12 shadow-[0_30px_70px_-20px_rgba(0,0,0,0.1)] overflow-hidden"
         >
           {/* Decorative elements */}
-          <div className="absolute -top-24 -right-24 h-64 w-64 bg-yellow-400/10 blur-[60px] rounded-full pointer-events-none" />
-          <div className="absolute -bottom-24 -left-24 h-64 w-64 bg-indigo-500/5 blur-[60px] rounded-full pointer-events-none" />
+          <div className="absolute -top-24 -right-24 h-64 w-64 bg-blue-500/10 blur-[60px] rounded-full pointer-events-none" />
+          <div className="absolute -bottom-24 -left-24 h-64 w-64 bg-blue-500/5 blur-[60px] rounded-full pointer-events-none" />
 
           <form onSubmit={handleSubmit} className="relative z-10 space-y-10">
 
             {/* --- PERSONAL DETAILS --- */}
             <section className="space-y-6">
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-yellow-100 rounded-lg text-yellow-600">
+                <div className="p-2 bg-yellow-100 rounded-lg text-blue-700">
                   <User size={18} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Personal Details</h3>
@@ -162,7 +162,7 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
                         name="dob_day"
                         required
                         defaultValue=""
-                        className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-3 sm:px-4 py-4 text-gray-900 appearance-none focus:border-yellow-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-400/10 transition-all font-medium text-[13px] sm:text-sm"
+                        className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-3 sm:px-4 py-4 text-gray-900 appearance-none focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all font-medium text-[13px] sm:text-sm"
                       >
                         <option value="" disabled>Day</option>
                         {DAYS.map(d => <option key={d} value={d}>{d}</option>)}
@@ -177,7 +177,7 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
                         name="dob_month"
                         required
                         defaultValue=""
-                        className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-3 sm:px-4 py-4 text-gray-900 appearance-none focus:border-yellow-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-400/10 transition-all font-medium text-[13px] sm:text-sm"
+                        className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-3 sm:px-4 py-4 text-gray-900 appearance-none focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all font-medium text-[13px] sm:text-sm"
                       >
                         <option value="" disabled>Month</option>
                         {MONTHS.map((m) => (
@@ -196,7 +196,7 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
                         name="dob_year"
                         required
                         defaultValue=""
-                        className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-3 sm:px-4 py-4 text-gray-900 appearance-none focus:border-yellow-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-400/10 transition-all font-medium text-[13px] sm:text-sm"
+                        className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-3 sm:px-4 py-4 text-gray-900 appearance-none focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all font-medium text-[13px] sm:text-sm"
                       >
                         <option value="" disabled>Year</option>
                         {YEARS.map(y => <option key={y} value={y}>{y}</option>)}
@@ -226,7 +226,7 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
             {/* --- EDUCATION --- */}
             <section className="space-y-6">
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-indigo-100 rounded-lg text-indigo-600">
+                <div className="p-2 bg-blue-100 rounded-lg text-blue-500">
                   <GraduationCap size={18} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Education</h3>
@@ -239,7 +239,7 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
                     name="education"
                     required
                     defaultValue=""
-                    className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 appearance-none focus:border-yellow-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-400/10 transition-all font-medium"
+                    className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 appearance-none focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all font-medium"
                   >
                     <option value="" disabled>Select your education...</option>
                     {EDUCATION_OPTIONS.map(opt => <option key={opt}>{opt}</option>)}
@@ -254,7 +254,7 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
             {/* --- SKILLS --- */}
             <section className="space-y-6">
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-emerald-100 rounded-lg text-emerald-600">
+                <div className="p-2 bg-blue-100 rounded-lg text-blue-500">
                   <Code2 size={18} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Skills Assessment</h3>
@@ -268,7 +268,7 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
                       <select
                         name={`skill_${skill.id}`}
                         defaultValue=""
-                        className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-900 appearance-none focus:border-yellow-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-400/10 transition-all font-medium"
+                        className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3 text-sm text-gray-900 appearance-none focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all font-medium"
                       >
                         <option value="">Not Applicable</option>
                         {LEVELS.map(lvl => <option key={lvl}>{lvl}</option>)}
@@ -285,7 +285,7 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
             {/* --- LOCATION --- */}
             <section className="space-y-6">
               <div className="flex items-center gap-3 mb-2">
-                <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
+                <div className="p-2 bg-blue-100 rounded-lg text-blue-500">
                   <Globe size={18} />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900">Location</h3>
@@ -300,7 +300,7 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
                       required
                       value={country}
                       onChange={(e) => setCountry(e.target.value)}
-                      className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 appearance-none focus:border-yellow-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-400/10 transition-all font-medium"
+                      className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 appearance-none focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all font-medium"
                     >
                       <option value="India">India</option>
                       <option value="USA">USA</option>
@@ -321,7 +321,7 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
                       required={country === "India"}
                       disabled={country !== "India"}
                       defaultValue=""
-                      className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 appearance-none focus:border-yellow-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-400/10 transition-all font-medium disabled:opacity-50 disabled:bg-gray-100 disabled:cursor-not-allowed"
+                      className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 appearance-none focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all font-medium disabled:opacity-50 disabled:bg-gray-100 disabled:cursor-not-allowed"
                     >
                       <option value="" disabled>Select state...</option>
                       {INDIAN_STATES.map(s => <option key={s}>{s}</option>)}
@@ -340,7 +340,7 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
                   required
                   rows={3}
                   placeholder="Street, Landmark, City, Pincode"
-                  className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 placeholder:text-gray-500 focus:border-yellow-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-400/10 transition-all resize-none font-medium text-sm"
+                  className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 placeholder:text-gray-500 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all resize-none font-medium text-sm"
                 />
               </div>
             </section>
@@ -358,9 +358,9 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
                           name="run_beginning"
                           value={opt}
                           required
-                          className="peer appearance-none w-6 h-6 rounded-full border-2 border-gray-200 checked:border-yellow-400 transition-all focus:outline-none focus:ring-4 focus:ring-yellow-400/10"
+                          className="peer appearance-none w-6 h-6 rounded-full border-2 border-gray-200 checked:border-blue-500 transition-all focus:outline-none focus:ring-4 focus:ring-blue-500/10"
                         />
-                        <div className="absolute w-2.5 h-2.5 bg-yellow-400 rounded-full scale-0 peer-checked:scale-100 transition-transform" />
+                        <div className="absolute w-2.5 h-2.5 bg-blue-500 rounded-full scale-0 peer-checked:scale-100 transition-transform" />
                       </div>
                       <span className="text-sm font-bold text-gray-800 group-hover:text-gray-950 transition-colors uppercase tracking-wider">{opt}</span>
                     </label>
@@ -374,9 +374,9 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
                     type="checkbox"
                     name="consent"
                     required
-                    className="peer appearance-none w-6 h-6 rounded-lg border-2 border-gray-200 checked:border-yellow-400 transition-all focus:outline-none focus:ring-4 focus:ring-yellow-400/10"
+                    className="peer appearance-none w-6 h-6 rounded-lg border-2 border-gray-200 checked:border-blue-500 transition-all focus:outline-none focus:ring-4 focus:ring-blue-500/10"
                   />
-                  <div className="absolute w-3 h-3 bg-yellow-400 rounded-sm scale-0 peer-checked:scale-100 transition-transform" />
+                  <div className="absolute w-3 h-3 bg-blue-500 rounded-sm scale-0 peer-checked:scale-100 transition-transform" />
                 </div>
                 <span className="text-sm font-medium text-gray-800 group-hover:text-gray-950 transition-colors">
                   I consent to the processing of my data and agree to the terms and conditions.
@@ -389,7 +389,7 @@ export default function InternshipApplicationPage({ params }: { params: Promise<
               <button
                 type="submit"
                 disabled={loading}
-                className="group relative flex w-full items-center justify-center gap-3 rounded-2xl bg-yellow-400 px-8 py-5 font-black uppercase tracking-widest text-black transition-all hover:bg-yellow-300 hover:shadow-[0_15px_40px_rgba(250,204,21,0.3)] hover:-translate-y-1 disabled:opacity-70 disabled:pointer-events-none overflow-hidden"
+                className="group relative flex w-full items-center justify-center gap-3 rounded-2xl bg-blue-500 px-8 py-5 font-black uppercase tracking-widest text-black transition-all hover:bg-yellow-300 hover:shadow-[0_15px_40px_rgba(250,204,21,0.3)] hover:-translate-y-1 disabled:opacity-70 disabled:pointer-events-none overflow-hidden"
               >
                 {loading ? (
                   <Loader2 className="h-5 w-5 animate-spin" />
@@ -429,7 +429,7 @@ function FormField({ label, id, type = "text", required = false, placeholder }: 
         type={type}
         required={required}
         placeholder={placeholder}
-        className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-4 sm:px-5 py-3.5 sm:py-4 text-gray-900 placeholder:text-gray-500 focus:border-yellow-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-400/10 transition-all font-medium text-[15px] sm:text-sm"
+        className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-4 sm:px-5 py-3.5 sm:py-4 text-gray-900 placeholder:text-gray-500 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all font-medium text-[15px] sm:text-sm"
       />
     </div>
   );

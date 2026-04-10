@@ -30,7 +30,7 @@ const INTERNSHIPS = [
     total: 15,
     fee: "8,999",
     icon: <div className="flex -space-x-2"><Code2 /><BrainCircuit /></div>,
-    color: "bg-blue-50 text-blue-600",
+    color: "bg-blue-50 text-blue-500",
     description: "Architect cutting-edge web platforms powered by artificial intelligence and machine learning models.",
     active: true
   },
@@ -66,7 +66,7 @@ const INTERNSHIPS = [
     total: 15,
     fee: "8,999",
     icon: <Database className="w-6 h-6" />,
-    color: "bg-emerald-50 text-emerald-600",
+    color: "bg-blue-50 text-blue-500",
     description: "Architect robust server-side systems and manage complex databases.",
     active: false
   },
@@ -90,7 +90,7 @@ const INTERNSHIPS = [
     total: 15,
     fee: "8,999",
     icon: <Smartphone className="w-6 h-6" />,
-    color: "bg-indigo-50 text-indigo-600",
+    color: "bg-blue-50 text-blue-500",
     description: "Build cross-platform mobile experiences for iOS and Android.",
     active: false
   },
@@ -146,7 +146,7 @@ const INTERNSHIPS = [
 
 export default function InternshipListingPage() {
   return (
-    <main className="bg-white selection:bg-yellow-500/30 min-h-screen pt-32 pb-20 overflow-x-hidden">
+    <main className="bg-white selection:bg-blue-700/30 min-h-screen pt-32 pb-20 overflow-x-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeader
           badge="Limited Opportunities"
@@ -188,7 +188,7 @@ export default function InternshipListingPage() {
                   </div>
                 </div>
 
-                <h3 className={`font-black mb-3 ${internship.active ? "text-gray-900 group-hover:text-yellow-600" : "text-gray-900"} transition-colors leading-tight ${internship.title.length > 25 ? "text-lg" : "text-xl"}`}>
+                <h3 className={`font-black mb-3 ${internship.active ? "text-gray-900 group-hover:text-blue-700" : "text-gray-900"} transition-colors leading-tight ${internship.title.length > 25 ? "text-lg" : "text-xl"}`}>
                   {internship.title}
                 </h3>
 
@@ -199,7 +199,7 @@ export default function InternshipListingPage() {
                 {internship.id !== "10" && (
                   <div className="flex items-center justify-between mb-8">
                     <span className="text-[12px] font-black uppercase tracking-widest text-gray-400">Tool Charges/Fees</span>
-                    <span className="text-lg font-black text-gray-900 group-hover:text-yellow-600 transition-colors">₹{internship.fee}</span>
+                    <span className="text-lg font-black text-gray-900 group-hover:text-blue-700 transition-colors">₹{internship.fee}</span>
                   </div>
                 )}
 
@@ -209,10 +209,10 @@ export default function InternshipListingPage() {
                       href={`/internship/${internship.id}`}
                       className="flex items-center justify-between w-full group/btn"
                     >
-                      <span className="text-sm font-black uppercase tracking-widest text-gray-900 group-hover/btn:text-yellow-600 transition-colors">
+                      <span className="text-sm font-black uppercase tracking-widest text-gray-900 group-hover/btn:text-blue-700 transition-colors">
                         Apply Now
                       </span>
-                      <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-white transition-all group-hover/btn:bg-yellow-400 group-hover/btn:text-black">
+                      <div className="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center text-white transition-all group-hover/btn:bg-blue-500 group-hover/btn:text-black">
                         <ArrowRight size={18} className="transition-transform group-hover/btn:translate-x-1" />
                       </div>
                     </Link>
@@ -239,11 +239,11 @@ export default function InternshipListingPage() {
           viewport={{ once: true }}
           className="mt-24 relative overflow-hidden rounded-[2.5rem] bg-gray-900 p-12 text-center"
         >
-          <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400 opacity-5 blur-[100px]" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500 opacity-5 blur-[100px]" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-blue-500 opacity-5 blur-[100px]" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-500 opacity-5 blur-[100px]" />
 
           <div className="relative z-10 max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-yellow-400 text-xs font-black uppercase tracking-widest mb-6">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-blue-500 text-xs font-black uppercase tracking-widest mb-6">
               <Sparkles size={14} />
               Future Focused
             </div>
@@ -255,7 +255,7 @@ export default function InternshipListingPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center gap-3 bg-yellow-400 px-8 py-4 rounded-2xl font-black uppercase tracking-widest text-black hover:bg-yellow-300 transition-all hover:scale-105"
+              className="inline-flex items-center justify-center gap-3 bg-blue-500 px-8 py-4 rounded-2xl font-black uppercase tracking-widest text-black hover:bg-yellow-300 transition-all hover:scale-105"
             >
               Contact Our Team
               <ArrowRight size={20} />

@@ -100,7 +100,7 @@ export default function MetaAdsManagementPage() {
       <FAQSection
         items={[
           {
-            question: "Why choose Clever Crow for Meta Ads management?",
+            question: "Why choose Pinnacle for Meta Ads management?",
             answer:
               "We specialise in Facebook and Instagram advertising using Meta Ads Manager, focusing on audience strategy, creatives, and ROI-driven optimisation.",
           },

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Terms and Conditions | Clever Crow",
+  title: "Terms and Conditions | Pinnacle",
 };
 
 export default function TermsAndConditions() {
@@ -41,7 +41,7 @@ export default function TermsAndConditions() {
 
           <h2 className="text-2xl font-semibold">Services</h2>
           <p>
-            Clever Crow provides digital marketing, branding, and related
+            Pinnacle provides digital marketing, branding, and related
             services. All pricing, timelines, and deliverables are defined in
             individual proposals or agreements.
           </p>
@@ -51,7 +51,7 @@ export default function TermsAndConditions() {
           </h2>
           <p>
             All content, designs, graphics, and materials on this website are
-            the property of Clever Crow and may not be copied or reused without
+            the property of Pinnacle and may not be copied or reused without
             written permission.
           </p>
 
@@ -66,13 +66,13 @@ export default function TermsAndConditions() {
             Limitation of Liability
           </h2>
           <p>
-            Clever Crow shall not be liable for any indirect, incidental, or
+            Pinnacle shall not be liable for any indirect, incidental, or
             consequential damages, including loss of data or revenue.
           </p>
 
           <h2 className="text-2xl font-semibold">Third-Party Services</h2>
           <p>
-            We may use third-party platforms and tools. Clever Crow is not
+            We may use third-party platforms and tools. Pinnacle is not
             responsible for outages, policy changes, or actions taken by these
             platforms.
           </p>
@@ -87,10 +87,10 @@ export default function TermsAndConditions() {
           <p>
             For any questions, contact us at{" "}
             <a
-              href="mailto:hello@clevercrow.in"
-              className="text-yellow-600 underline"
+              href="mailto:hello@pinnacledesign.in"
+              className="text-blue-700 underline"
             >
-              hello@clevercrow.in
+              hello@pinnacledesign.in
             </a>
           </p>
         </section>

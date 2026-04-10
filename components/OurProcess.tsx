@@ -86,7 +86,7 @@ export default function OurProcess() {
               className="group relative text-center"
             >
               {/* Number */}
-              <div className="relative mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-blue-100 text-lg font-bold text-blue-600 transition-all duration-300 group-hover:scale-105 group-hover:bg-blue-200">
+              <div className="relative mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-blue-100 text-lg font-bold text-blue-500 transition-all duration-300 group-hover:scale-105 group-hover:bg-blue-200">
                 {step.number}
 
                 {/* Pulse ring */}

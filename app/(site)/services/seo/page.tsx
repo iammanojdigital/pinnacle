@@ -48,7 +48,7 @@ const seoFaqs = [
 
 export const metadata = {
   title:
-    "SEO Services in India | Website SEO Content & Optimization – Clever Crow",
+    "SEO Services in India | Website SEO Content & Optimization – Pinnacle",
   description:
     "Professional SEO services in India focused on rankings, organic traffic, and lead generation. Website SEO content, on-page & technical SEO.",
   keywords: [
@@ -136,13 +136,13 @@ export default function SeoServicesPage() {
       <WebPageSchema
         title="SEO Services in India"
         description="Professional SEO services in India focused on organic traffic, rankings, and lead generation."
-        url="https://clevercrow.in/seo-services"
+        url="https://pinnacledesign.in/seo-services"
       />
 
       <ServiceSchema
         serviceName="SEO Services"
         serviceDescription="SEO services in India including website SEO content, technical SEO, and on-page optimisation."
-        pageUrl="https://clevercrow.in/seo-services"
+        pageUrl="https://pinnacledesign.in/seo-services"
       />
 
       <FaqSchema faqs={seoFaqs} />

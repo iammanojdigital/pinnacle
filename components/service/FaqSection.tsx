@@ -62,7 +62,7 @@ export default function FaqSection({
                   <span
                     className={`flex h-7 w-7 items-center justify-center rounded-full border transition ${
                       isOpen
-                        ? "border-yellow-400 bg-yellow-400 text-gray-900"
+                        ? "border-blue-500 bg-blue-500 text-gray-900"
                         : "border-gray-300 text-gray-500"
                     }`}
                   >

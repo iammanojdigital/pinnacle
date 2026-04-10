@@ -14,7 +14,7 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Script Writing Services | Clever Crow",
+  title: "Script Writing Services | Pinnacle",
   description: "We write powerful scripts for ads, reels, and videos that hook your audience and deliver your message effectively.",
 };
 
@@ -34,8 +34,8 @@ export default function ScriptWritingPage() {
       <ScriptWritingSections />
       <DynamicCTA />
       <FaqSection title="Frequently Asked Questions" description="Common questions about our script writing services." faqs={faqs} />
-      <WebPageSchema title="Script Writing Services | Clever Crow" description="We write powerful scripts for ads, reels, and videos that hook your audience and deliver your message effectively." url="https://clevercrow.in/services/script-writing" />
-      <ServiceSchema serviceName="Script Writing Services" serviceDescription="Professional script writing for ads, reels, YouTube videos, and brand storytelling." pageUrl="https://clevercrow.in/services/script-writing" />
+      <WebPageSchema title="Script Writing Services | Pinnacle" description="We write powerful scripts for ads, reels, and videos that hook your audience and deliver your message effectively." url="https://pinnacledesign.in/services/script-writing" />
+      <ServiceSchema serviceName="Script Writing Services" serviceDescription="Professional script writing for ads, reels, YouTube videos, and brand storytelling." pageUrl="https://pinnacledesign.in/services/script-writing" />
       <FaqSchema faqs={faqs} />
     </main>
   );

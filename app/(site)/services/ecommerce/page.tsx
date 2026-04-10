@@ -34,7 +34,7 @@ const ecommerceFaqs = [
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "E-commerce Website Development Services | Clever Crow",
+  title: "E-commerce Website Development Services | Pinnacle",
   description:
     "We design and develop high-performance e-commerce websites that are fast, user-friendly, and optimized to convert visitors into customers.",
 };
@@ -76,14 +76,14 @@ export default function EcommerceWebsiteDevelopmentPage() {
 
       {/* ═══════════ SCHEMA ═══════════ */}
       <WebPageSchema
-        title="E-commerce Website Development Services | Clever Crow"
+        title="E-commerce Website Development Services | Pinnacle"
         description="We design and develop high-performance e-commerce websites that are fast, user-friendly, and optimized to convert visitors into customers."
-        url="https://clevercrow.in/services/ecommerce"
+        url="https://pinnacledesign.in/services/ecommerce"
       />
       <ServiceSchema
         serviceName="E-commerce Website Development Services"
         serviceDescription="Professional e-commerce website design and development services with payment integration, product management, and mobile-first design."
-        pageUrl="https://clevercrow.in/services/ecommerce"
+        pageUrl="https://pinnacledesign.in/services/ecommerce"
       />
       <FaqSchema faqs={ecommerceFaqs} />
     </main>

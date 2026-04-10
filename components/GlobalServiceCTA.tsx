@@ -18,26 +18,26 @@ export default function GlobalServiceCTA() {
         >
           {/* Heading */}
           <h2 className="text-3xl font-semibold tracking-tight text-white md:text-4xl">
-            Speak With a Marketing Expert
+            Speak With a Manufacturing Expert
           </h2>
 
           {/* Subtext */}
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-300">
-            We’ll understand your business and guide you on the best next steps
+            We’ll understand your engineering requirements and guide you on the best production steps
             based on your goals.
           </p>
 
           {/* CTAs */}
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="tel:+919986389444"
-              className="inline-flex min-w-[220px] items-center justify-center rounded-xl bg-yellow-400 px-6 py-3 text-base font-medium text-black transition hover:bg-yellow-300"
+              href="tel:+919481763083"
+              className="inline-flex min-w-[220px] items-center justify-center rounded-xl bg-orange-500 px-6 py-3 text-base font-medium text-white transition hover:bg-orange-600"
             >
               Call Now
             </Link>
 
             <Link
-              href="https://wa.me/919986389444"
+              href="https://wa.me/919481763083"
               target="_blank"
               className="inline-flex min-w-[220px] items-center justify-center rounded-xl border border-white/30 bg-transparent px-6 py-3 text-base font-medium text-white transition hover:border-white"
             >
@@ -46,7 +46,7 @@ export default function GlobalServiceCTA() {
           </div>
 
           {/* Trust line */}
-          <p className="mt-6 text-sm text-gray-400">
+          <p className="mt-6 text-xl font-extrabold text-blue-500">
             No obligation. Honest advice.
           </p>
         </motion.div>

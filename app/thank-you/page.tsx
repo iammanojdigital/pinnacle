@@ -13,7 +13,7 @@ export default function ThankYouPage() {
 
         <a
           href="/"
-          className="mt-6 inline-block rounded-lg bg-yellow-400 px-6 py-3
+          className="mt-6 inline-block rounded-lg bg-blue-500 px-6 py-3
                      font-semibold text-gray-900 transition hover:opacity-90"
         >
           Back to Home

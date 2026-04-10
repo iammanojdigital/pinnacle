@@ -51,7 +51,7 @@ const metaAdsFaqs = [
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "Meta Ads Management Services in India | Clever Crow",
+  title: "Meta Ads Management Services in India | Pinnacle",
   description:
     "ROI-driven Meta (Facebook & Instagram) Ads management services in India focused on lead generation, lower CPL, and scalable growth.",
   keywords: [
@@ -135,13 +135,13 @@ export default function MetaAdsPage() {
       <WebPageSchema
         title="Meta Ads Management Services in India"
         description="Professional Meta Ads management services in India focused on lead generation and ROI-driven growth."
-        url="https://clevercrow.in/services/meta-ads"
+        url="https://pinnacledesign.in/services/meta-ads"
       />
 
       <ServiceSchema
         serviceName="Meta Ads Management Services"
         serviceDescription="Conversion-focused Meta Ads management services in India designed to generate leads and sales at lower cost."
-        pageUrl="https://clevercrow.in/services/meta-ads"
+        pageUrl="https://pinnacledesign.in/services/meta-ads"
       />
 
       <FaqSchema faqs={metaAdsFaqs} />

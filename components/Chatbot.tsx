@@ -309,7 +309,7 @@ export default function Chatbot() {
                 <div>
                   <h3 className="font-bold text-[15px] text-white tracking-tight">Pinnacle AI</h3>
                   <div className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
+                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span>
                     <p className="text-[10px] text-zinc-500 font-semibold uppercase tracking-widest">Active</p>
                   </div>
                 </div>
@@ -331,7 +331,7 @@ export default function Chatbot() {
                   <div
                     className={`px-4 py-3 text-[18px] leading-[1.3] tracking-tight font-semibold ${
                       msg.sender === "user"
-                        ? "bg-blue-600 text-white rounded-2xl rounded-tr-sm"
+                        ? "bg-blue-500 text-white rounded-2xl rounded-tr-sm"
                         : "bg-zinc-900 text-white border border-zinc-800 rounded-2xl rounded-tl-sm"
                     }`}
                     style={{ maxWidth: '88%' }}
@@ -360,7 +360,7 @@ export default function Chatbot() {
                     <button
                       key={idx}
                       onClick={() => handleOptionClick(opt)}
-                      className="text-[13px] font-semibold bg-zinc-900 border border-zinc-800 text-white px-3.5 py-2 rounded-full hover:bg-blue-600 hover:text-white transition-all shadow-md"
+                      className="text-[13px] font-semibold bg-zinc-900 border border-zinc-800 text-white px-3.5 py-2 rounded-full hover:bg-blue-500 hover:text-white transition-all shadow-md"
                     >
                       {opt}
                     </button>
@@ -381,7 +381,7 @@ export default function Chatbot() {
                   placeholder="Type..."
                   className="w-full pl-4 pr-12 py-3 bg-zinc-900 border border-zinc-800 rounded-full text-[16px] font-semibold focus:outline-none focus:border-blue-500 text-white placeholder-zinc-700 transition-all"
                 />
-                <button type="submit" disabled={!inputValue.trim() || isTyping} className="absolute right-1.5 top-1.5 w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center disabled:opacity-20 transition-transform active:scale-90">
+                <button type="submit" disabled={!inputValue.trim() || isTyping} className="absolute right-1.5 top-1.5 w-9 h-9 rounded-full bg-blue-500 text-white flex items-center justify-center disabled:opacity-20 transition-transform active:scale-90">
                   <Send size={18} />
                 </button>
               </form>

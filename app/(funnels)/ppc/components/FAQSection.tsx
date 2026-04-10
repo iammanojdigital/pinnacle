@@ -59,7 +59,7 @@ export default function FAQSection({ items }: FAQSectionProps) {
         "Success is measured using business-focused metrics such as qualified leads, conversions, revenue impact, and return on investment — not vanity metrics.",
     },
     {
-      question: "What makes Clever Crow different from other agencies?",
+      question: "What makes Pinnacle different from other agencies?",
       answer:
         "We focus on systems, clarity, and outcomes. Instead of chasing trends or impressions, we build repeatable growth engines backed by data, execution, and ownership.",
     },
@@ -90,11 +90,10 @@ export default function FAQSection({ items }: FAQSectionProps) {
             return (
               <div
                 key={index}
-                className={`rounded-xl border bg-white transition ${
-                  isOpen
-                    ? "border-yellow-400 shadow-md"
-                    : "border-gray-200"
-                }`}
+                className={`rounded-xl border bg-white transition ${isOpen
+                  ? "border-blue-500 shadow-md"
+                  : "border-gray-200"
+                  }`}
               >
                 {/* Question */}
                 <button
@@ -110,11 +109,10 @@ export default function FAQSection({ items }: FAQSectionProps) {
 
                   {/* Accent indicator */}
                   <span
-                    className={`ml-4 text-2xl font-semibold transition ${
-                      isOpen
-                        ? "text-yellow-500"
-                        : "text-slate-400"
-                    }`}
+                    className={`ml-4 text-2xl font-semibold transition ${isOpen
+                      ? "text-blue-700"
+                      : "text-slate-400"
+                      }`}
                   >
                     {isOpen ? "−" : "+"}
                   </span>

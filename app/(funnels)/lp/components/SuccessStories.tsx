@@ -70,7 +70,7 @@ export default function SuccessStories({ data, title, subtitle, filterBy }: Succ
   const selectedCase = displayCaseStudies.find(cs => cs.id === selectedId);
 
   const displayTitle = title ?? "Google Ads Success Stories";
-  const displaySubtitle = subtitle ?? "Real campaigns, real data, and proven growth for businesses scaling with Clever Crow.";
+  const displaySubtitle = subtitle ?? "Real campaigns, real data, and proven growth for businesses scaling with Pinnacle.";
 
   return (
     <section id="portfolio" className="bg-slate-50 py-16 sm:py-24 relative overflow-hidden">
@@ -170,8 +170,8 @@ export default function SuccessStories({ data, title, subtitle, filterBy }: Succ
                       <p className="text-[9px] font-bold text-slate-400 uppercase mb-0.5">Impact</p>
                       <p className="text-sm font-black text-slate-900">{cs.primaryMetric}</p>
                     </div>
-                    <div className="rounded-xl bg-emerald-50 p-3 border border-emerald-100 group-hover:bg-emerald-100/20 transition-all">
-                      <p className="text-[9px] font-bold text-emerald-500 uppercase mb-0.5">Growth</p>
+                    <div className="rounded-xl bg-blue-50 p-3 border border-blue-100 group-hover:bg-blue-100/20 transition-all">
+                      <p className="text-[9px] font-bold text-blue-500 uppercase mb-0.5">Growth</p>
                       <p className="text-sm font-black text-emerald-700">{cs.secondaryMetric}</p>
                     </div>
                   </div>
@@ -247,8 +247,8 @@ export default function SuccessStories({ data, title, subtitle, filterBy }: Succ
                     <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-2">Primary Outcome</p>
                     <p className="text-2xl font-black text-slate-900">{selectedCase.primaryMetric}</p>
                   </div>
-                  <div className="rounded-3xl bg-emerald-50 p-6 border border-emerald-100">
-                    <p className="text-[10px] font-bold text-emerald-500 uppercase tracking-widest mb-2">Growth Lift</p>
+                  <div className="rounded-3xl bg-blue-50 p-6 border border-blue-100">
+                    <p className="text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-2">Growth Lift</p>
                     <p className="text-2xl font-black text-emerald-700">{selectedCase.secondaryMetric}</p>
                   </div>
                 </div>

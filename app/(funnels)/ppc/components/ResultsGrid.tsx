@@ -62,7 +62,7 @@ export default function ResultsSaaS() {
             >
               {/* Accent bar */}
               <span className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r
-                               from-indigo-500 via-purple-500 to-pink-500
+                               from-blue-500 via-orange-500 to-orange-500
                                opacity-0 group-hover:opacity-100 transition" />
 
               {/* Metric */}

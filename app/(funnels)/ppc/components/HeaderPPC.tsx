@@ -6,11 +6,11 @@ export default function HeaderPPC() {
   return (
     <header className="fixed top-0 z-50 w-full bg-white/95 backdrop-blur border-b shadow-sm">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6">
-        
+
         {/* LOGO */}
         <img
           src="/logo.png"
-          alt="Clever Crow"
+          alt="Pinnacle"
           className="h-8"
         />
 
@@ -23,12 +23,12 @@ export default function HeaderPPC() {
             className="
               flex items-center gap-2
               rounded-lg
-              bg-yellow-400
+              bg-blue-500
               px-3 py-1.5
               text-sm font-semibold
               text-gray-900
               shadow
-              hover:bg-yellow-500
+              hover:bg-blue-700
               transition
             "
           >

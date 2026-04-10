@@ -10,7 +10,7 @@ import ServiceSchema from "@/components/seo/ServiceSchema";
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "Marketing Strategy & Growth Consulting Services | Clever Crow",
+  title: "Marketing Strategy & Growth Consulting Services | Pinnacle",
   description:
     "Data-driven marketing strategy services to help brands grow faster with clear positioning, channel planning, and scalable growth frameworks.",
   keywords: [
@@ -108,13 +108,13 @@ export default function MarketingStrategyPage() {
       <WebPageSchema
         title="Marketing Strategy Services"
         description="Professional marketing strategy services focused on positioning, channel planning, and scalable business growth."
-        url="https://clevercrow.in/services/marketing-strategy"
+        url="https://pinnacledesign.in/services/marketing-strategy"
       />
 
       <ServiceSchema
         serviceName="Marketing Strategy Services"
         serviceDescription="Marketing strategy and growth consulting services designed to help businesses scale with clarity and direction."
-        pageUrl="https://clevercrow.in/services/marketing-strategy"
+        pageUrl="https://pinnacledesign.in/services/marketing-strategy"
       />
 
       {/* ================= FINAL CTA ================= */}

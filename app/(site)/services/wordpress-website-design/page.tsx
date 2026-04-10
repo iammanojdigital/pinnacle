@@ -42,7 +42,7 @@ const wordpressFaqs = [
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "WordPress Website Design Services in India | Clever Crow",
+  title: "WordPress Website Design Services in India | Pinnacle",
   description:
     "Professional WordPress website design services in India. Custom, SEO-friendly, and high-converting WordPress websites.",
 };
@@ -160,13 +160,13 @@ export default function WordPressWebsiteDesignPage() {
       <WebPageSchema
         title="WordPress Website Design Services in India"
         description="Custom WordPress website design services focused on performance, SEO, and conversions."
-        url="https://clevercrow.in/services/wordpress-website-design"
+        url="https://pinnacledesign.in/services/wordpress-website-design"
       />
 
       <ServiceSchema
         serviceName="WordPress Website Design Services"
         serviceDescription="Professional WordPress website design services for businesses and brands."
-        pageUrl="https://clevercrow.in/services/wordpress-website-design"
+        pageUrl="https://pinnacledesign.in/services/wordpress-website-design"
       />
 
       <FaqSchema faqs={wordpressFaqs} />

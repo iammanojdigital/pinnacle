@@ -13,11 +13,11 @@ export default function CallbackModal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4 backdrop-blur-sm">
-      
+
       <div className="relative w-full max-w-md overflow-hidden rounded-2xl bg-white shadow-2xl">
-        
+
         {/* TOP AI GRADIENT STRIP */}
-        <div className="h-1.5 bg-gradient-to-r from-indigo-500 via-violet-500 to-fuchsia-500" />
+        <div className="h-1.5 bg-gradient-to-r from-blue-500 via-blue-500 to-orange-500" />
 
         {/* CLOSE */}
         <button
@@ -29,9 +29,9 @@ export default function CallbackModal({
         </button>
 
         <div className="p-6 sm:p-7">
-          
+
           {/* ICON */}
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-500">
             <PhoneIcon className="h-6 w-6" />
           </div>
 
@@ -56,7 +56,7 @@ export default function CallbackModal({
                 placeholder="Enter your name"
                 className="w-full rounded-md border border-gray-300 px-3 py-2.5
                   text-gray-900
-                  focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -70,7 +70,7 @@ export default function CallbackModal({
                 placeholder="Enter your phone number"
                 className="w-full rounded-md border border-gray-300 px-3 py-2.5
                   text-gray-900
-                  focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
 
@@ -80,8 +80,8 @@ export default function CallbackModal({
               className="
                 mt-2 w-full rounded-md px-4 py-3
                 font-semibold text-white
-                bg-gradient-to-r from-indigo-500 to-violet-500
-                hover:from-indigo-600 hover:to-violet-600
+                bg-gradient-to-r from-blue-500 to-blue-700
+                hover:from-blue-700 hover:to-blue-700
                 transition
                 shadow-md hover:shadow-lg
               "

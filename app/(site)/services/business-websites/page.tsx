@@ -34,7 +34,7 @@ const businessWebsiteFaqs = [
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "Business Website Development Services | Clever Crow",
+  title: "Business Website Development Services | Pinnacle",
   description:
     "We design and develop modern, fast, and mobile-friendly websites that help your business attract leads, build trust, and grow online.",
 };
@@ -76,14 +76,14 @@ export default function BusinessWebsiteDevelopmentPage() {
 
       {/* ═══════════ SCHEMA ═══════════ */}
       <WebPageSchema
-        title="Business Website Development Services | Clever Crow"
+        title="Business Website Development Services | Pinnacle"
         description="We design and develop modern, fast, and mobile-friendly websites that help your business attract leads, build trust, and grow online."
-        url="https://clevercrow.in/services/business-websites"
+        url="https://pinnacledesign.in/services/business-websites"
       />
       <ServiceSchema
         serviceName="Business Website Development Services"
         serviceDescription="Professional business website design and development services for companies, agencies, and growing brands."
-        pageUrl="https://clevercrow.in/services/business-websites"
+        pageUrl="https://pinnacledesign.in/services/business-websites"
       />
       <FaqSchema faqs={businessWebsiteFaqs} />
     </main>

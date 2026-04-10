@@ -39,7 +39,7 @@ export default function CallbackModal({ isOpen, onClose }: CallbackModalProps) {
         </button>
         <div className="mb-5">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-brandSoft/80">Request a Callback</p>
-          <h2 className="mt-3 text-2xl font-bold text-white">Speak with Clever Crow Strategies</h2>
+          <h2 className="mt-3 text-2xl font-bold text-white">Speak with Pinnacle Strategies</h2>
           <p className="mt-2 text-sm text-white/62">Call: <a href="tel:+919986389444" className="font-semibold text-support">+91 99863 89444</a></p>
         </div>
         <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); alert("Thanks!"); onClose(); }}>

@@ -72,7 +72,7 @@ export default function CustomQuoteForm({ onClose }: Props) {
           required
           placeholder="Your Name"
           className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm
-          focus:outline-none focus:ring-2 focus:ring-blue-400"
+          focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         {/* Phone */}
@@ -82,7 +82,7 @@ export default function CustomQuoteForm({ onClose }: Props) {
           required
           placeholder="Phone Number"
           className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm
-          focus:outline-none focus:ring-2 focus:ring-blue-400"
+          focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         {/* Service */}
@@ -91,7 +91,7 @@ export default function CustomQuoteForm({ onClose }: Props) {
           required
           className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm
           bg-white text-gray-700
-          focus:outline-none focus:ring-2 focus:ring-blue-400"
+          focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <option value="">What service are you looking for?</option>
           <option>Prototype Manufacturing</option>
@@ -109,7 +109,7 @@ export default function CustomQuoteForm({ onClose }: Props) {
           rows={4}
           placeholder="Tell us about your requirement"
           className="w-full rounded-xl border border-gray-200 px-4 py-3 text-sm
-          focus:outline-none focus:ring-2 focus:ring-blue-400"
+          focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         {error && (
@@ -126,7 +126,7 @@ export default function CustomQuoteForm({ onClose }: Props) {
         <button
           type="submit"
           disabled={loading}
-          className="w-full rounded-xl bg-blue-600 py-3.5 font-semibold
+          className="w-full rounded-xl bg-blue-500 py-3.5 font-semibold
           text-white transition hover:bg-blue-500 hover:shadow-lg
           disabled:opacity-60"
         >

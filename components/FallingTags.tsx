@@ -5,19 +5,19 @@ import { useRef } from "react";
 
 const TAGS = [
   { text: "#Precision", color: "bg-blue-100 text-blue-700", left: "5%", hideOnMobile: false },
-  { text: "#Aerospace", color: "bg-indigo-100 text-indigo-700", left: "17%", hideOnMobile: true },
-  { text: "#Prototyping", color: "bg-gradient-to-r from-blue-200 to-indigo-200 text-blue-700", left: "30%", hideOnMobile: false },
-  { text: "#Engineering", color: "bg-emerald-100 text-emerald-700", left: "46%", hideOnMobile: true },
-  { text: "#CNC-Machining", color: "bg-rose-100 text-rose-700", left: "60%", hideOnMobile: false },
-  { text: "#DMLS-3DPrint", color: "bg-purple-100 text-purple-700", left: "72%", hideOnMobile: true },
-  { text: "#Automotive", color: "bg-orange-100 text-orange-700", left: "10%", hideOnMobile: true },
-  { text: "#Manufacturing", color: "bg-cyan-100 text-cyan-700", left: "40%", hideOnMobile: false },
-  { text: "#MassProduction", color: "bg-pink-100 text-pink-700", left: "54%", hideOnMobile: true },
-  { text: "#ToolDesign", color: "bg-lime-100 text-lime-700", left: "84%", hideOnMobile: false },
-  { text: "#Fabrication", color: "bg-teal-100 text-teal-700", left: "24%", hideOnMobile: true },
-  { text: "#QualityControl", color: "bg-violet-100 text-violet-700", left: "66%", hideOnMobile: false },
-  { text: "#VacuumCasting", color: "bg-blue-50 text-blue-600", left: "88%", hideOnMobile: true },
-  { text: "#MicronPrecision", color: "bg-sky-100 text-sky-700", left: "36%", hideOnMobile: true },
+  { text: "#Aerospace", color: "bg-orange-100 text-orange-700", left: "17%", hideOnMobile: true },
+  { text: "#Prototyping", color: "bg-blue-50 text-blue-500", left: "30%", hideOnMobile: false },
+  { text: "#Engineering", color: "bg-slate-100 text-slate-800", left: "46%", hideOnMobile: true },
+  { text: "#CNC-Machining", color: "bg-blue-100 text-blue-700", left: "60%", hideOnMobile: false },
+  { text: "#DMLS-3DPrint", color: "bg-orange-100 text-orange-700", left: "72%", hideOnMobile: true },
+  { text: "#Automotive", color: "bg-blue-50 text-blue-500", left: "10%", hideOnMobile: true },
+  { text: "#Manufacturing", color: "bg-slate-100 text-slate-800", left: "40%", hideOnMobile: false },
+  { text: "#MassProduction", color: "bg-blue-100 text-blue-700", left: "54%", hideOnMobile: true },
+  { text: "#ToolDesign", color: "bg-orange-100 text-orange-700", left: "84%", hideOnMobile: false },
+  { text: "#Fabrication", color: "bg-blue-50 text-blue-500", left: "24%", hideOnMobile: true },
+  { text: "#QualityControl", color: "bg-slate-100 text-slate-800", left: "66%", hideOnMobile: false },
+  { text: "#VacuumCasting", color: "bg-blue-100 text-blue-700", left: "88%", hideOnMobile: true },
+  { text: "#MicronPrecision", color: "bg-orange-100 text-orange-700", left: "36%", hideOnMobile: true },
 ];
 
 const ROTATIONS = [-6, 4, -10, 2, 8, -3, 5, -8, 12, -4, 7, -15, 3, 9];

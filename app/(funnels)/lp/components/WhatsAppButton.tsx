@@ -8,7 +8,7 @@ type WhatsAppButtonProps = {
 };
 
 export default function WhatsAppButton({ 
-  message = "Hi Clever Crow Team, I'm interested in your services.",
+  message = "Hi Pinnacle Team, I'm interested in your services.",
   phoneNumber = "919986389444" 
 }: WhatsAppButtonProps) {
   const encodedMessage = encodeURIComponent(message);

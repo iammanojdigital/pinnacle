@@ -17,11 +17,11 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-bold mb-6 tracking-tight">Services</h3>
             <ul className="space-y-3">
-              <li><Link href="/services/prototype-manufacturing" className="text-gray-400 hover:text-blue-400 transition-colors">Prototype Manufacturing</Link></li>
-              <li><Link href="/services/tool-design-development" className="text-gray-400 hover:text-blue-400 transition-colors">Tool Design & Development</Link></li>
-              <li><Link href="/services/precision-machining" className="text-gray-400 hover:text-blue-400 transition-colors">Precision Machining</Link></li>
-              <li><Link href="/services/refurbishment" className="text-gray-400 hover:text-blue-400 transition-colors">Refurbishment</Link></li>
-              <li><Link href="/services/fabrication" className="text-gray-400 hover:text-blue-400 transition-colors">Fabrication</Link></li>
+              <li><Link href="/services/prototype-manufacturing" className="text-gray-400 hover:text-blue-500 transition-colors">Prototype Manufacturing</Link></li>
+              <li><Link href="/services/tool-design-development" className="text-gray-400 hover:text-blue-500 transition-colors">Tool Design & Development</Link></li>
+              <li><Link href="/services/precision-machining" className="text-gray-400 hover:text-blue-500 transition-colors">Precision Machining</Link></li>
+              <li><Link href="/services/refurbishment" className="text-gray-400 hover:text-blue-500 transition-colors">Refurbishment</Link></li>
+              <li><Link href="/services/fabrication" className="text-gray-400 hover:text-blue-500 transition-colors">Fabrication</Link></li>
             </ul>
           </div>
 
@@ -29,10 +29,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-bold mb-6 tracking-tight">Company</h3>
             <ul className="space-y-3">
-              <li><Link href="/about" className="text-gray-400 hover:text-blue-400 transition-colors">About Us</Link></li>
-              <li><Link href="/team" className="text-gray-400 hover:text-blue-400 transition-colors">Our Expert Team</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-blue-400 transition-colors">Contact Us</Link></li>
-              <li><Link href="/privacy-policy" className="text-gray-400 hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
+              <li><Link href="/about" className="text-gray-400 hover:text-blue-500 transition-colors">About Us</Link></li>
+              <li><Link href="/team" className="text-gray-400 hover:text-blue-500 transition-colors">Our Expert Team</Link></li>
+              <li><Link href="/contact" className="text-gray-400 hover:text-blue-500 transition-colors">Contact Us</Link></li>
+              <li><Link href="/privacy-policy" className="text-gray-400 hover:text-blue-500 transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
 
@@ -43,9 +43,14 @@ export default function Footer() {
               <li className="text-gray-400">
                 <span className="block font-bold text-white">Head Office:</span>
                 No. 329, Ashwathnagar, Shimoga, 577204
+                <p className="text-white font-bold mb-1">Pinnacle Design Solutions</p>
+                <p className="text-white/50 text-xs leading-relaxed">
+                  No.329, Ashwathnagar,<br />
+                  Shimoga, Karnataka - 577204
+                </p>
               </li>
               <li>
-                <a href="mailto:info@pinnacle-designsolutions.com" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="mailto:info@pinnacle-designsolutions.com" className="text-gray-400 hover:text-blue-500 transition-colors">
                   info@pinnacle-designsolutions.com
                 </a>
               </li>
@@ -59,29 +64,13 @@ export default function Footer() {
             {/* Phone */}
             <a 
               href="tel:+919481763083" 
-              className="flex items-center gap-3 text-gray-400 hover:text-blue-400 transition-colors mb-6"
+              className="flex items-center gap-3 text-gray-400 hover:text-blue-500 transition-colors mb-6"
             >
               <Phone size={20} />
-              <span className="font-semibold">+91 9481763083</span>
+              <p className="text-white font-black text-lg">+91 9481763083</p>
             </a>
 
-            {/* Buttons */}
-            <div className="space-y-3">
-              <a 
-                href="/contact" 
-                className="flex items-center justify-center gap-2 w-full bg-[#2563eb] hover:bg-[#1d4ed8] text-white px-6 py-3 rounded-full text-sm font-bold transition-all"
-              >
-                <span>✉️</span> Get A Quote
-              </a>
-              <a 
-                href="https://wa.me/919481763083" 
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-center gap-2 w-full bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full text-sm font-bold transition-all"
-              >
-                <FaWhatsapp size={18} /> WhatsApp
-              </a>
-            </div>
+
           </div>
         </div>
 
@@ -93,14 +82,14 @@ export default function Footer() {
               <div className="mb-4">
                 <Image
                   src="/logos/pinnacle-logo.svg"
-                  alt="Pinnacle"
+                  alt="Pinnacle Design Solutions & Manufacturing"
                   width={160}
                   height={50}
                   className="h-10 w-auto"
                 />
               </div>
               <p className="text-gray-400 text-sm max-w-xs">
-                Pinnacle transforms concepts into tangible products with precision and speed. One Partner. Every Process. Precision Manufacturing Made Effortless.
+                Pinnacle Design Solutions & Manufacturing transforms concepts into tangible products with precision and speed. One Partner. Every Process.
               </p>
               
               {/* Social Links */}
@@ -109,7 +98,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/company/pinnacle-design-solutions-manufacturing-pvt-ltd/"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-600 bg-gray-900 hover:bg-blue-600 hover:border-blue-600 transition-all"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-600 bg-gray-900 hover:bg-blue-500 hover:border-blue-500 transition-all"
                 >
                   <FaLinkedin size={18} className="text-gray-400 hover:text-white" />
                 </a>
@@ -126,7 +115,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="mt-8 pt-6 border-t border-gray-700 text-center text-gray-500 text-xs">
-            <p>© 2026 Pinnacle Manufacturing Pvt. Ltd. All rights reserved.</p>
+            <p>© 2026 Pinnacle Design Solutions & Manufacturing Pvt. Ltd. All rights reserved.</p>
           </div>
         </div>
       </div>

@@ -42,7 +42,7 @@ export default function GoogleAdsLandingPage() {
       </div>
 
       <CallbackModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      <WhatsAppButton message="Hi Clever Crow Team, I'm interested in Google Ads management services." />
+      <WhatsAppButton message="Hi Pinnacle Team, I'm interested in Google Ads management services." />
     </main>
   );
 }

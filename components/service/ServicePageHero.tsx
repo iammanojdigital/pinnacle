@@ -87,7 +87,7 @@ export default function ServicePageHero({
           >
             {/* eyebrow */}
             <div className="inline-flex items-center gap-2 rounded-full bg-gray-100 border border-gray-200 px-4 py-1.5 mb-6">
-              <div className="h-1.5 w-1.5 rounded-full bg-yellow-500 animate-pulse" />
+              <div className="h-1.5 w-1.5 rounded-full bg-blue-700 animate-pulse" />
               <span className="text-[11px] font-bold uppercase tracking-[0.18em] text-gray-700">
                 {eyebrow}
               </span>
@@ -107,7 +107,7 @@ export default function ServicePageHero({
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <button
                 onClick={() => setIsFormOpen(true)}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-yellow-400 px-7 py-4 text-[15px] font-black text-gray-900 shadow-lg shadow-yellow-400/20 transition-all duration-300 hover:bg-yellow-300 hover:shadow-yellow-400/30"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-blue-500 px-7 py-4 text-[15px] font-black text-gray-900 shadow-lg shadow-blue-500/20 transition-all duration-300 hover:bg-yellow-300 hover:shadow-blue-500/30"
               >
                 {primaryCta}
                 <ArrowRight className="h-4 w-4" />
@@ -127,7 +127,7 @@ export default function ServicePageHero({
                   key={i}
                   className="flex items-center gap-3 text-[14px] text-gray-700 font-medium"
                 >
-                  <CheckCircle2 className="h-4 w-4 text-yellow-500 shrink-0" />
+                  <CheckCircle2 className="h-4 w-4 text-blue-700 shrink-0" />
                   {point}
                 </div>
               ))}
@@ -146,7 +146,7 @@ export default function ServicePageHero({
 
             <div className="relative rounded-[1.75rem] border border-gray-200 bg-white shadow-2xl shadow-gray-200/50 overflow-hidden">
               {/* top accent */}
-              <div className="h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-amber-500" />
+              <div className="h-1 bg-gradient-to-r from-blue-500 via-blue-700 to-amber-500" />
 
               <AnimatePresence mode="wait" initial={false}>
                 {!isFormOpen ? (
@@ -164,7 +164,7 @@ export default function ServicePageHero({
 
                     <h3 className="text-2xl sm:text-[26px] font-extrabold text-gray-900 tracking-tight leading-tight mb-3">
                       Unlock Your Free{" "}
-                      <span className="text-yellow-500">Growth Strategy</span>
+                      <span className="text-blue-700">Growth Strategy</span>
                     </h3>
 
                     <p className="text-[15px] text-gray-500 font-medium mb-8 leading-relaxed">
@@ -174,7 +174,7 @@ export default function ServicePageHero({
 
                     <button
                       onClick={() => setIsFormOpen(true)}
-                      className="w-full flex items-center justify-center gap-2 rounded-xl bg-yellow-400 px-6 py-4 text-[15px] font-black text-gray-900 shadow-lg shadow-yellow-400/20 transition-all duration-300 hover:bg-yellow-300"
+                      className="w-full flex items-center justify-center gap-2 rounded-xl bg-blue-500 px-6 py-4 text-[15px] font-black text-gray-900 shadow-lg shadow-blue-500/20 transition-all duration-300 hover:bg-yellow-300"
                     >
                       Request a Call Back
                       <ArrowRight className="h-4 w-4" />
@@ -238,13 +238,13 @@ export default function ServicePageHero({
                         name="name"
                         required
                         placeholder="Your Name *"
-                        className="h-12 w-full rounded-xl border border-gray-200 bg-gray-50 px-4 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400/20 transition-all"
+                        className="h-12 w-full rounded-xl border border-gray-200 bg-gray-50 px-4 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
                       />
                       <input
                         name="phone"
                         required
                         placeholder="Phone number *"
-                        className="h-12 w-full rounded-xl border border-gray-200 bg-gray-50 px-4 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:border-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400/20 transition-all"
+                        className="h-12 w-full rounded-xl border border-gray-200 bg-gray-50 px-4 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
                       />
 
                       {error && (
@@ -256,11 +256,10 @@ export default function ServicePageHero({
                       <button
                         type="submit"
                         disabled={isLoading}
-                        className={`mt-2 h-14 w-full rounded-xl text-[15px] font-bold tracking-wide transition-all text-gray-900 ${
-                          isLoading
-                            ? "cursor-not-allowed bg-yellow-300 opacity-70"
-                            : "bg-yellow-400 hover:bg-yellow-300 shadow-lg shadow-yellow-400/20"
-                        }`}
+                        className={`mt-2 h-14 w-full rounded-xl text-[15px] font-bold tracking-wide transition-all text-gray-900 ${isLoading
+                          ? "cursor-not-allowed bg-yellow-300 opacity-70"
+                          : "bg-blue-500 hover:bg-yellow-300 shadow-lg shadow-blue-500/20"
+                          }`}
                       >
                         {isLoading ? "Sending..." : "Request a Call Back"}
                       </button>

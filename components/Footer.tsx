@@ -18,7 +18,7 @@ export default function Footer() {
     <footer className="relative w-full bg-white text-gray-600 border-t border-gray-100 overflow-hidden">
       {/* ───────────────── CONVERSION STRIP ───────────────── */}
       {!pathname.startsWith("/internship") && (
-        <div className="border-b border-black/5 bg-yellow-400">
+        <div className="border-b border-black/5 bg-blue-500">
           <div className="mx-auto max-w-7xl px-6 py-5 sm:py-6 lg:py-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex flex-col gap-1">
               <h3 className="text-lg lg:text-xl font-black tracking-tight text-gray-900">
@@ -43,7 +43,7 @@ export default function Footer() {
                 target="_blank"
                 className="group inline-flex items-center gap-2 rounded-xl border border-black/10 bg-white/40 backdrop-blur-md px-6 py-3 text-sm font-bold text-gray-900 transition-all hover:bg-white hover:border-black/20 hover:shadow-lg hover:-translate-y-1"
               >
-                <FaWhatsapp size={18} className="text-[#25D366] group-hover:scale-110 transition-transform" />
+                <FaWhatsapp size={18} className="text-blue-500 group-hover:scale-110 transition-transform" />
                 WhatsApp
               </a>
             </div>
@@ -67,8 +67,8 @@ export default function Footer() {
               <div className="flex flex-col items-center">
                 <Link href="/" className="inline-block">
                   <Image
-                    src="/logo-dark.svg"
-                    alt="Clever Crow"
+                    src="/logos/pinnacle-logo-dark.svg"
+                    alt="Pinnacle Design Solutions & Manufacturing"
                     width={220}
                     height={60}
                     className="h-12 sm:h-14 w-auto select-none"
@@ -87,7 +87,7 @@ export default function Footer() {
                       href={href}
                       target="_blank"
                       aria-label={label}
-                      className="group flex h-10 w-10 items-center justify-center rounded-xl border border-gray-200 bg-gray-50 transition-all hover:bg-yellow-400 hover:border-yellow-400 hover:-translate-y-1 shadow-sm"
+                      className="group flex h-10 w-10 items-center justify-center rounded-xl border border-gray-200 bg-gray-50 transition-all hover:bg-blue-500 hover:border-blue-500 hover:-translate-y-1 shadow-sm"
                     >
                       <Icon size={18} className="text-gray-500 transition-colors group-hover:text-black" />
                     </Link>
@@ -107,11 +107,11 @@ export default function Footer() {
                       Growth Stack
                     </h4>
                     <ul className="space-y-3 sm:space-y-4 text-sm font-bold text-gray-600">
-                      <li><Link href="/services/marketing-strategy" className="transition-colors hover:text-yellow-600">Digital Marketing</Link></li>
-                      <li><Link href="/services/google-ads" className="transition-colors hover:text-yellow-600">Google & Meta Ads</Link></li>
-                      <li><Link href="/services/seo" className="transition-colors hover:text-yellow-600">Strategic SEO</Link></li>
-                      <li><Link href="/services/logo-design" className="transition-colors hover:text-yellow-600">Brand Identity</Link></li>
-                      <li><Link href="/services/ai-seo" className="transition-colors tracking-tight text-gray-900 hover:text-yellow-600 underline decoration-yellow-400/50 decoration-2 underline-offset-4">AI Systems</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">CNC Machining</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">Turning & Milling</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">Sheet Metal Fabrication</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">Welding Expertise</Link></li>
+                      <li><Link href="/services" className="transition-colors tracking-tight text-gray-900 hover:text-blue-500 underline decoration-blue-500/50 decoration-2 underline-offset-4">Special Processes</Link></li>
                     </ul>
                   </div>
 
@@ -120,11 +120,11 @@ export default function Footer() {
                       Experience
                     </h4>
                     <ul className="space-y-3 sm:space-y-4 text-sm font-bold text-gray-600">
-                      <li><Link href="/contact" className="transition-colors hover:text-yellow-600">Company Story</Link></li>
-                      <li><Link href="/services" className="transition-colors hover:text-yellow-600">Case Results</Link></li>
-                      <li><Link href="/#testimonials" className="transition-colors hover:text-yellow-600">Client Reviews</Link></li>
-                      <li><Link href="/contact" className="transition-colors hover:text-yellow-600">Contact Hub</Link></li>
-                      <li><Link href="/internship" className="transition-colors hover:text-yellow-600">Careers</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">Company Story</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">Case Results</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">Client Reviews</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">Contact Hub</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">Careers</Link></li>
                     </ul>
                   </div>
                 </>
@@ -135,11 +135,11 @@ export default function Footer() {
                       Active Tracks
                     </h4>
                     <ul className="space-y-3 sm:space-y-4 text-sm font-bold text-gray-600">
-                      <li><Link href="/internship/1" className="transition-colors hover:text-yellow-600">AI-ML Development</Link></li>
-                      <li><Link href="/internship/1" className="transition-colors hover:text-yellow-600">Full Stack Web</Link></li>
-                      <li><Link href="/internship/10" className="transition-colors hover:text-yellow-600">Content Writing</Link></li>
-                      <li><Link href="/internship/7" className="transition-colors hover:text-yellow-600">Web Design</Link></li>
-                      <li><Link href="/internship" className="transition-colors text-gray-900 hover:text-yellow-600 underline decoration-yellow-400/50 decoration-2 underline-offset-4">View All Tracks</Link></li>
+                      <li><Link href="/internship/1" className="transition-colors hover:text-blue-500">AI-ML Development</Link></li>
+                      <li><Link href="/internship/1" className="transition-colors hover:text-blue-500">Full Stack Web</Link></li>
+                      <li><Link href="/internship/10" className="transition-colors hover:text-blue-500">Content Writing</Link></li>
+                      <li><Link href="/internship/7" className="transition-colors hover:text-blue-500">Web Design</Link></li>
+                      <li><Link href="/internship" className="transition-colors text-gray-900 hover:text-blue-500 underline decoration-blue-500/50 decoration-2 underline-offset-4">View All Tracks</Link></li>
                     </ul>
                   </div>
 
@@ -148,11 +148,11 @@ export default function Footer() {
                       Information
                     </h4>
                     <ul className="space-y-3 sm:space-y-4 text-sm font-bold text-gray-600">
-                      <li><Link href="/about" className="transition-colors hover:text-yellow-600">About Clever Crow</Link></li>
-                      <li><Link href="/internship" className="transition-colors hover:text-yellow-600">How to Apply</Link></li>
-                      <li><Link href="/terms" className="transition-colors hover:text-yellow-600">Internship Terms</Link></li>
-                      <li><Link href="/privacy" className="transition-colors hover:text-yellow-600">Data Privacy</Link></li>
-                      <li><Link href="/contact" className="transition-colors hover:text-yellow-600">Help Desk</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">About Pinnacle</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">How to Apply</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">Internship Terms</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">Data Privacy</Link></li>
+                      <li><Link href="/services" className="transition-colors hover:text-blue-500">Help Desk</Link></li>
                     </ul>
                   </div>
                 </>
@@ -172,15 +172,15 @@ export default function Footer() {
                 <div className="mt-5 sm:mt-6 pt-5 sm:pt-6 border-t border-gray-100 space-y-2 sm:space-y-3">
                   <a
                     href="tel:+919986389444"
-                    className="block text-lg font-black text-gray-900 hover:text-yellow-600 transition-colors"
+                    className="block text-lg font-black text-gray-900 hover:text-blue-500 transition-colors"
                   >
                     +91 99863 89444
                   </a>
                   <a
-                    href="mailto:hello@clevercrow.in"
+                    href="mailto:contact@pinnacledesign.in"
                     className="block text-sm font-bold text-gray-500 hover:text-gray-900 transition-colors"
                   >
-                    hello@clevercrow.in
+                    contact@pinnacledesign.in
                   </a>
                 </div>
               </div>
@@ -194,8 +194,8 @@ export default function Footer() {
       <div className="relative z-10 border-t border-gray-100 bg-gray-50/80 backdrop-blur-md pb-24 sm:pb-0">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-5 sm:py-6 lg:py-8 text-[10px] font-black uppercase tracking-[0.3em] text-gray-500 md:flex-row md:items-center md:justify-between">
           <p className="flex items-center gap-3">
-            <span className="h-1 w-5 bg-yellow-400/50 rounded-full" />
-            © {new Date().getFullYear()} Clever Crow Strategies LLP
+            <span className="h-1 w-5 bg-blue-500/50 rounded-full" />
+            © {new Date().getFullYear()} Pinnacle Design Solutions & Manufacturing
           </p>
 
           <div className="flex flex-wrap gap-8">
@@ -203,7 +203,7 @@ export default function Footer() {
             <Link href="/terms" className="transition-colors hover:text-gray-900 border-b border-transparent hover:border-gray-200">Terms of Service</Link>
             <button 
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} 
-              className="text-gray-400 hover:text-yellow-600 transition-colors active:translate-y-0.5"
+              className="text-gray-400 hover:text-blue-500 transition-colors active:translate-y-0.5"
             >
               Back to Top ↑
             </button>
@@ -215,8 +215,8 @@ export default function Footer() {
       {!pathname.startsWith("/internship") && (
         <div className="fixed bottom-4 left-4 right-4 z-[100] flex gap-2 rounded-3xl sm:rounded-full bg-white/95 backdrop-blur-xl px-3 py-3 shadow-[0_12px_40px_rgba(0,0,0,0.15)] sm:hidden border border-gray-100">
           <a
-            href="tel:+919986389444"
-            className="flex flex-1 items-center justify-center gap-2 rounded-2xl sm:rounded-full bg-yellow-400 py-3.5 text-[11px] font-black uppercase tracking-widest text-gray-950 shadow-xl shadow-yellow-500/10 active:scale-95 transition-transform"
+            href="tel:+919481763083"
+            className="flex flex-1 items-center justify-center gap-2 rounded-2xl sm:rounded-full bg-blue-500 py-3.5 text-[11px] font-black uppercase tracking-widest text-white shadow-xl shadow-blue-500/10 active:scale-95 transition-transform"
           >
             <Phone size={14} />
             Call
@@ -225,7 +225,7 @@ export default function Footer() {
           <a
             href="https://wa.me/919986389444"
             target="_blank"
-            className="flex items-center justify-center px-4 rounded-2xl sm:rounded-full bg-[#25D366] py-3.5 text-white shadow-xl shadow-green-500/10 active:scale-95 transition-transform"
+            className="flex items-center justify-center px-4 rounded-2xl sm:rounded-full bg-blue-500 py-3.5 text-white shadow-xl shadow-blue-500/10 active:scale-95 transition-transform"
           >
             <FaWhatsapp size={20} />
           </a>

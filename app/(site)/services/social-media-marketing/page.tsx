@@ -43,7 +43,7 @@ const smmFaqs = [
 
 export const metadata = {
   title:
-    "Social Media Marketing Services in India | Clever Crow",
+    "Social Media Marketing Services in India | Pinnacle",
   description:
     "Results-driven social media marketing services in India to grow your brand, engage audiences, and generate leads across Instagram, Facebook, and LinkedIn.",
   keywords: [
@@ -127,13 +127,13 @@ export default function SocialMediaMarketingPage() {
       <WebPageSchema
         title="Social Media Marketing Services in India"
         description="Professional social media marketing services in India focused on brand growth, engagement, and lead generation."
-        url="https://clevercrow.in/services/social-media-marketing"
+        url="https://pinnacledesign.in/services/social-media-marketing"
       />
 
       <ServiceSchema
         serviceName="Social Media Marketing Services"
         serviceDescription="Social media marketing services in India to grow brands, engage audiences, and generate leads."
-        pageUrl="https://clevercrow.in/services/social-media-marketing"
+        pageUrl="https://pinnacledesign.in/services/social-media-marketing"
       />
 
       <FaqSchema faqs={smmFaqs} />

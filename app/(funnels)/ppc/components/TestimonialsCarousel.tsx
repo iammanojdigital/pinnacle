@@ -12,7 +12,7 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "We were burning money on ads with no clarity. Clever Crow rebuilt our funnel, fixed tracking, and within weeks our cost per lead dropped while lead quality improved drastically. This finally feels like a scalable growth system, not experiments.",
+      "We were burning money on ads with no clarity. Pinnacle rebuilt our funnel, fixed tracking, and within weeks our cost per lead dropped while lead quality improved drastically. This finally feels like a scalable growth system, not experiments.",
     name: "Daniel Wong",
     role: "Growth Manager",
     company: "SaaS Startup",
@@ -26,7 +26,7 @@ const testimonials: Testimonial[] = [
   },
   {
     quote:
-      "Most agencies chase vanity metrics. Clever Crow focuses on revenue, intent, and long-term ROI. The communication is clear, execution is fast, and decisions are backed by data.",
+      "Most agencies chase vanity metrics. Pinnacle focuses on revenue, intent, and long-term ROI. The communication is clear, execution is fast, and decisions are backed by data.",
     name: "Ankit Jain",
     role: "Founder",
     company: "Ecommerce Company",

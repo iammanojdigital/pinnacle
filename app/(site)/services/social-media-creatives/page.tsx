@@ -90,13 +90,13 @@ export default function SocialMediaCreativesClient() {
       <WebPageSchema
         title="Social Media Creative Design Services in India"
         description="Professional social media creative design services in India."
-        url="https://clevercrow.in/services/social-media-creatives"
+        url="https://pinnacledesign.in/services/social-media-creatives"
       />
 
       <ServiceSchema
         serviceName="Social Media Creative Design Services"
         serviceDescription="Creative design services for social media marketing and advertising."
-        pageUrl="https://clevercrow.in/services/social-media-creatives"
+        pageUrl="https://pinnacledesign.in/services/social-media-creatives"
       />
 
       <FaqSchema faqs={creativesFaqs} />

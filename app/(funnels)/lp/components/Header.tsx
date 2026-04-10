@@ -21,7 +21,7 @@ export default function Header() {
         <a href="#top" className="flex items-center gap-3">
           <Image 
             src="/logo-dark.svg" 
-            alt="Clever Crow Strategies" 
+            alt="Pinnacle Strategies" 
             width={130} 
             height={36} 
             className="h-8 w-auto sm:h-10" 

@@ -14,7 +14,7 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Strategy & Planning Services | Clever Crow",
+  title: "Strategy & Planning Services | Pinnacle",
   description: "We help you define your positioning, messaging, and growth roadmap so your brand stands out and scales with confidence.",
 };
 
@@ -34,8 +34,8 @@ export default function StrategyPlanningPage() {
       <StrategyPlanningSections />
       <DynamicCTA />
       <FaqSection title="Frequently Asked Questions" description="Common questions about our strategy and planning services." faqs={faqs} />
-      <WebPageSchema title="Strategy & Planning Services | Clever Crow" description="We help you define your positioning, messaging, and growth roadmap so your brand stands out and scales with confidence." url="https://clevercrow.in/services/strategy-planning" />
-      <ServiceSchema serviceName="Strategy & Planning Services" serviceDescription="Brand strategy, positioning, competitor analysis, and growth roadmap services for businesses." pageUrl="https://clevercrow.in/services/strategy-planning" />
+      <WebPageSchema title="Strategy & Planning Services | Pinnacle" description="We help you define your positioning, messaging, and growth roadmap so your brand stands out and scales with confidence." url="https://pinnacledesign.in/services/strategy-planning" />
+      <ServiceSchema serviceName="Strategy & Planning Services" serviceDescription="Brand strategy, positioning, competitor analysis, and growth roadmap services for businesses." pageUrl="https://pinnacledesign.in/services/strategy-planning" />
       <FaqSchema faqs={faqs} />
     </main>
   );

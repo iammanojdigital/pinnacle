@@ -17,7 +17,7 @@ export default function WebPageSchema({
     "url": url,
     "publisher": {
       "@type": "Organization",
-      "name": "Clever Crow Strategies LLP",
+      "name": "Pinnacle Design Solutions & Manufacturing",
       "url": "https://clevercrow.in",
     },
   };

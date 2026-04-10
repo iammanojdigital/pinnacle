@@ -42,7 +42,7 @@ const aiSeoFaqs = [
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "AI SEO Algorithms & Optimization Services in India | Clever Crow",
+  title: "AI SEO Algorithms & Optimization Services in India | Pinnacle",
   description:
     "Dominate search rankings with our advanced AI SEO algorithms. Semantic search, NLP optimization, and predictive analytics for scalable organic growth.",
 };
@@ -118,13 +118,13 @@ export default function AiSeoPage() {
       <WebPageSchema
         title="AI SEO Algorithms & Services in India"
         description="Advanced AI SEO services focusing on machine learning, precise analytics, and semantic search for superior rankings."
-        url="https://clevercrow.in/services/ai-seo"
+        url="https://pinnacledesign.in/services/ai-seo"
       />
 
       <ServiceSchema
         serviceName="AI SEO Algorithms & Optimization"
         serviceDescription="Machine learning and predictive AI search engine optimization services."
-        pageUrl="https://clevercrow.in/services/ai-seo"
+        pageUrl="https://pinnacledesign.in/services/ai-seo"
       />
 
       <FaqSchema faqs={aiSeoFaqs} />

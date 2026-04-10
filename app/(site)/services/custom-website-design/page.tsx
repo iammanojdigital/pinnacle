@@ -42,7 +42,7 @@ const customWebsiteFaqs = [
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "Custom Website Design Services in India | Clever Crow",
+  title: "Custom Website Design Services in India | Pinnacle",
   description:
     "Custom website design services in India. High-performance, conversion-focused websites tailored to your brand and business goals.",
 };
@@ -159,13 +159,13 @@ export default function CustomWebsiteDesignPage() {
       <WebPageSchema
         title="Custom Website Design Services in India"
         description="Custom website design services focused on performance, scalability, and conversions."
-        url="https://clevercrow.in/services/custom-website-design"
+        url="https://pinnacledesign.in/services/custom-website-design"
       />
 
       <ServiceSchema
         serviceName="Custom Website Design Services"
         serviceDescription="Professional custom website design services for businesses and brands."
-        pageUrl="https://clevercrow.in/services/custom-website-design"
+        pageUrl="https://pinnacledesign.in/services/custom-website-design"
       />
 
       <FaqSchema faqs={customWebsiteFaqs} />

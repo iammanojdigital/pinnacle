@@ -23,7 +23,7 @@ export default function ServiceCTA() {
             href={`tel:${CONTACT.phone}`}
             className="
               inline-flex items-center gap-2
-              rounded-lg bg-yellow-400 px-6 py-3
+              rounded-lg bg-blue-500 px-6 py-3
               font-medium text-neutral-900
               transition hover:bg-yellow-300
             "

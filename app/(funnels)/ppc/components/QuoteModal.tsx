@@ -42,7 +42,7 @@ export default function QuoteModal() {
       {/* Trigger Button */}
       <button
         onClick={() => setOpen(true)}
-        className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover-glow hover-glow-purple"
+        className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover-glow hover-glow-blue"
       >
         Request a Custom Quote
       </button>

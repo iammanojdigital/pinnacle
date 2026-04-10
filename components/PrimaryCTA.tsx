@@ -40,8 +40,8 @@ export default function PrimaryCTA({
             {/* Status Badge - Mini */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/5 px-4 py-1.5 shadow-sm">
               <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-600"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-blue-500"></span>
               </span>
               <span className="text-[9px] font-black uppercase tracking-[0.2em] text-blue-500/80">
                 Next Slot Available: Today
@@ -54,7 +54,7 @@ export default function PrimaryCTA({
             </h2>
 
             <p className="mx-auto mt-6 max-w-lg text-sm sm:text-base font-medium text-gray-400 leading-relaxed">
-              We don't just run ads. We build integrated systems that scale. 
+              We don't just build components. We bridge the gap between complex engineering concepts and finalized components.
               {description && <span className="block mt-1 italic opacity-60 text-xs font-normal">{description}</span>}
             </p>
 
@@ -64,7 +64,7 @@ export default function PrimaryCTA({
                 onClick={onPrimaryClick}
                 className="
                   group relative inline-flex items-center gap-3
-                  rounded-2xl bg-blue-600 px-8 py-4
+                  rounded-2xl bg-blue-500 px-8 py-4
                   font-black text-white text-sm uppercase tracking-wide
                   transition-all duration-300
                   hover:bg-blue-500 hover:shadow-[0_20px_40px_-10px_rgba(37,99,235,0.4)] 

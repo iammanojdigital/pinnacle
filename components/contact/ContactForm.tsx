@@ -51,8 +51,8 @@ export default function ContactForm() {
   return (
     <div className="relative rounded-[2.5rem] border border-gray-100 bg-white p-8 sm:p-12 shadow-[0_30px_70px_-20px_rgba(0,0,0,0.1)] overflow-hidden">
       {/* Soft Glow Effects for Light Background */}
-      <div className="absolute -top-24 -right-24 h-64 w-64 bg-blue-400/10 blur-[60px] rounded-full pointer-events-none" />
-      <div className="absolute -bottom-24 -left-24 h-64 w-64 bg-indigo-500/5 blur-[60px] rounded-full pointer-events-none" />
+      <div className="absolute -top-24 -right-24 h-64 w-64 bg-blue-500/10 blur-[60px] rounded-full pointer-events-none" />
+      <div className="absolute -bottom-24 -left-24 h-64 w-64 bg-blue-500/5 blur-[60px] rounded-full pointer-events-none" />
 
       <div className="relative z-10">
         <div className="mb-10">
@@ -75,7 +75,7 @@ export default function ContactForm() {
                 name="name"
                 required
                 placeholder="John Doe"
-                className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 placeholder:text-gray-400 focus:border-blue-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-400/10 transition-all font-medium"
+                className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all font-medium"
               />
             </div>
             
@@ -89,7 +89,7 @@ export default function ContactForm() {
                 type="tel"
                 required
                 placeholder="+91 98765 43210"
-                className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 placeholder:text-gray-400 focus:border-blue-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-400/10 transition-all font-medium"
+                className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all font-medium"
               />
             </div>
           </div>
@@ -104,7 +104,7 @@ export default function ContactForm() {
                 name="service"
                 required
                 defaultValue=""
-                className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 appearance-none focus:border-yellow-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-yellow-400/10 transition-all font-medium"
+                className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 appearance-none focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all font-medium"
               >
                 <option value="" disabled className="text-gray-400">Select a service...</option>
                 <option>Prototype Manufacturing</option>
@@ -130,7 +130,7 @@ export default function ContactForm() {
               name="message"
               rows={4}
               placeholder="Tell us about your technical requirements, material specs, and timeline..."
-              className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 placeholder:text-gray-400 focus:border-blue-400 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-400/10 transition-all resize-none font-medium"
+              className="w-full rounded-2xl border border-gray-200 bg-gray-50 px-5 py-4 text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-4 focus:ring-blue-500/10 transition-all resize-none font-medium"
             />
           </div>
 
@@ -149,7 +149,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={loading || success}
-            className="group relative flex w-full items-center justify-center gap-3 rounded-2xl bg-blue-600 px-8 py-5 font-black uppercase tracking-widest text-white transition-all hover:bg-blue-500 hover:shadow-[0_15px_40px_rgba(37,99,235,0.3)] hover:-translate-y-1 disabled:opacity-70 disabled:pointer-events-none overflow-hidden"
+            className="group relative flex w-full items-center justify-center gap-3 rounded-2xl bg-blue-500 px-8 py-5 font-black uppercase tracking-widest text-white transition-all hover:bg-blue-500 hover:shadow-[0_15px_40px_rgba(37,99,235,0.3)] hover:-translate-y-1 disabled:opacity-70 disabled:pointer-events-none overflow-hidden"
           >
             {loading ? (
               <Loader2 className="h-5 w-5 animate-spin" />

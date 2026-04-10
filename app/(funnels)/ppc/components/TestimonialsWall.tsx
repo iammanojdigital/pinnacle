@@ -9,7 +9,7 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     quote:
-      "Clever Crow helped us move from random ad experiments to a structured growth engine. CPL dropped and lead quality improved within weeks.",
+      "Pinnacle helped us move from random ad experiments to a structured growth engine. CPL dropped and lead quality improved within weeks.",
     name: "Daniel Wong",
     role: "Growth Manager",
   },

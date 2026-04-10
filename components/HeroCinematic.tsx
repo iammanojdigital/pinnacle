@@ -68,7 +68,7 @@ const AdvancedHUDCursor = () => {
       if (Math.random() > 0.75) {
         const id = sparkId++;
         const isOrange = Math.random() > 0.7;
-        setSparks(prev => [...prev.slice(-20), { id, x: clientX, y: clientY, color: isOrange ? "#f97316" : "#60a5fa" }]);
+        setSparks(prev => [...prev.slice(-20), { id, x: clientX, y: clientY, color: isOrange ? "#f97316" : "#3b82f6" }]);
         setTimeout(() => {
           setSparks(prev => prev.filter(s => s.id !== id));
         }, 1000);
@@ -128,12 +128,12 @@ const AdvancedHUDCursor = () => {
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1 h-1 bg-blue-500 rounded-full" />
 
           {/* Minimalist Coordinate Readout */}
-          <div className="absolute top-6 left-6 p-2 bg-black/40 backdrop-blur-sm border border-white/5 rounded flex flex-col gap-0.5 font-mono text-left">
+          <div className="absolute top-6 left-6 p-2 bg-black border border-white/10 rounded flex flex-col gap-0.5 font-mono text-left">
             <div className="flex gap-3 text-[9px] text-white/40">
               <span>X:{coords.x}</span>
               <span>Y:{coords.y}</span>
             </div>
-            <div className="flex gap-3 text-[8px] text-blue-400/50 font-bold tracking-tighter">
+            <div className="flex gap-3 text-[8px] text-blue-500 font-bold tracking-tighter">
               <span>LAT:{coords.lat}°</span>
               <span>LNG:{coords.long}°</span>
             </div>
@@ -158,7 +158,7 @@ const BlueprintCAD = () => {
           animate={{ pathLength: 1 }}
           transition={{ duration: 4, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
         />
-        <text x="50" y="120" className="font-mono text-[8px] fill-blue-400/40">REF: PRECISION_AXIS_01</text>
+        <text x="50" y="120" className="font-mono text-[8px] fill-blue-500/40">REF: PRECISION_AXIS_01</text>
       </svg>
 
       {/* Drawing of a Manifold Schematic */}
@@ -473,7 +473,7 @@ const HolographicModel3D = ({ styleY }: { styleY?: any }) => {
   }, [mouseX, mouseY]);
 
   return (
-    <motion.div style={{ y: styleY }} className="relative -mt-24 lg:mt-0 lg:absolute lg:inset-0 w-full h-[40vh] lg:h-full z-10 pointer-events-none">
+    <motion.div style={{ y: styleY }} className="relative -mt-16 sm:-mt-24 lg:mt-0 lg:absolute lg:inset-0 w-full h-[35vh] lg:h-full z-10 pointer-events-none">
       <Canvas
         dpr={[1, 1.5]}
         camera={{ position: [0, 0, 5], fov: 45 }}
@@ -481,7 +481,7 @@ const HolographicModel3D = ({ styleY }: { styleY?: any }) => {
       >
         <Suspense fallback={null}>
           <ambientLight intensity={0.5} />
-          <pointLight position={[10, 10, 10]} intensity={1.5} color="#00f2ff" />
+          <pointLight position={[10, 10, 10]} intensity={1.5} color="#3b82f6" />
 
           <PresentationControls
             global
@@ -513,7 +513,7 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
   const modelY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
 
   return (
-    <section ref={sectionRef} className="relative w-full min-h-[100svh] overflow-hidden bg-[#05070a]">
+    <section ref={sectionRef} className="relative w-full min-h-[85svh] lg:min-h-[100svh] overflow-hidden bg-[#05070a]">
 
       {/* ── GENERATIVE INDUSTRIAL BACKGROUND ── */}
       <GenerativeBackground />
@@ -528,9 +528,9 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
 
       {/* ── MAIN CONTENT ── */}
       <div className="z-30 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-16 items-center lg:min-h-[100svh] pt-32 pb-16 lg:pt-24 lg:pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-16 items-center lg:min-h-[100svh] pt-32 pb-4 lg:pt-24 lg:pb-24">
 
-          <motion.div 
+          <motion.div
             style={{ y: textY, opacity: textOpacity }}
             className="lg:col-span-7 flex flex-col items-start translate-y-[-5%] sm:translate-y-0 text-left relative z-30"
           >
@@ -542,7 +542,7 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
               {/* THE PINNACLE BRAND: ORANGE LASER SCAN Reveal */}
               <div className="relative group overflow-visible">
                 <motion.h1
-                  className="text-7xl sm:text-9xl md:text-[9rem] lg:text-[12rem] xl:text-[14rem] leading-[0.85] scale-y-110 font-black tracking-[-0.06em] text-white flex flex-wrap"
+                  className="text-[12vw] sm:text-[10vw] lg:text-[10rem] xl:text-[12rem] leading-[1] font-black tracking-[-0.04em] text-white block whitespace-nowrap"
                 >
                   {"Pinnacle".split("").map((char, index) => (
                     <motion.span
@@ -597,8 +597,8 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
                 className="flex items-center gap-4 mt-2 sm:mt-0 pl-1"
               >
                 <div className="h-[1.5px] w-8 sm:w-16 bg-orange-500/30" />
-                <span className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[32px] font-mono font-black uppercase tracking-[0.2em] text-orange-500/80">
-                  for Manufacturing
+                <span className="text-[4vw] sm:text-[22px] md:text-[26px] lg:text-[30px] font-mono font-black uppercase tracking-[0.10em] sm:tracking-[0.15em] text-orange-500/80 whitespace-nowrap">
+                  Manufacturing Redefined
                 </span>
                 <motion.div
                   animate={{ scale: [1, 1.5, 1], opacity: [0.3, 1, 0.3] }}
@@ -620,9 +620,10 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
 
                 <motion.div
                   {...fadeUp(0.2)}
-                  className="max-w-3xl text-xl sm:text-2xl lg:text-3xl leading-relaxed text-white/50 font-medium font-mono relative"
+                  className="max-w-2xl text-lg sm:text-xl lg:text-2xl leading-relaxed text-white/50 font-medium font-mono relative"
                 >
-                  <strong className="text-white/80">Manufacturing Redefined.</strong> One Partner. Every Process. Pinnacle empowers you to move from concept to component with speed and confidence.
+                  <strong className="text-white/80">One Partner. Every Process.</strong>
+                  Move from concept to component with absolute confidence, powered by <span className="text-orange-500/80">Pinnacle Design Solutions &amp; Manufacturing</span>.
 
                   {/* Subtle Horizontal Scanner Line for Text */}
                   <motion.div
@@ -633,38 +634,30 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
                 </motion.div>
               </div>
 
-              <motion.div
-                {...fadeUp(0.35)}
-                className="mt-12 flex flex-col sm:flex-row items-start sm:items-center gap-6 w-auto relative z-30"
-              >
-                <button
-                  onClick={onCallbackClick}
-                  className="group relative flex items-center justify-center gap-4 rounded-full bg-blue-600 px-8 py-3.5 sm:px-12 sm:py-5 text-[16px] font-black text-white shadow-[0_0_50px_rgba(37,99,235,0.4)] transition-all hover:shadow-[0_0_80px_rgba(37,99,235,0.6)] hover:-translate-y-1 overflow-hidden"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
-                  <ArrowRight className="h-5 w-5" />
-                  <span>Get a Quote</span>
-                </button>
 
-                <a
-                  href="https://wa.me/919481763083"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex items-center justify-center gap-4 rounded-full border-2 border-white/10 bg-white/5 backdrop-blur-xl px-8 py-3.5 sm:px-12 sm:py-5 text-[16px] font-bold text-white transition-all hover:bg-white/10 hover:-translate-y-1"
-                >
-                  <MessageCircle className="h-5 w-5 text-[#25D366]" />
-                  WhatsApp
-                </a>
-              </motion.div>
             </div>
           </motion.div>
           <HolographicModel3D styleY={modelY} />
+
+          {/* Mobile Specific - Space filler below the model */}
+          <div className="lg:hidden flex flex-col items-center justify-center w-full mt-4 pb-8 z-30">
+            <motion.div 
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="flex flex-col items-center gap-3"
+            >
+              <div className="w-[1px] h-12 bg-gradient-to-b from-orange-500/80 to-transparent" />
+              <div className="uppercase font-mono text-[9px] tracking-[0.4em] text-orange-500/60 leading-tight">
+                Scroll to Details
+              </div>
+            </motion.div>
+          </div>
         </div>
       </div>
 
       <div className="absolute bottom-10 left-10 z-40 hidden xl:flex items-center gap-5 text-white/20 font-mono text-[9px] tracking-[0.4em] uppercase">
         <span className="flex items-center gap-2">
-          <div className="w-1 h-1 bg-emerald-500 shadow-[0_0_10px_#10b981]" />
+          <div className="w-1 h-1 bg-blue-500 shadow-[0_0_10px_#3b82f6]" />
           SYS_READY: PRECISION_LOCKED
         </span>
         <div className="w-5 h-[1px] bg-white/10" />

@@ -156,7 +156,7 @@ export default function ServiceCard({
               </p>
 
               {/* Adaptive Learn More Link */}
-              <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between text-sm font-black uppercase tracking-widest text-[#2563eb]/60 group-hover:text-orange-500 transition-all duration-300">
+              <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between text-sm font-black uppercase tracking-widest text-[#3b82f6]/60 group-hover:text-orange-500 transition-all duration-300">
                 <span>Learn More</span>
                 <div className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-orange-500/10 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all">
                   <ArrowUpRight className="h-4 w-4 transform" />

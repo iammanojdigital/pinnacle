@@ -12,7 +12,7 @@ type ServiceHeroProps = {
   title: string;
   subtitle: string;
   serviceName: string;
-    eyebrow?: string; // ✅  
+  eyebrow?: string; // ✅  
 
   /* PAGE-SPECIFIC (OPTIONAL) */
   highlights?: string[]; // ✅ optional
@@ -23,7 +23,7 @@ export default function ServiceHero({
   title,
   subtitle,
   serviceName,
-    eyebrow = "",
+  eyebrow = "",
   highlights = [], // ✅ SAFE DEFAULT
   tools = [],      // ✅ SAFE DEFAULT
 }: ServiceHeroProps) {
@@ -81,20 +81,20 @@ export default function ServiceHero({
           {/* LEFT */}
           <div>
             {eyebrow && (
-              <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-purple-600">
+              <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-orange-500">
                 {eyebrow}
               </p>
             )}
 
 
 
-            <h1 
+            <h1
               className="text-3xl font-black leading-[1.12] text-gray-950 sm:text-4xl lg:text-[40px] tracking-tight"
               style={{ maxWidth: "900px", fontSize: "clamp(32px, 4.5vw, 38px)" }}
             >
               {title}
             </h1>
-            
+
             <p className="mt-6 max-w-2xl text-base sm:text-[17px] text-gray-600 font-medium leading-relaxed">
               {subtitle}
             </p>
@@ -136,8 +136,8 @@ export default function ServiceHero({
           {/* RIGHT SIDE CTA CARD WITH INLINE FORM TRANSITION */}
           <div className="relative w-full max-w-md mx-auto lg:ml-auto lg:mr-0 z-20">
             {/* Decorative background aura for the card */}
-            <div className="absolute -inset-1 rounded-[2.5rem] bg-gradient-to-br from-yellow-400/30 via-purple-400/20 to-pink-400/30 blur-2xl opacity-70" />
-            
+            <div className="absolute -inset-1 rounded-[2.5rem] bg-gradient-to-br from-blue-500/30 via-purple-400/20 to-orange-400/30 blur-2xl opacity-70" />
+
             <motion.div layout className="relative rounded-[2rem] border border-white/60 bg-white/70 backdrop-blur-xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden">
               {/* Internal decorative shapes */}
               <div className="absolute -top-10 -right-10 h-32 w-32 rounded-full bg-yellow-300/30 blur-2xl pointer-events-none" />
@@ -156,12 +156,12 @@ export default function ServiceHero({
                     <div className="inline-flex items-center justify-center rounded-full bg-purple-100/80 px-4 py-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-purple-700 mb-6 border border-purple-200/50">
                       Priority Access
                     </div>
-                    
+
                     <h3 className="text-2xl sm:text-[28px] font-extrabold text-gray-900 tracking-tight leading-tight mb-4">
                       Unlock Your Free <br />
-                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-pink-600">Growth Strategy</span>
+                      <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-orange-600">Growth Strategy</span>
                     </h3>
-                    
+
                     <p className="text-[15px] font-medium text-gray-600 mb-8 leading-relaxed">
                       Get a comprehensive audit and a custom execution plan designed to scale your ROI.
                     </p>
@@ -170,12 +170,12 @@ export default function ServiceHero({
                       {/* The Button */}
                       <div className="relative group w-full">
                         {/* Minimal Outer Glow / Ripple */}
-                        <div className="absolute -inset-1 rounded-full bg-yellow-400/10 blur-sm group-hover:bg-yellow-400/20 transition-all duration-700 animate-pulse" />
-                        <div className="absolute inset-0 rounded-full bg-yellow-400/15 animate-ping [animation-duration:3s]" />
-                        
+                        <div className="absolute -inset-1 rounded-full bg-blue-500/10 blur-sm group-hover:bg-blue-500/20 transition-all duration-700 animate-pulse" />
+                        <div className="absolute inset-0 rounded-full bg-blue-500/15 animate-ping [animation-duration:3s]" />
+
                         <button
                           onClick={() => setIsModalOpen(true)}
-                          className="relative z-10 w-full flex items-center justify-center gap-2 sm:gap-3 rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 px-6 py-3.5 sm:px-8 sm:py-5 text-[16px] sm:text-lg font-black text-gray-900 shadow-[0_0_20px_rgba(250,204,21,0.3)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(250,204,21,0.5)]"
+                          className="relative z-10 w-full flex items-center justify-center gap-2 sm:gap-3 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 px-6 py-3.5 sm:px-8 sm:py-5 text-[16px] sm:text-lg font-black text-gray-900 shadow-[0_0_20px_rgba(250,204,21,0.3)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(250,204,21,0.5)]"
                         >
                           <span>Request a Call Back</span>
                           <svg className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1 object-contain" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -183,7 +183,7 @@ export default function ServiceHero({
                           </svg>
                         </button>
                       </div>
-                      
+
                       {/* Trust Indicators */}
                       <div className="flex items-center justify-center gap-8 mt-2 opacity-80">
                         <div className="flex flex-col items-center gap-1">
@@ -226,13 +226,13 @@ export default function ServiceHero({
                         name="name"
                         required
                         placeholder="Your Name *"
-                        className="h-12 w-full rounded-xl border border-gray-200 bg-white/50 px-4 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:border-yellow-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-yellow-400/20 transition-all"
+                        className="h-12 w-full rounded-xl border border-gray-200 bg-white/50 px-4 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
                       />
                       <input
                         name="phone"
                         required
                         placeholder="Phone number *"
-                        className="h-12 w-full rounded-xl border border-gray-200 bg-white/50 px-4 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:border-yellow-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-yellow-400/20 transition-all"
+                        className="h-12 w-full rounded-xl border border-gray-200 bg-white/50 px-4 text-sm font-medium text-gray-900 placeholder:text-gray-400 focus:border-blue-500 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all"
                       />
 
                       {error && (
@@ -244,11 +244,10 @@ export default function ServiceHero({
                       <button
                         type="submit"
                         disabled={isLoading}
-                        className={`mt-4 h-14 w-full rounded-xl text-[15px] font-bold tracking-wide transition-all text-gray-900 ${
-                          isLoading
-                            ? "cursor-not-allowed bg-yellow-300 opacity-70"
-                            : "bg-yellow-400 hover:bg-yellow-500 shadow-[0_0_20px_rgba(250,204,21,0.3)] hover:shadow-[0_0_30px_rgba(250,204,21,0.5)] hover:-translate-y-0.5"
-                        }`}
+                        className={`mt-4 h-14 w-full rounded-xl text-[15px] font-bold tracking-wide transition-all text-gray-900 ${isLoading
+                          ? "cursor-not-allowed bg-yellow-300 opacity-70"
+                          : "bg-blue-500 hover:bg-blue-700 shadow-[0_0_20px_rgba(250,204,21,0.3)] hover:shadow-[0_0_30px_rgba(250,204,21,0.5)] hover:-translate-y-0.5"
+                          }`}
                       >
                         {isLoading ? "Sending..." : "Request a Call Back"}
                       </button>

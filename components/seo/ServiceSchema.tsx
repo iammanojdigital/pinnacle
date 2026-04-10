@@ -16,7 +16,7 @@ export default function ServiceSchema({
     "description": serviceDescription,
     "provider": {
       "@type": "Organization",
-      "name": "Clever Crow Strategies LLP",
+      "name": "Pinnacle Design Solutions & Manufacturing",
       "url": "https://clevercrow.in",
     },
     "areaServed": {

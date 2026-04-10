@@ -14,7 +14,7 @@ import FaqSchema from "@/components/seo/FaqSchema";
 <WebPageSchema
   title="Google Ads Management Services in India"
   description="Professional Google Ads & PPC management services in India focused on lead generation and ROI."
-  url="https://clevercrow.in/services/google-ads"
+  url="https://pinnacledesign.in/services/google-ads"
 />
 
 
@@ -56,7 +56,7 @@ const googleAdsFaqs = [
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "Google Ads Management Services in India | Clever Crow",
+  title: "Google Ads Management Services in India | Pinnacle",
   description:
     "Professional Google Ads & PPC management services in India focused on lead generation, conversion tracking, and ROI-driven growth.",
   keywords: [
@@ -218,13 +218,13 @@ export default function GoogleAdsPage() {
       <WebPageSchema
         title="Google Ads Management Services in India"
         description="Professional Google Ads & PPC management services in India focused on lead generation and ROI."
-        url="https://clevercrow.in/services/google-ads"
+        url="https://pinnacledesign.in/services/google-ads"
       />
 
       <ServiceSchema
         serviceName="Google Ads Management Services"
         serviceDescription="Lead-focused Google Ads management services in India with conversion tracking and ROI-driven optimisation."
-        pageUrl="https://clevercrow.in/services/google-ads"
+        pageUrl="https://pinnacledesign.in/services/google-ads"
       />
 
       <FaqSchema faqs={googleAdsFaqs} />

@@ -17,10 +17,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-bold mb-6 tracking-tight">Services</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">Google Ads Management</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">Meta Ads Management</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">Website Development</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">App Development</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">Google Ads Management</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">Meta Ads Management</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">Website Development</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">App Development</a></li>
             </ul>
           </div>
 
@@ -28,10 +28,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-bold mb-6 tracking-tight">Company</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">About Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">Our Work / Case Studies</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">Contact Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">Careers</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">About Us</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">Our Work / Case Studies</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">Contact Us</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">Careers</a></li>
             </ul>
           </div>
 
@@ -39,10 +39,10 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-bold mb-6 tracking-tight">Resources</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">FAQs</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">Case Studies</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-yellow-400 transition-colors">Free Consultation</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">FAQs</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">Blog</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">Case Studies</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-blue-500 transition-colors">Free Consultation</a></li>
             </ul>
           </div>
 
@@ -53,7 +53,7 @@ export default function Footer() {
             {/* Phone */}
             <a 
               href="tel:+919986389444" 
-              className="flex items-center gap-3 text-gray-400 hover:text-yellow-400 transition-colors mb-6"
+              className="flex items-center gap-3 text-gray-400 hover:text-blue-500 transition-colors mb-6"
             >
               <Phone size={20} />
               <span className="font-semibold">+91 99863 89444</span>
@@ -87,14 +87,14 @@ export default function Footer() {
               <div className="mb-4">
                 <Image
                   src="/logo-dark.svg"
-                  alt="Clever Crow"
+                  alt="Pinnacle"
                   width={160}
                   height={50}
                   className="h-10 w-auto"
                 />
               </div>
               <p className="text-gray-400 text-sm max-w-xs">
-                Clever Crow Strategies helps ambitious brands grow with premium websites, sharper campaigns, and creative systems built to convert.
+                Pinnacle Strategies helps ambitious brands grow with premium websites, sharper campaigns, and creative systems built to convert.
               </p>
               
               {/* Social Links */}
@@ -103,7 +103,7 @@ export default function Footer() {
                   href="https://www.facebook.com/people/Clever-Crow-Strategies/61579261586907/"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-600 bg-gray-900 hover:bg-yellow-400 hover:border-yellow-400 transition-all"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-600 bg-gray-900 hover:bg-blue-500 hover:border-blue-500 transition-all"
                 >
                   <FaFacebook size={18} className="text-gray-400 hover:text-black" />
                 </a>
@@ -111,7 +111,7 @@ export default function Footer() {
                   href="https://www.instagram.com/clevercrow.strategies"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-600 bg-gray-900 hover:bg-yellow-400 hover:border-yellow-400 transition-all"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-600 bg-gray-900 hover:bg-blue-500 hover:border-blue-500 transition-all"
                 >
                   <FaInstagram size={18} className="text-gray-400 hover:text-black" />
                 </a>
@@ -119,7 +119,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/company/clever-crow-strategies/"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-600 bg-gray-900 hover:bg-yellow-400 hover:border-yellow-400 transition-all"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-600 bg-gray-900 hover:bg-blue-500 hover:border-blue-500 transition-all"
                 >
                   <FaLinkedin size={18} className="text-gray-400 hover:text-black" />
                 </a>
@@ -138,7 +138,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <div className="mt-8 pt-6 border-t border-gray-700 text-center text-gray-500 text-xs">
-            <p>© 2026 Clever Crow Strategies LLP. All rights reserved.</p>
+            <p>© 2026 Pinnacle Design Solutions & Manufacturing. All rights reserved.</p>
           </div>
         </div>
       </div>

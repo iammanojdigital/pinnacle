@@ -14,7 +14,7 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Content Marketing Services | Clever Crow",
+  title: "Content Marketing Services | Pinnacle",
   description: "We build content marketing systems that attract the right audience, establish your authority, and drive consistent business growth.",
 };
 
@@ -34,8 +34,8 @@ export default function ContentMarketingPage() {
       <ContentMarketingSections />
       <DynamicCTA />
       <FaqSection title="Frequently Asked Questions" description="Common questions about our content marketing services." faqs={faqs} />
-      <WebPageSchema title="Content Marketing Services | Clever Crow" description="We build content marketing systems that attract the right audience, establish your authority, and drive consistent business growth." url="https://clevercrow.in/services/content-marketing" />
-      <ServiceSchema serviceName="Content Marketing Services" serviceDescription="Strategic content marketing services including blog marketing, social media content, email campaigns, and growth strategies." pageUrl="https://clevercrow.in/services/content-marketing" />
+      <WebPageSchema title="Content Marketing Services | Pinnacle" description="We build content marketing systems that attract the right audience, establish your authority, and drive consistent business growth." url="https://pinnacledesign.in/services/content-marketing" />
+      <ServiceSchema serviceName="Content Marketing Services" serviceDescription="Strategic content marketing services including blog marketing, social media content, email campaigns, and growth strategies." pageUrl="https://pinnacledesign.in/services/content-marketing" />
       <FaqSchema faqs={faqs} />
     </main>
   );

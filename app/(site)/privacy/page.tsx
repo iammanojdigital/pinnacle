@@ -1,8 +1,8 @@
 import WebPageSchema from "@/components/seo/WebPageSchema";
 
 export const metadata = {
-  title: "Privacy Policy | Clever Crow",
-  description: "Privacy Policy & Data Protection guidelines for Clever Crow Strategies.",
+  title: "Privacy Policy | Pinnacle",
+  description: "Privacy Policy & Data Protection guidelines for Pinnacle Strategies.",
 };
 
 export default function PrivacyPolicyPage() {
@@ -43,15 +43,15 @@ export default function PrivacyPolicyPage() {
             
             <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">5. Contact Us</h3>
             <p className="mb-6 leading-relaxed">
-              If you have any questions or concerns about this Privacy Policy or our data practices, please contact us immediately at <a href="mailto:hello@clevercrow.in" className="text-yellow-600 hover:text-yellow-700 font-bold transition-colors">hello@clevercrow.in</a>.
+              If you have any questions or concerns about this Privacy Policy or our data practices, please contact us immediately at <a href="mailto:hello@pinnacledesign.in" className="text-blue-700 hover:text-yellow-700 font-bold transition-colors">hello@pinnacledesign.in</a>.
             </p>
           </div>
         </div>
       </div>
       <WebPageSchema
-        title="Privacy Policy | Clever Crow"
-        description="Privacy Policy & Data Protection guidelines for Clever Crow Strategies."
-        url="https://clevercrow.in/privacy"
+        title="Privacy Policy | Pinnacle"
+        description="Privacy Policy & Data Protection guidelines for Pinnacle Strategies."
+        url="https://pinnacledesign.in/privacy"
       />
     </main>
   );

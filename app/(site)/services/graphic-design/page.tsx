@@ -14,7 +14,7 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Graphic Design Services | Clever Crow",
+  title: "Graphic Design Services | Pinnacle",
   description: "We create high-impact visual designs for ads, social media, and marketing that help your brand stand out and convert.",
 };
 
@@ -34,8 +34,8 @@ export default function GraphicDesignPage() {
       <GraphicDesignSections />
       <DynamicCTA />
       <FaqSection title="Frequently Asked Questions" description="Common questions about our graphic design services." faqs={faqs} />
-      <WebPageSchema title="Graphic Design Services | Clever Crow" description="We create high-impact visual designs for ads, social media, and marketing that help your brand stand out and convert." url="https://clevercrow.in/services/graphic-design" />
-      <ServiceSchema serviceName="Graphic Design Services" serviceDescription="Professional graphic design for ads, social media, marketing collateral, and brand visuals." pageUrl="https://clevercrow.in/services/graphic-design" />
+      <WebPageSchema title="Graphic Design Services | Pinnacle" description="We create high-impact visual designs for ads, social media, and marketing that help your brand stand out and convert." url="https://pinnacledesign.in/services/graphic-design" />
+      <ServiceSchema serviceName="Graphic Design Services" serviceDescription="Professional graphic design for ads, social media, marketing collateral, and brand visuals." pageUrl="https://pinnacledesign.in/services/graphic-design" />
       <FaqSchema faqs={faqs} />
     </main>
   );

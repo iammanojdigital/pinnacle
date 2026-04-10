@@ -98,7 +98,7 @@ export default function GoogleAdsManagementPage() {
       <FAQSection
         items={[
           {
-            question: "Why choose Clever Crow for Google Ads management?",
+            question: "Why choose Pinnacle for Google Ads management?",
             answer:
               "We are a Google Ads certified team focused on ROI-driven campaigns, transparent pricing, and data-backed optimisation strategies.",
           },

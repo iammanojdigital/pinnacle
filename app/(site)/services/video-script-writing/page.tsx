@@ -9,7 +9,7 @@ import ServiceSchema from "@/components/seo/ServiceSchema";
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "Video Script Writing Services in India | Clever Crow",
+  title: "Video Script Writing Services in India | Pinnacle",
   description:
     "High-converting video script writing services in India. Scripts for reels, ads, YouTube videos, explainers, and brand storytelling.",
   keywords: [
@@ -99,13 +99,13 @@ export default function VideoScriptWritingPage() {
       <WebPageSchema
         title="Video Script Writing Services in India"
         description="Professional video script writing services in India for reels, ads, YouTube videos, and brand storytelling."
-        url="https://clevercrow.in/services/video-script-writing"
+        url="https://pinnacledesign.in/services/video-script-writing"
       />
 
       <ServiceSchema
         serviceName="Video Script Writing Services"
         serviceDescription="Video script writing services in India focused on engagement, watch time, and conversions."
-        pageUrl="https://clevercrow.in/services/video-script-writing"
+        pageUrl="https://pinnacledesign.in/services/video-script-writing"
       />
 
       {/* ================= FINAL CTA ================= */}

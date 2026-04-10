@@ -42,7 +42,7 @@ const landingPageFaqs = [
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "Landing Page Design Services in India | Clever Crow",
+  title: "Landing Page Design Services in India | Pinnacle",
   description:
     "High-converting landing page design services in India. Campaign-focused, fast, and conversion-optimised landing pages.",
 };
@@ -158,13 +158,13 @@ export default function LandingPagesPage() {
       <WebPageSchema
         title="Landing Page Design Services in India"
         description="Landing page design services focused on conversions, performance, and campaign success."
-        url="https://clevercrow.in/services/landing-pages"
+        url="https://pinnacledesign.in/services/landing-pages"
       />
 
       <ServiceSchema
         serviceName="Landing Page Design Services"
         serviceDescription="High-converting landing page design services for campaigns and lead generation."
-        pageUrl="https://clevercrow.in/services/landing-pages"
+        pageUrl="https://pinnacledesign.in/services/landing-pages"
       />
 
       <FaqSchema faqs={landingPageFaqs} />

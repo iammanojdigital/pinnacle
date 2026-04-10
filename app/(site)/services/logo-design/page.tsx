@@ -14,7 +14,7 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: "Logo Design Services | Clever Crow",
+  title: "Logo Design Services | Pinnacle",
   description: "We create powerful, timeless logos that build trust, recognition, and strong brand recall for your business.",
 };
 
@@ -34,8 +34,8 @@ export default function LogoDesignPage() {
       <LogoDesignSections />
       <DynamicCTA />
       <FaqSection title="Frequently Asked Questions" description="Common questions about our logo design services." faqs={faqs} />
-      <WebPageSchema title="Logo Design Services | Clever Crow" description="We create powerful, timeless logos that build trust, recognition, and strong brand recall for your business." url="https://clevercrow.in/services/logo-design" />
-      <ServiceSchema serviceName="Logo Design Services" serviceDescription="Professional logo design services with strategy-driven approach for startups and businesses." pageUrl="https://clevercrow.in/services/logo-design" />
+      <WebPageSchema title="Logo Design Services | Pinnacle" description="We create powerful, timeless logos that build trust, recognition, and strong brand recall for your business." url="https://pinnacledesign.in/services/logo-design" />
+      <ServiceSchema serviceName="Logo Design Services" serviceDescription="Professional logo design services with strategy-driven approach for startups and businesses." pageUrl="https://pinnacledesign.in/services/logo-design" />
       <FaqSchema faqs={faqs} />
     </main>
   );

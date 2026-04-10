@@ -1,8 +1,8 @@
 import WebPageSchema from "@/components/seo/WebPageSchema";
 
 export const metadata = {
-  title: "Terms of Service | Clever Crow",
-  description: "Terms of Service and usage guidelines for Clever Crow Strategies.",
+  title: "Terms of Service | Pinnacle",
+  description: "Terms of Service and usage guidelines for Pinnacle Strategies.",
 };
 
 export default function TermsOfServicePage() {
@@ -17,7 +17,7 @@ export default function TermsOfServicePage() {
               Effective Date: {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
             </p>
             
-            <div className="mt-6 mb-10 text-sm font-medium text-blue-800 bg-blue-50 p-4 rounded-xl border border-blue-100">
+            <div className="mt-6 mb-10 text-sm font-medium text-blue-700 bg-blue-50 p-4 rounded-xl border border-blue-100">
                📝 Please note: This is a placeholder structure for your official Terms of Service document. Replace these sections with the fully drafted legal text from your legal counsel.
             </div>
 
@@ -28,7 +28,7 @@ export default function TermsOfServicePage() {
 
             <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">2. Provision of Services</h3>
             <p className="mb-6 leading-relaxed">
-              Clever Crow Strategies LLP is constantly innovating in order to provide the best possible experience for its users. You acknowledge and agree that the form and nature of the services which we provide may change from time to time without prior notice to you.
+              Pinnacle Design Solutions & Manufacturing is constantly innovating in order to provide the best possible experience for its users. You acknowledge and agree that the form and nature of the services which we provide may change from time to time without prior notice to you.
             </p>
 
             <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">3. Use of Services</h3>
@@ -38,25 +38,25 @@ export default function TermsOfServicePage() {
 
             <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">4. Intellectual Property</h3>
             <p className="mb-6 leading-relaxed">
-              All content included on this site, such as text, graphics, logos, button icons, images, audio clips, digital downloads, and data compilations is the property of Clever Crow Strategies LLP or its content suppliers and protected by international copyright laws.
+              All content included on this site, such as text, graphics, logos, button icons, images, audio clips, digital downloads, and data compilations is the property of Pinnacle Design Solutions & Manufacturing or its content suppliers and protected by international copyright laws.
             </p>
             
             <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">5. Limitation of Liability</h3>
             <p className="mb-6 leading-relaxed">
-              You expressly understand and agree that Clever Crow Strategies LLP shall not be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses resulting from the use of or inability to use the service.
+              You expressly understand and agree that Pinnacle Design Solutions & Manufacturing shall not be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses resulting from the use of or inability to use the service.
             </p>
             
             <h3 className="text-xl font-bold text-gray-900 mt-10 mb-4">6. Contact Information</h3>
             <p className="mb-6 leading-relaxed">
-              If you have any questions or concerns regarding our Terms of Service, please contact us immediately at <a href="mailto:hello@clevercrow.in" className="text-yellow-600 hover:text-yellow-700 font-bold transition-colors">hello@clevercrow.in</a>.
+              If you have any questions or concerns regarding our Terms of Service, please contact us immediately at <a href="mailto:hello@pinnacledesign.in" className="text-blue-700 hover:text-yellow-700 font-bold transition-colors">hello@pinnacledesign.in</a>.
             </p>
           </div>
         </div>
       </div>
       <WebPageSchema
-        title="Terms of Service | Clever Crow"
-        description="Terms of Service and usage guidelines for Clever Crow Strategies."
-        url="https://clevercrow.in/terms"
+        title="Terms of Service | Pinnacle"
+        description="Terms of Service and usage guidelines for Pinnacle Strategies."
+        url="https://pinnacledesign.in/terms"
       />
     </main>
   );

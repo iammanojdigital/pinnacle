@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useVelocity, useTransform, useSpring } from "framer-motion";
 
 type SectionHeaderProps = {
   badge: string;
@@ -10,13 +10,20 @@ type SectionHeaderProps = {
 };
 
 export default function SectionHeader({ badge, title, titleAccent, description }: SectionHeaderProps) {
+  const { scrollY } = useScroll();
+  const scrollVelocity = useVelocity(scrollY);
+  
+  // Transform velocity into a subtle skew angle (-2 to 2 degrees)
+  const skewVelocity = useTransform(scrollVelocity, [-2000, 2000], [-2, 2]);
+  const skewY = useSpring(skewVelocity, { stiffness: 100, damping: 30 });
+
   return (
     <div className="mb-10 sm:mb-20 text-center">
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="text-[11px] sm:text-sm font-black uppercase tracking-[0.4em] text-blue-600 mb-4"
+        className="text-[11px] sm:text-sm font-black uppercase tracking-[0.4em] text-blue-500 mb-4"
       >
         {badge}
       </motion.p>
@@ -25,10 +32,13 @@ export default function SectionHeader({ badge, title, titleAccent, description }
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1 }}
-        className="font-black text-gray-900 tracking-[-0.03em] pb-2 leading-[1.1]"
-        style={{ fontSize: "clamp(32px, 4.5vw, 65px)" }}
+        style={{ 
+          fontSize: "clamp(32px, 4.5vw, 65px)",
+          skewY: skewY 
+        }}
+        className="font-black text-gray-900 tracking-[-0.03em] pb-2 leading-[1.1] will-change-transform"
       >
-        {title} <span className="text-blue-600">{titleAccent}</span>
+        {title} <span className="text-blue-500">{titleAccent}</span>
       </motion.h2>
       <motion.p 
         initial={{ opacity: 0, y: 10 }}

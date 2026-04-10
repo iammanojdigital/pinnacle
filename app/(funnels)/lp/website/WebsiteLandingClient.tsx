@@ -53,7 +53,7 @@ export default function WebsiteLandingClient({ data }: WebsiteLandingClientProps
       </div>
 
       <CallbackModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
-      <WhatsAppButton message="Hi Clever Crow Team, I'm interested in Website development services." />
+      <WhatsAppButton message="Hi Pinnacle Team, I'm interested in Website development services." />
     </main>
   );
 }

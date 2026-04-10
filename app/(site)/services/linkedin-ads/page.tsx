@@ -42,7 +42,7 @@ const linkedinAdsFaqs = [
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "LinkedIn Ads Management Services in India | Clever Crow",
+  title: "LinkedIn Ads Management Services in India | Pinnacle",
   description:
     "Professional LinkedIn Ads management services in India focused on B2B lead generation, decision-maker targeting, and ROI-driven growth.",
   keywords: [
@@ -131,13 +131,13 @@ export default function LinkedInAdsPage() {
       <WebPageSchema
         title="LinkedIn Ads Management Services in India"
         description="Professional LinkedIn Ads management services in India focused on B2B lead generation and ROI-driven growth."
-        url="https://clevercrow.in/services/linkedin-ads"
+        url="https://pinnacledesign.in/services/linkedin-ads"
       />
 
       <ServiceSchema
         serviceName="LinkedIn Ads Management Services"
         serviceDescription="B2B-focused LinkedIn Ads management services in India designed to generate qualified leads from decision-makers."
-        pageUrl="https://clevercrow.in/services/linkedin-ads"
+        pageUrl="https://pinnacledesign.in/services/linkedin-ads"
       />
 
       <FaqSchema faqs={linkedinAdsFaqs} />

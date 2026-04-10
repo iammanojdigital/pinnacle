@@ -54,16 +54,16 @@ const testimonials = [
   },
 ];
 
-const Row = ({ 
-  items, 
-  direction = "left", 
-  speed = 30, 
-  isBig = false 
-}: { 
-  items: any[], 
-  direction?: "left" | "right", 
-  speed?: number, 
-  isBig?: boolean 
+const Row = ({
+  items,
+  direction = "left",
+  speed = 30,
+  isBig = false
+}: {
+  items: any[],
+  direction?: "left" | "right",
+  speed?: number,
+  isBig?: boolean
 }) => {
   return (
     <div className="flex overflow-hidden py-4">
@@ -77,7 +77,7 @@ const Row = ({
             key={i}
             className={`
               relative flex flex-col justify-between rounded-3xl border border-gray-100 bg-white/70 backdrop-blur-md 
-              p-6 transition-all duration-300 hover:border-blue-400/40 hover:shadow-2xl hover:-translate-y-1
+              p-6 transition-all duration-300 hover:border-blue-500/40 hover:shadow-2xl hover:-translate-y-1
               ${isBig ? "w-[380px] sm:w-[450px]" : "w-[280px] sm:w-[320px]"}
             `}
           >
@@ -113,8 +113,8 @@ const Row = ({
                   {t.name}
                 </div>
                 <div className="flex items-center gap-2">
-                   <div className="h-1 w-1 rounded-full bg-blue-400" />
-                   <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">
+                  <div className="h-1 w-1 rounded-full bg-blue-500" />
+                  <span className="text-[10px] font-black uppercase tracking-widest text-gray-500">
                     {t.source}
                   </span>
                 </div>
@@ -135,12 +135,12 @@ export default function Testimonials() {
         {/* Simple Mesh Gradient */}
         <div className="absolute inset-x-0 top-0 h-[800px] w-full bg-[radial-gradient(circle_at_50%_0%,rgba(191,219,254,0.3),transparent_70%)]" />
         <div className="absolute inset-x-0 bottom-0 h-[800px] w-full bg-[radial-gradient(circle_at_50%_100%,rgba(191,219,254,0.2),transparent_70%)]" />
-        
+
         {/* Decorative Floating Blobs (Artistic Design) */}
-        <svg className="absolute left-0 top-1/4 h-[400px] w-[400px] opacity-[0.03] text-blue-600" viewBox="0 0 200 200">
+        <svg className="absolute left-0 top-1/4 h-[400px] w-[400px] opacity-[0.03] text-blue-500" viewBox="0 0 200 200">
           <path fill="currentColor" d="M45,-76.3C57.4,-69.5,66.1,-55.8,73.1,-41.6C80.1,-27.4,85.5,-12.7,84.4,1.8C83.2,16.2,75.4,30.4,66,42.8C56.6,55.1,45.5,65.6,32.4,72.4C19.3,79.1,4.2,82.2,-10.1,80.1C-24.3,78,-37.7,70.6,-49.2,61.4C-60.6,52.2,-70.1,41.2,-76.7,28.4C-83.3,15.6,-86.9,1.1,-84.9,-12.6C-82.9,-26.3,-75.2,-39.3,-64.5,-47.9C-53.7,-56.6,-40,-60.8,-27.9,-68.3C-15.8,-75.7,-5.2,-86.3,5.3,-95.5C15.8,-104.7,45,-76.3,45,-76.3Z" transform="translate(100 100)" />
         </svg>
-        <svg className="absolute right-0 bottom-1/4 h-[400px] w-[400px] opacity-[0.03] text-blue-600" viewBox="0 0 200 200">
+        <svg className="absolute right-0 bottom-1/4 h-[400px] w-[400px] opacity-[0.03] text-blue-500" viewBox="0 0 200 200">
           <path fill="currentColor" d="M41.5,-73.4C52.7,-67.2,60.1,-53.4,66.8,-39.8C73.4,-26.2,79.2,-12.7,80,1.4C80.8,15.5,76.6,30.2,68.9,43.4C61.3,56.5,50.2,68.1,36.5,74.7C22.8,81.3,6.5,82.9,-10.1,81.1C-26.6,79.3,-43.3,74.1,-56.2,63.9C-69.1,53.7,-78.2,38.5,-82.4,22.2C-86.6,5.9,-85.9,-11.5,-79.8,-27.4C-73.8,-43.3,-62.4,-57.8,-48.7,-64.8C-35,-71.8,-18.9,-71.4,-2.4,-67.3C14.1,-63.2,30.3,-79.7,41.5,-73.4Z" transform="translate(100 100)" />
         </svg>
 
@@ -149,7 +149,7 @@ export default function Testimonials() {
       </div>
 
       <div className="relative z-10 w-full mb-16 sm:mb-24 px-6 text-center">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -164,11 +164,11 @@ export default function Testimonials() {
 
           <h2 className="mx-auto max-w-4xl font-black tracking-[-0.03em] text-gray-950 pb-2" style={{ fontSize: "clamp(24px, 4vw, 50px)", lineHeight: "1" }}>
             Trusted by Industries That <br className="hidden sm:block" />
-            <span className="text-blue-600 drop-shadow-sm">Demand Perfection.</span>
+            <span className="text-blue-500 drop-shadow-sm">Demand Perfection.</span>
           </h2>
 
           <p className="mx-auto mt-8 max-w-2xl text-base sm:text-xl font-medium text-gray-600">
-            Precision engineering matters. Join 500+ global clients that have unified their 
+            Precision engineering matters. Join 500+ global clients that have unified their
             manufacturing processes with Pinnacle.
           </p>
         </motion.div>
@@ -176,7 +176,7 @@ export default function Testimonials() {
 
       <div className="relative isolate px-6">
         {/* Review Score Container - Moved Above Cards */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -201,7 +201,7 @@ export default function Testimonials() {
                 <Star size={16} fill="currentColor" />
                 <Star size={16} fill="currentColor" />
               </div>
-              <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 underline decoration-blue-400/50 underline-offset-4 cursor-pointer">Read All Reviews</span>
+              <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 underline decoration-blue-500/50 underline-offset-4 cursor-pointer">Read All Reviews</span>
             </div>
           </div>
         </motion.div>
@@ -213,7 +213,7 @@ export default function Testimonials() {
         <div className="flex flex-col gap-2 sm:gap-6">
           {/* Row 1: Left moving, Mixed */}
           <Row items={testimonials.slice(0, 4)} direction="left" speed={45} isBig={true} />
-          
+
           {/* Row 2: Right moving, Mixed */}
           <Row items={testimonials.slice(4, 8)} direction="right" speed={45} isBig={true} />
         </div>

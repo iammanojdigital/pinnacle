@@ -34,7 +34,7 @@ const webAppFaqs = [
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "Web Application Development Services | Clever Crow",
+  title: "Web Application Development Services | Pinnacle",
   description:
     "We design and develop custom web applications that streamline operations, improve efficiency, and scale with your business.",
 };
@@ -76,14 +76,14 @@ export default function WebAppDevelopmentPage() {
 
       {/* ═══════════ SCHEMA ═══════════ */}
       <WebPageSchema
-        title="Web Application Development Services | Clever Crow"
+        title="Web Application Development Services | Pinnacle"
         description="We design and develop custom web applications that streamline operations, improve efficiency, and scale with your business."
-        url="https://clevercrow.in/services/web-app-development"
+        url="https://pinnacledesign.in/services/web-app-development"
       />
       <ServiceSchema
         serviceName="Web Application Development Services"
         serviceDescription="Custom web application development for businesses including SaaS platforms, admin dashboards, CRM systems, and API integrations."
-        pageUrl="https://clevercrow.in/services/web-app-development"
+        pageUrl="https://pinnacledesign.in/services/web-app-development"
       />
       <FaqSchema faqs={webAppFaqs} />
     </main>

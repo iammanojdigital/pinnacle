@@ -59,7 +59,7 @@ export async function POST(req: Request) {
       .join('');
 
     const mailOptions = {
-      from: `"Clever Crow Internships" <${process.env.SMTP_USER}>`,
+      from: `"Pinnacle Internships" <${process.env.SMTP_USER}>`,
       to: process.env.TO_EMAIL || "manojvg900@gmail.com",
       subject: `New Internship Application: ${name}`,
       html: `
@@ -88,7 +88,7 @@ export async function POST(req: Request) {
           <p><strong>Data Consent:</strong> ${consent ? 'Yes' : 'No'}</p>
           
           <div style="margin-top: 32px; padding-top: 16px; border-top: 1px solid #eee; font-size: 12px; color: #9ca3af;">
-            Submitted via Clever Crow Internship Portal
+            Submitted via Pinnacle Internship Portal
           </div>
         </div>
       `,

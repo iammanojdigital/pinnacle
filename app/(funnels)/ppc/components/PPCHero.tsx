@@ -140,14 +140,14 @@ export default function PPCHero({
                   name="name"
                   required
                   placeholder="Your Name *"
-                  className="h-10 w-full rounded-lg border px-3 text-sm text-gray-900 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="h-10 w-full rounded-lg border px-3 text-sm text-gray-900 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
 
                 <input
                   name="phone"
                   required
                   placeholder="Phone number *"
-                  className="h-10 w-full rounded-lg border px-3 text-sm text-gray-900 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                  className="h-10 w-full rounded-lg border px-3 text-sm text-gray-900 placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
 
                 {error && (
@@ -160,10 +160,9 @@ export default function PPCHero({
                   type="submit"
                   disabled={isLoading}
                   className={`h-10 w-full rounded-xl text-sm font-semibold transition text-black
-                    ${
-                      isLoading
-                        ? "bg-yellow-300 cursor-not-allowed"
-                        : "bg-yellow-400 hover:bg-yellow-500"
+                    ${isLoading
+                      ? "bg-yellow-300 cursor-not-allowed"
+                      : "bg-blue-500 hover:bg-blue-700"
                     }
                   `}
                 >

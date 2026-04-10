@@ -2,16 +2,15 @@ export default function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Clever Crow Strategies LLP",
+    "name": "Pinnacle Design Solutions & Manufacturing",
     "url": "https://clevercrow.in",
     "logo": "https://clevercrow.in/logo.png",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress":
-        "D.No. 8-1-83B-14, Business Bay Center, Udupi - Manipal Highway, Kunjibettu",
-      "addressLocality": "Udupi",
+      "streetAddress": "No.329, Ashwathnagar",
+      "addressLocality": "Shimoga",
       "addressRegion": "Karnataka",
-      "postalCode": "576102",
+      "postalCode": "577204",
       "addressCountry": "IN"
     },
     "sameAs": [

@@ -34,7 +34,7 @@ export default function InlineContactCTA() {
               href={`tel:${CONTACT.phone}`}
               className="
                 inline-flex items-center gap-2
-                rounded-xl bg-yellow-400 px-8 py-4
+                rounded-xl bg-blue-500 px-8 py-4
                 text-base font-semibold text-neutral-900
                 shadow-[0_8px_30px_rgba(250,204,21,0.35)]
                 transition hover:bg-yellow-300

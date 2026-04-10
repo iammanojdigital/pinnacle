@@ -19,7 +19,7 @@ const navLinks = [
     label: "Products",
     key: "products",
     items: [
-      { href: "/products/industrial-valves", label: "Industrial Valves", accent: true },
+      { href: "/products/industrial-valves", label: "Industrial Valves" },
       { href: "/products/industrial-dampers", label: "Industrial Dampers" },
     ],
   },
@@ -27,9 +27,9 @@ const navLinks = [
     label: "Services",
     key: "services",
     items: [
-      { href: "/services/prototype-manufacturing", label: "Prototype Manufacturing", accent: true },
+      { href: "/services/prototype-manufacturing", label: "Prototype Manufacturing" },
       { href: "/services/tool-design-development", label: "Tool Design & Development" },
-      { href: "/services/precision-machining", label: "Precision Machining", accent: true },
+      { href: "/services/precision-machining", label: "Precision Machining" },
       { href: "/services/refurbishment", label: "Refurbishment" },
       { href: "/services/fabrication", label: "Fabrication" },
     ],
@@ -66,7 +66,7 @@ export default function Header() {
     setActiveDropdown(key);
   };
   const closeDropdown = () => {
-    dropdownTimer = setTimeout(() => setActiveDropdown(null), 120);
+    dropdownTimer = setTimeout(() => setActiveDropdown(null), 150);
   };
 
   return (
@@ -75,51 +75,59 @@ export default function Header() {
         <motion.div
           initial={false}
           animate={{
-            backgroundColor: scrolled ? "rgba(255,255,255,0.95)" : "rgba(255,255,255,0.03)",
+            backgroundColor: scrolled ? "rgba(10, 15, 25, 0.85)" : "rgba(10, 15, 25, 0.4)",
             boxShadow: scrolled
-              ? "0 10px 40px rgba(0,0,0,0.08)"
-              : "0 10px 30px rgba(0,0,0,0.1)",
-            height: scrolled ? "64px" : "76px",
+              ? "0 10px 40px rgba(0,0,0,0.3)"
+              : "0 10px 30px rgba(0,0,0,0.2)",
+            height: scrolled ? "72px" : "84px",
             y: 0,
           }}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className={`pointer-events-auto rounded-3xl sm:rounded-full backdrop-blur-md border transition-colors duration-300 overflow-hidden ${
-            scrolled ? "border-gray-200/50" : "border-white/10"
-          }`}
+          className={`pointer-events-auto rounded-3xl sm:rounded-full backdrop-blur-md border transition-colors duration-300  ${scrolled ? "border-gray-200/50" : "border-white/10"
+            }`}
         >
           {/* Internal Glass Highlight */}
           {!scrolled && <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />}
-          
+
           <div className="mx-auto px-6 h-full flex items-center justify-between">
-            
+
             {/* LOGO: Exclusive usage of pinnacle-logo.svg */}
             <Link href="/" className="relative z-10 flex shrink-0 items-center">
               <Image
                 src="/logos/pinnacle-logo.svg"
-                alt="Pinnacle"
+                alt="Pinnacle Design Solutions & Manufacturing"
                 width={200}
                 height={200}
-                className={`h-12 xl:h-16 w-auto object-contain transition-all duration-500 hover:scale-110 drop-shadow-[0_0_15px_rgba(249,115,22,0.3)]`}
+                className={`h-10 xl:h-12 w-auto object-contain transition-all duration-500 hover:scale-110 drop-shadow-[0_0_15px_rgba(249,115,22,0.3)]`}
                 priority
               />
             </Link>
 
             {/* DESKTOP NAV */}
             <nav className="hidden xl:flex items-center gap-0.5" onMouseLeave={closeDropdown}>
+              <Link 
+                href="/" 
+                className={`rounded-full px-3 2xl:px-4 py-2 text-[13px] 2xl:text-[14px] font-bold tracking-tight transition-all duration-200 ${
+                  pathname === "/" 
+                    ? "text-orange-500 bg-white/10" 
+                    : "text-white/70 hover:text-white hover:bg-white/5"
+                }`}
+              >
+                Home
+              </Link>
               {navLinks.map((group) => (
                 <div key={group.key} className="relative" onMouseEnter={() => openDropdown(group.key)}>
                   <button
                     className={`flex items-center gap-1 rounded-full px-3 2xl:px-4 py-2 text-[13px] 2xl:text-[14px] font-bold tracking-tight transition-all duration-200 ${
-                      activeDropdown === group.key
-                        ? (scrolled ? "text-blue-600 bg-blue-50" : "text-blue-400 bg-white/10")
-                        : (scrolled ? "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50" : "text-white/70 hover:text-white hover:bg-white/5")
+                      activeDropdown === group.key || group.items.some(item => pathname === item.href)
+                        ? "text-orange-500 bg-white/10 shadow-[0_0_20px_rgba(249,115,22,0.1)]"
+                        : "text-white/70 hover:text-white hover:bg-white/5"
                     }`}
                   >
                     {group.label}
                     <ChevronDownIcon
-                      className={`h-3 w-3 transition-transform duration-300 ${
-                        activeDropdown === group.key ? "rotate-180" : ""
-                      }`}
+                      className={`h-3 w-3 transition-transform duration-300 ${activeDropdown === group.key ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
 
@@ -130,20 +138,20 @@ export default function Header() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 8, scale: 0.99 }}
                         transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="absolute left-1/2 top-[calc(100%+8px)] -translate-x-1/2"
+                        className="absolute left-1/2 top-[calc(100%-2px)] -translate-x-1/2 pt-3"
                         onMouseEnter={() => openDropdown(group.key)}
                       >
-                        <div className="w-[300px] rounded-[1.75rem] bg-white ring-1 ring-black/[0.08] shadow-[0_20px_48px_rgba(0,0,0,0.12)] overflow-hidden">
-                          <div className="h-1.5 bg-gradient-to-r from-blue-400 to-blue-600" />
+                        <div className="w-[300px] rounded-[1.75rem] bg-[#0f172a] border border-white/10 shadow-[0_20px_48px_rgba(0,0,0,0.4)] backdrop-blur-xl overflow-hidden">
+
                           <div className="p-3">
                             {group.items.map((item, i) => (
                               <Link
                                 key={i}
                                 href={item.href}
-                                className={`group flex items-center justify-between rounded-2xl px-4 py-3 text-[14px] font-medium transition-all duration-150 hover:bg-gray-50 ${
-                                  item.accent
-                                    ? "text-blue-600 hover:text-blue-700 font-bold"
-                                    : "text-gray-600 hover:text-gray-900"
+                                className={`group flex items-center justify-between rounded-2xl px-4 py-3 text-[14px] font-medium transition-all duration-150 hover:bg-white/5 ${
+                                  pathname === item.href
+                                    ? "text-orange-500 hover:text-orange-400 font-bold bg-white/5 shadow-inner"
+                                    : "text-white/70 hover:text-white"
                                 }`}
                               >
                                 {item.label}
@@ -158,57 +166,39 @@ export default function Header() {
                 </div>
               ))}
 
-              <DesktopLink href="/contact" scrolled={scrolled}>Contact</DesktopLink>
+
             </nav>
 
             {/* DESKTOP CTAs */}
-            <div className={`hidden xl:flex items-center gap-2.5 ${pathname.startsWith("/internship") ? "opacity-0 pointer-events-none" : ""}`}>
+            <div className="hidden xl:flex items-center gap-4">
               <a
                 href={`tel:${phoneNumber}`}
-                className={`flex items-center gap-1.5 rounded-full border px-4 2xl:px-5 py-2.5 text-[13px] 2xl:text-[14px] font-bold shadow-sm transition-all hover:shadow-md hover:-translate-y-px active:scale-95 ${
-                  scrolled 
-                    ? "border-gray-200 bg-gray-50 text-gray-700 hover:bg-gray-100" 
-                    : "border-white/10 bg-white/5 text-white/80 hover:bg-white/10 hover:text-white"
-                }`}
+                className={`flex h-10 w-10 items-center justify-center rounded-full border transition-all hover:scale-105 ${scrolled
+                  ? "bg-white text-gray-900 border-gray-200 shadow-sm"
+                  : "bg-white/10 text-white border-white/10"
+                  }`}
               >
-                <PhoneIcon className={`h-4.5 w-4.5 ${scrolled ? "text-blue-600" : "text-blue-400"}`} />
-                {phoneNumber}
+                <PhoneIcon className="h-4 w-4" />
               </a>
-              <a
-                href={whatsappLink}
-                target="_blank"
-                className={`flex items-center gap-1.5 rounded-full border-2 px-5 2xl:px-6 py-2.5 text-[13px] 2xl:text-[14px] font-black transition-all backdrop-blur-md active:scale-[0.98] ${
-                  scrolled 
-                    ? "border-[#25D366] bg-[#25D366]/10 text-[#128C7E] hover:bg-[#25D366]/20" 
-                    : "border-[#25D366] bg-[#25D366]/10 text-white hover:bg-[#25D366]/20"
-                }`}
+
+              <button
+                className={`rounded-full px-6 py-2.5 text-[14px] font-bold transition-all duration-300 backdrop-blur-md border border-orange-500/50 text-white hover:bg-orange-500/10 hover:shadow-[0_0_20px_rgba(249,115,22,0.2)] active:scale-95 shadow-orange-500/5`}
               >
-                <FaWhatsapp className="h-4 w-4 2xl:h-4.5 2xl:w-4.5" />
-                WhatsApp
-              </a>
+                Request a Call
+              </button>
             </div>
+
+            {/* DESKTOP CTAs Removed */}
 
             {/* MOBILE TOGGLE */}
             {!pathname.startsWith("/internship") && (
               <div className="flex items-center gap-2.5 xl:hidden relative z-10">
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  className={`flex h-10 w-10 items-center justify-center rounded-full border-2 backdrop-blur-md transition-transform hover:scale-105 ${
-                    scrolled 
-                    ? "border-[#25D366] bg-[#25D366]/10 text-[#128C7E]" 
-                    : "border-[#25D366] bg-[#25D366]/10 text-white"
-                  }`}
-                >
-                  <FaWhatsapp className="h-5 w-5" />
-                </a>
                 <button
                   onClick={() => setMenuOpen(!menuOpen)}
-                  className={`flex h-10 w-10 items-center justify-center rounded-full border backdrop-blur-md transition-all hover:scale-105 ${
-                    scrolled 
-                      ? "bg-white text-gray-900 border-gray-200 shadow-sm" 
-                      : "bg-white/10 text-white border-white/10"
-                  }`}
+                  className={`flex h-10 w-10 items-center justify-center rounded-full border backdrop-blur-md transition-all hover:scale-105 ${scrolled
+                    ? "bg-white text-gray-900 border-gray-200 shadow-sm"
+                    : "bg-white/10 text-white border-white/10"
+                    }`}
                 >
                   {menuOpen ? <XMarkIcon className="h-5 w-5" /> : <Bars3Icon className="h-5 w-5" />}
                 </button>
@@ -230,68 +220,61 @@ export default function Header() {
               className="xl:hidden overflow-hidden bg-[#05070a]/90 backdrop-blur-xl border border-white/10 shadow-2xl rounded-3xl mt-3 pointer-events-auto"
             >
               <div className="px-5 py-6 space-y-2">
+                <Link
+                  href="/"
+                  onClick={() => setMenuOpen(false)}
+                  className={`block rounded-2xl px-4 py-3.5 text-[16px] font-semibold transition-colors ${
+                    pathname === "/" ? "text-orange-500 bg-white/5" : "text-white/90 hover:bg-white/5"
+                  }`}
+                >
+                  Home
+                </Link>
                 {navLinks.map((group) => (
-                <div key={group.key} className="border-b border-gray-100 last:border-0 pb-1 mb-1">
-                  <button
-                    onClick={() => setMobileAccordion(mobileAccordion === group.key ? null : group.key)}
-                    className="flex w-full items-center justify-between rounded-2xl px-4 py-3.5 text-[16px] font-semibold text-white/90 transition-colors hover:bg-white/5"
-                  >
-                    {group.label}
-                    <ChevronDownIcon
-                      className={`h-5 w-5 text-white/30 transition-transform duration-300 ${
-                        mobileAccordion === group.key ? "rotate-180 text-blue-400" : ""
+                  <div key={group.key} className="border-b border-white/5 last:border-0 pb-1 mb-1">
+                    <button
+                      onClick={() => setMobileAccordion(mobileAccordion === group.key ? null : group.key)}
+                      className={`flex w-full items-center justify-between rounded-2xl px-4 py-3.5 text-[16px] font-semibold transition-colors ${
+                        group.items.some(item => pathname === item.href) ? "text-orange-500 bg-white/5" : "text-white/90 hover:bg-white/5"
                       }`}
-                    />
-                  </button>
-                  <AnimatePresence>
-                    {mobileAccordion === group.key && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="overflow-hidden"
-                      >
-                        <div className="ml-5 border-l-2 border-blue-400/30 pl-4 pb-4 space-y-1">
-                           {group.items.map((item, i) => (
-                            <Link
-                              key={i}
-                              href={item.href}
-                              onClick={() => setMenuOpen(false)}
-                              className={`block py-2.5 text-[15px] font-medium transition-colors ${
-                                item.accent ? "text-blue-400" : "text-white/50 hover:text-white"
-                              }`}
-                            >
-                              {item.label}
-                            </Link>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
+                    >
+                      {group.label}
+                      <ChevronDownIcon
+                        className={`h-5 w-5 text-white/30 transition-transform duration-300 ${mobileAccordion === group.key ? "rotate-180 text-orange-500" : ""
+                          }`}
+                      />
+                    </button>
+                    <AnimatePresence>
+                      {mobileAccordion === group.key && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="ml-5 border-l-2 border-blue-500/30 pl-4 pb-4 space-y-1">
+                            {group.items.map((item, i) => (
+                              <Link
+                                key={i}
+                                href={item.href}
+                                onClick={() => setMenuOpen(false)}
+                                className={`block py-2.5 text-[15px] font-medium transition-colors ${
+                                  pathname === item.href ? "text-orange-500 font-bold" : "text-white/50 hover:text-white"
+                                }`}
+                              >
+                                {item.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
 
-              <MobileNavLink href="/contact" setOpen={setMenuOpen}>Contact Us</MobileNavLink>
 
-              {/* Mobile CTAs */}
-              <div className="pt-6 mt-4 border-t border-white/5 grid grid-cols-2 gap-4">
-                <a
-                  href={`tel:${phoneNumber}`}
-                  className="flex items-center justify-center gap-2 rounded-2xl bg-white/5 border border-white/10 py-4 text-[15px] font-semibold text-white transition-transform hover:scale-[0.98] active:scale-95"
-                >
-                  <PhoneIcon className="h-4.5 w-4.5 text-blue-400" /> Call
-                </a>
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  className="flex items-center justify-center gap-2 rounded-2xl border-2 border-[#25D366] bg-[#25D366]/10 backdrop-blur-xl py-4 text-[15px] font-bold text-white shadow-lg transition-transform hover:scale-[0.98] active:scale-95"
-                >
-                  <FaWhatsapp className="h-4.5 w-4.5 text-[#25D366]" /> WhatsApp
-                </a>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
           )}
         </AnimatePresence>
       </div>
@@ -303,11 +286,7 @@ function DesktopLink({ href, scrolled, children }: { href: string; scrolled: boo
   return (
     <Link
       href={href}
-      className={`rounded-full px-3 2xl:px-4 py-2 text-[13px] 2xl:text-[14px] font-bold tracking-tight transition-all duration-200 ${
-        scrolled 
-          ? "text-gray-700 hover:text-gray-900 hover:bg-gray-100/50" 
-          : "text-white/70 hover:text-white hover:bg-white/5"
-      }`}
+      className={`rounded-full px-3 2xl:px-4 py-2 text-[13px] 2xl:text-[14px] font-bold tracking-tight transition-all duration-200 text-white/70 hover:text-white hover:bg-white/5`}
     >
       {children}
     </Link>

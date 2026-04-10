@@ -34,7 +34,7 @@ const mobileAppFaqs = [
 /* ---------------- METADATA ---------------- */
 
 export const metadata = {
-  title: "Mobile App Development Services | Clever Crow",
+  title: "Mobile App Development Services | Pinnacle",
   description:
     "We design and develop custom mobile apps for startups, service businesses, and growing brands. Fast, user-friendly, and built to scale.",
 };
@@ -76,14 +76,14 @@ export default function MobileAppDevelopmentPage() {
 
       {/* ═══════════ SCHEMA ═══════════ */}
       <WebPageSchema
-        title="Mobile App Development Services | Clever Crow"
+        title="Mobile App Development Services | Pinnacle"
         description="We design and develop custom mobile apps for startups, service businesses, and growing brands."
-        url="https://clevercrow.in/services/mobile-app-development"
+        url="https://pinnacledesign.in/services/mobile-app-development"
       />
       <ServiceSchema
         serviceName="Mobile App Development Services"
         serviceDescription="Professional mobile app development services for iOS and Android platforms."
-        pageUrl="https://clevercrow.in/services/mobile-app-development"
+        pageUrl="https://pinnacledesign.in/services/mobile-app-development"
       />
       <FaqSchema faqs={mobileAppFaqs} />
     </main>

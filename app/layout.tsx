@@ -4,7 +4,7 @@ import Chatbot from "@/components/Chatbot";
 import GlobalTouchEffect from "@/components/GlobalTouchEffect";
 
 export const metadata: Metadata = {
-  title: "Pinnacle – Precision Manufacturing & Design Solutions",
+  title: "Pinnacle Design Solutions & Manufacturing",
   description: "One Partner. Every Process. Precision manufacturing from prototyping to scale production.",
   icons: {
     icon: "/logo-icon.png",

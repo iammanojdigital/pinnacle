@@ -81,7 +81,7 @@ export default function ResultsCarousel({
                 <div className="mt-6 grid grid-cols-3 gap-4">
                   {item.metrics.map((metric, i) => (
                     <div key={i}>
-                      <p className="text-xl font-extrabold text-purple-600">
+                      <p className="text-xl font-extrabold text-blue-500">
                         {metric.value}
                       </p>
                       <p className="mt-1 text-xs text-gray-500">

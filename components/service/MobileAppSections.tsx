@@ -48,7 +48,7 @@ const services = [
       "Cross-platform app development with React Native",
     ],
     accent: "bg-blue-500",
-    accentLight: "bg-blue-50 text-blue-600",
+    accentLight: "bg-blue-50 text-blue-500",
   },
   {
     icon: Palette,
@@ -61,8 +61,8 @@ const services = [
       "Wireframes and screen planning",
       "Clean, conversion-focused interface design",
     ],
-    accent: "bg-purple-500",
-    accentLight: "bg-purple-50 text-purple-600",
+    accent: "bg-orange-500",
+    accentLight: "bg-purple-50 text-orange-500",
   },
   {
     icon: Server,
@@ -76,7 +76,7 @@ const services = [
       "User management",
       "Secure and scalable setup",
     ],
-    accent: "bg-emerald-500",
+    accent: "bg-blue-500",
     accentLight: "bg-emerald-50 text-emerald-600",
   },
   {
@@ -304,7 +304,7 @@ export default function MobileAppSections() {
                 {...fadeUp(i * 0.05)}
                 className="group flex flex-col items-center text-center gap-4 rounded-2xl bg-gray-50/60 border border-gray-100 p-6 sm:p-8 transition-all duration-300 hover:bg-white hover:shadow-[0_8px_28px_rgba(0,0,0,0.06)]"
               >
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-50 text-yellow-600 transition-all duration-300 group-hover:bg-yellow-400 group-hover:text-white group-hover:scale-105">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-yellow-50 text-blue-700 transition-all duration-300 group-hover:bg-blue-500 group-hover:text-white group-hover:scale-105">
                   <app.icon className="h-6 w-6" />
                 </div>
                 <span className="text-[14px] sm:text-[15px] font-semibold text-gray-800 leading-snug">
@@ -325,7 +325,7 @@ export default function MobileAppSections() {
 
         <div className="relative z-10 mx-auto max-w-7xl px-6">
           <motion.div {...fadeUp()} className="text-center mb-16">
-            <span className="inline-flex items-center rounded-full bg-white/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-yellow-400 border border-white/10 mb-5">
+            <span className="inline-flex items-center rounded-full bg-white/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-blue-500 border border-white/10 mb-5">
               Why Us
             </span>
             <h2 className="text-white">
@@ -342,7 +342,7 @@ export default function MobileAppSections() {
                   i === 4 ? "sm:col-span-2 lg:col-span-1" : ""
                 }`}
               >
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-yellow-400/10 text-yellow-400 mb-5 transition-all duration-300 group-hover:bg-yellow-400 group-hover:text-gray-900 group-hover:scale-105">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-500 mb-5 transition-all duration-300 group-hover:bg-blue-500 group-hover:text-gray-900 group-hover:scale-105">
                   <item.icon className="h-5 w-5" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-3 tracking-tight">
@@ -365,7 +365,7 @@ export default function MobileAppSections() {
 
         <div className="mx-auto max-w-7xl px-6">
           <motion.div {...fadeUp()} className="text-center mb-16">
-            <span className="inline-flex items-center rounded-full bg-purple-50 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-purple-600 border border-purple-100 mb-5">
+            <span className="inline-flex items-center rounded-full bg-purple-50 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-orange-500 border border-purple-100 mb-5">
               Our Process
             </span>
             <h2 className="text-gray-950">
@@ -386,11 +386,11 @@ export default function MobileAppSections() {
                 >
                   {/* step icon */}
                   <div className="relative z-10 flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-2xl bg-white border-2 border-purple-200 shadow-md shrink-0 transition-all duration-300 hover:border-purple-400 hover:shadow-lg">
-                    <step.icon className="h-5 w-5 sm:h-6 sm:w-6 text-purple-600" />
+                    <step.icon className="h-5 w-5 sm:h-6 sm:w-6 text-orange-500" />
                   </div>
 
                   <div className="flex-1 pb-2">
-                    <span className="text-[10px] font-black text-purple-500 tracking-widest uppercase mb-2 block">
+                    <span className="text-[10px] font-black text-orange-500 tracking-widest uppercase mb-2 block">
                       Step {step.step}
                     </span>
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900 tracking-tight mb-2">
@@ -416,7 +416,7 @@ export default function MobileAppSections() {
         <div className="relative z-[5] mx-auto max-w-7xl px-6">
           <motion.p
             {...fadeUp()}
-            className="text-center text-[10px] font-black uppercase tracking-[0.2em] text-blue-400 mb-8 sm:mb-10"
+            className="text-center text-[10px] font-black uppercase tracking-[0.2em] text-blue-500 mb-8 sm:mb-10"
           >
             Technology We Use
           </motion.p>
@@ -448,7 +448,7 @@ export default function MobileAppSections() {
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 text-center">
           <motion.div {...fadeUp()}>
-            <span className="inline-flex items-center rounded-full bg-white/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-yellow-400 border border-white/10 mb-6">
+            <span className="inline-flex items-center rounded-full bg-white/5 px-4 py-1.5 text-[10px] font-black uppercase tracking-[0.2em] text-blue-500 border border-white/10 mb-6">
               Get Started
             </span>
           </motion.div>
@@ -474,7 +474,7 @@ export default function MobileAppSections() {
           >
             <a
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-yellow-400 px-8 py-4 text-[15px] font-black text-gray-900 shadow-xl shadow-yellow-400/15 transition-all duration-300 hover:bg-yellow-300"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-500 px-8 py-4 text-[15px] font-black text-gray-900 shadow-xl shadow-blue-500/15 transition-all duration-300 hover:bg-yellow-300"
             >
               Get Free Consultation
             </a>
