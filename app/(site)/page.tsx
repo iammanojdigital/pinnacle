@@ -1,6 +1,7 @@
 import HeroCinematic from "@/components/HeroCinematic";
 import TechStack from "@/components/TechStack";
 import SectionHeader from "@/components/SectionHeader";
+import MobileSectionReveal from "@/components/animations/MobileSectionReveal";
 
 import ServiceGrid from "@/components/ServiceGrid";
 import StrategicEcosystem from "@/components/StrategicEcosystem";
@@ -59,38 +60,50 @@ export default function HomePage() {
     <main>
       {/* ================= HERO ================= */}
       <HeroCinematic />
-      <TechStack />
+      
+      <MobileSectionReveal>
+        <TechStack />
+      </MobileSectionReveal>
 
       {/* ================= WHAT WE BUILD ================= */}
-      <section className="relative bg-white pt-16 sm:pt-32 pb-20 sm:pb-44 overflow-hidden">
-        {/* Subtle Animated Grid Background */}
-        <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, rgba(0,0,0,0.5) 1px, transparent 0)`,
-              backgroundSize: "40px 40px",
-            }}
-          />
-        </div>
+      <MobileSectionReveal>
+        <section className="relative bg-white pt-16 sm:pt-32 pb-20 sm:pb-44 overflow-hidden">
+          {/* Subtle Animated Grid Background */}
+          <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
+            <div
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `radial-gradient(circle at 2px 2px, rgba(0,0,0,0.5) 1px, transparent 0)`,
+                backgroundSize: "40px 40px",
+              }}
+            />
+          </div>
 
-        <div className="relative z-10 mx-auto max-w-7xl px-6">
-          <SectionHeader
-            badge="Precision Engineering"
-            title="Manufacturing"
-            titleAccent="Redefined"
-            description="One Partner. Every Process. We empower you to move from concept to component with absolute confidence."
-          />
-          <ServiceGrid services={services} />
-        </div>
-      </section>
+          <div className="relative z-10 mx-auto max-w-7xl px-6">
+            <SectionHeader
+              badge="Precision Engineering"
+              title="Manufacturing"
+              titleAccent="Redefined"
+              description="One Partner. Every Process. We empower you to move from concept to component with absolute confidence."
+            />
+            <ServiceGrid services={services} />
+          </div>
+        </section>
+      </MobileSectionReveal>
 
       {/* ================= STRATEGIC ECOSYSTEM ================= */}
-      <StrategicEcosystem />
+      <MobileSectionReveal>
+        <StrategicEcosystem />
+      </MobileSectionReveal>
 
       {/* ================= TESTIMONIALS ================= */}
-      <Differentiators />
-      <DynamicCTA />
+      <MobileSectionReveal>
+        <Differentiators />
+      </MobileSectionReveal>
+      
+      <MobileSectionReveal>
+        <DynamicCTA />
+      </MobileSectionReveal>
 
     </main>
   );

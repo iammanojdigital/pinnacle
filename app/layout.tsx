@@ -5,7 +5,7 @@ import GlobalTouchEffect from "@/components/GlobalTouchEffect";
 
 export const metadata: Metadata = {
   title: "Pinnacle Design Solutions & Manufacturing",
-  description: "One Partner. Every Process. Precision manufacturing from prototyping to scale production.",
+  description: "One Partner. Integrated Processes. Accelerated Growth. Radical Transparency. Complete Ownership. Redefining manufacturing through speed, precision, and intelligent execution at every stage.",
   icons: {
     icon: "/favicon-pinnacle.png",
     shortcut: "/favicon-pinnacle.png",

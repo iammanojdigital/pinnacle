@@ -513,7 +513,7 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
   const modelY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
 
   return (
-    <section ref={sectionRef} className="relative w-full min-h-[85svh] lg:min-h-[100svh] overflow-hidden bg-[#05070a]">
+    <section ref={sectionRef} className="relative w-full min-h-[75svh] lg:min-h-[100svh] overflow-hidden bg-[#05070a]">
 
       {/* ── GENERATIVE INDUSTRIAL BACKGROUND ── */}
       <GenerativeBackground />
@@ -528,7 +528,7 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
 
       {/* ── MAIN CONTENT ── */}
       <div className="z-30 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-16 items-center lg:min-h-[100svh] pt-32 pb-4 lg:pt-24 lg:pb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 lg:gap-16 items-center lg:min-h-[100svh] pt-36 pb-2 lg:pt-24 lg:pb-24">
 
           <motion.div
             style={{ y: textY, opacity: textOpacity }}
@@ -622,8 +622,8 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
                   {...fadeUp(0.2)}
                   className="max-w-2xl text-lg sm:text-xl lg:text-2xl leading-relaxed text-white/50 font-medium font-mono relative"
                 >
-                  <strong className="text-white/80">One Partner. Every Process.</strong>
-                  Move from concept to component with absolute confidence, powered by <span className="text-orange-500/80">Pinnacle Design Solutions &amp; Manufacturing</span>.
+                  <strong className="text-white/80">One Partner. Integrated Processes.</strong>
+                  Accelerated Growth. Radical Transparency. Complete Ownership. Redefining manufacturing through speed, precision, and intelligent execution at every stage.
 
                   {/* Subtle Horizontal Scanner Line for Text */}
                   <motion.div
@@ -640,14 +640,14 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
           <HolographicModel3D styleY={modelY} />
 
           {/* Mobile Specific - Space filler below the model */}
-          <div className="lg:hidden flex flex-col items-center justify-center w-full mt-4 pb-8 z-30">
-            <motion.div 
-              animate={{ y: [0, -10, 0] }}
+          <div className="lg:hidden flex flex-col items-center justify-center w-full mt-2 pb-4 z-30">
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="flex flex-col items-center gap-3"
+              className="flex flex-col items-center gap-2"
             >
-              <div className="w-[1px] h-12 bg-gradient-to-b from-orange-500/80 to-transparent" />
-              <div className="uppercase font-mono text-[9px] tracking-[0.4em] text-orange-500/60 leading-tight">
+              <div className="w-[1px] h-6 bg-gradient-to-b from-orange-500/80 to-transparent" />
+              <div className="uppercase font-mono text-[8px] tracking-[0.4em] text-orange-500/60 leading-tight">
                 Scroll to Details
               </div>
             </motion.div>

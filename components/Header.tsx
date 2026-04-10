@@ -89,18 +89,28 @@ export default function Header() {
           {/* Internal Glass Highlight */}
           {!scrolled && <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />}
 
-          <div className="mx-auto px-6 h-full flex items-center justify-between">
+          <div className="mx-auto px-3 sm:px-6 h-full flex items-center justify-between">
 
             {/* LOGO: Exclusive usage of pinnacle-logo.svg */}
-            <Link href="/" className="relative z-10 flex shrink-0 items-center">
-              <Image
-                src="/logos/pinnacle-logo.svg"
-                alt="Pinnacle Design Solutions & Manufacturing"
-                width={200}
-                height={200}
-                className={`h-10 xl:h-12 w-auto object-contain transition-all duration-500 hover:scale-110 drop-shadow-[0_0_15px_rgba(249,115,22,0.3)]`}
-                priority
-              />
+            <Link href="/" className="relative z-10 flex shrink-0 items-center gap-2 sm:gap-4 group">
+              <div className="relative flex items-center h-10 xl:h-12 w-auto">
+                <Image
+                  src="/logos/pinnacle-logo.svg"
+                  alt="Pinnacle Logo Icon"
+                  width={60}
+                  height={60}
+                  className="h-full w-auto object-contain transition-all duration-500 group-hover:scale-110 drop-shadow-[0_0_15px_rgba(249,115,22,0.3)]"
+                  priority
+                />
+              </div>
+              <div className="flex flex-col justify-center border-l border-white/10 pl-2 sm:pl-4 py-1 group-hover:border-orange-500/50 transition-colors duration-500">
+                <span className="text-base xl:text-lg font-black tracking-[0.1em] sm:tracking-[0.2em] text-white uppercase leading-none">
+                  Pinnacle
+                </span>
+                <span className="text-[8px] xl:text-[8px] font-bold tracking-normal sm:tracking-[0.3em] text-white/40 uppercase mt-1 group-hover:text-white/60 transition-colors">
+                  Design Solutions & Manufacturing
+                </span>
+              </div>
             </Link>
 
             {/* DESKTOP NAV */}
@@ -184,7 +194,7 @@ export default function Header() {
               <button
                 className={`rounded-full px-6 py-2.5 text-[14px] font-bold transition-all duration-300 backdrop-blur-md border border-orange-500/50 text-white hover:bg-orange-500/10 hover:shadow-[0_0_20px_rgba(249,115,22,0.2)] active:scale-95 shadow-orange-500/5`}
               >
-                Request a Call
+                Go to Call
               </button>
             </div>
 

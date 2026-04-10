@@ -61,7 +61,7 @@ export default function HeroSection({ onCallbackClick }: HeroSectionProps) {
               size={18}
               className="transition-transform duration-300 group-hover:rotate-[-8deg]"
             />
-            Request a Call
+            Go to Call
           </button>
 
           {/* SECONDARY CTA — View Services */}

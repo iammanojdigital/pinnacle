@@ -198,18 +198,18 @@ export default function StrategicEcosystem() {
                     <div className="group relative block h-full">
                       <div className="relative h-full rounded-[2.2rem] border border-blue-500/5 p-[1px] shadow-sm transition-all duration-500 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)] bg-slate-900/40 backdrop-blur-sm overflow-hidden">
                         
-                        <div className="relative h-full overflow-hidden rounded-[2.1rem] border border-white/5 bg-slate-900/95 p-8 sm:p-10 z-10 transition-all duration-500 ease-[0.16,1,0.3,1] flex flex-col">
+                        <div className="relative min-h-[500px] sm:min-h-0 h-full overflow-hidden rounded-[2.5rem] border border-white/5 bg-slate-900/95 p-12 sm:p-10 z-10 transition-all duration-500 ease-[0.16,1,0.3,1] flex flex-col">
                           
                           <div className="absolute inset-0 z-0">
                             <PillarCardBackground />
                           </div>
 
                           <div className="relative z-10 flex flex-col h-full">
-                            <div className="mb-8 inline-flex h-14 w-14 items-center justify-center rounded-xl bg-white/5 border border-white/10 shadow-sm transition-all duration-500 ease-out group-hover:border-orange-500/50 group-hover:bg-orange-500/5 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(249,115,22,0.2)]">
-                              <pillar.icon className="h-6 w-6 transition-colors duration-500 text-slate-400 group-hover:text-orange-400" />
+                            <div className="mb-10 inline-flex h-16 w-16 items-center justify-center rounded-2xl bg-white/5 border border-white/10 shadow-sm transition-all duration-500 ease-out group-hover:border-orange-500/50 group-hover:bg-orange-500/5 group-hover:scale-110 group-hover:shadow-[0_0_20px_rgba(249,115,22,0.2)]">
+                              <pillar.icon className="h-8 w-8 transition-colors duration-500 text-slate-400 group-hover:text-orange-400" />
                             </div>
 
-                            <h3 className="text-xl sm:text-2xl font-black mb-4 tracking-tight text-white transition-colors group-hover:text-orange-500 uppercase">
+                            <h3 className="text-[28px] sm:text-2xl font-black mb-5 tracking-tight text-white transition-colors group-hover:text-orange-500 uppercase leading-tight">
                               {pillar.title}
                             </h3>
 
@@ -247,13 +247,13 @@ export default function StrategicEcosystem() {
             viewport={{ once: true }}
             className="flex flex-col items-center"
           >
-            <div className="relative group p-[1px] rounded-full bg-gradient-to-r from-blue-500 to-orange-500 shadow-[0_0_40px_rgba(59,130,246,0.1)] hover:shadow-[0_0_60px_rgba(59,130,246,0.2)] transition-shadow duration-500">
-              <div className="relative flex items-center gap-3 sm:gap-5 px-5 sm:px-10 py-3 sm:py-5 rounded-full bg-[#05070a] backdrop-blur-2xl transition-all group-hover:bg-[#080d15]">
-                <Workflow className="h-4 w-4 sm:h-5 sm:w-5 text-blue-500 group-hover:scale-110 transition-transform shrink-0" />
-                <span className="text-[10px] sm:text-base font-black tracking-tight text-white/80 text-center leading-tight">
-                  Unified Growth. Full Transparency. 100% Client Ownership.
+            <div className="relative group p-[1px] rounded-full bg-gradient-to-r from-blue-500 to-orange-500 shadow-[0_0_50px_rgba(59,130,246,0.15)] hover:shadow-[0_0_80px_rgba(59,130,246,0.25)] transition-all duration-500">
+              <div className="relative flex items-center gap-4 sm:gap-7 px-8 sm:px-16 py-6 sm:py-8 rounded-full bg-[#05070a] backdrop-blur-2xl transition-all group-hover:bg-[#080d15]">
+                <Workflow className="h-6 w-6 sm:h-9 sm:w-9 text-blue-500 group-hover:scale-110 transition-transform shrink-0" />
+                <span className="text-xs sm:text-xl font-black tracking-tight text-white transition-colors text-center leading-tight">
+                  Accelerated Growth. Radical Transparency. Complete Ownership.
                 </span>
-                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 text-white/30 group-hover:translate-x-1.5 transition-transform group-hover:text-white shrink-0" />
+                <ArrowRight className="h-6 w-6 sm:h-9 sm:w-9 text-white/30 group-hover:translate-x-2 transition-transform group-hover:text-white shrink-0" />
               </div>
             </div>
           </motion.div>
