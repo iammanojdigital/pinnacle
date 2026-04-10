@@ -43,13 +43,11 @@ export default function GlobalTouchEffect() {
       {/* 3D Perspective Grid (Blueprint Depth) */}
       <div className="absolute inset-0 [perspective:1000px] opacity-25">
         <motion.div
+          className="absolute inset-[-100%] border-t border-l border-blue-400/30"
           style={{
             rotateX: gridRotateX,
             translateZ: gridTranslateZ,
             y: gridY,
-          }}
-          className="absolute inset-[-100%] border-t border-l border-blue-400/30"
-          style={{
             backgroundImage: `linear-gradient(to right, rgba(59, 130, 246, 0.3) 1px, transparent 1px), 
                               linear-gradient(to bottom, rgba(59, 130, 246, 0.3) 1px, transparent 1px)`,
             backgroundSize: "60px 60px",

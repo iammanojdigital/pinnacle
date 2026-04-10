@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   title: "Pinnacle Design Solutions & Manufacturing",
   description: "One Partner. Every Process. Precision manufacturing from prototyping to scale production.",
   icons: {
-    icon: "/logo-icon.png",
-    shortcut: "/logo-icon.png",
-    apple: "/logo-icon.png",
+    icon: "/favicon-pinnacle.png",
+    shortcut: "/favicon-pinnacle.png",
+    apple: "/favicon-pinnacle.png",
   },
 };
 
