@@ -5,7 +5,7 @@ import InnerPageLayout from "@/components/InnerPageLayout";
 export default function PrecisionMachiningPage() {
   const serviceData = {
     category: "Service" as const,
-    title: "Precision Machining",
+    title: "CNC Machining",
     subtitle: "High-accuracy manufacturing of complex components using advanced CNC Turning and Milling.",
     description1: "Precision Machining at Pinnacle ensures high-accuracy manufacturing of complex components using advanced CNC turning and milling technologies. We specialize in tight-tolerance parts for critical applications across aerospace, automotive, medical, and industrial sectors.",
     description2: `

@@ -21,7 +21,7 @@ const services = [
     title: "CNC Machining",
     text: "3-axis, 4-axis, and 5-axis machining centres designed for handling complex geometries.",
     icon: "factory",
-    href: "/services",
+    href: "/services/precision-machining",
   },
   {
     title: "Tool Design",
@@ -33,25 +33,25 @@ const services = [
     title: "Sheet Metal Fabrication",
     text: "Precision stamping, bending, and forming processes combined with optimized nesting.",
     icon: "box",
-    href: "/services",
+    href: "/services/sheet-metal-fabrication",
   },
   {
     title: "Welding Expertise",
     text: "AWS-certified TIG, MIG, and Laser welding across steel, aluminium, and special metals.",
     icon: "wrench",
-    href: "/services",
+    href: "/services/welding-expertise",
   },
   {
     title: "Engineering Services",
     text: "Comprehensive product design architectures accompanied by extensive Reverse Engineering.",
     icon: "wrench",
-    href: "/services",
+    href: "/services/prototype-manufacturing",
   },
   {
     title: "Special Processes",
     text: "End-to-end finishing including PU coating, Anodizing, Black & Sulphide oxide, and NDT.",
     icon: "factory",
-    href: "/services",
+    href: "/services/special-processes",
   },
 ];
 

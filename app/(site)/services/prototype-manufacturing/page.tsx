@@ -5,7 +5,7 @@ import InnerPageLayout from "@/components/InnerPageLayout";
 export default function PrototypeManufacturingPage() {
   const serviceData = {
     category: "Service" as const,
-    title: "Prototype Manufacturing",
+    title: "Engineering Services",
     subtitle: "Turning complex engineering ideas into functional industrial prototypes with speed and precision.",
     description1: "Pinnacle provides comprehensive prototype manufacturing services tailored to fast-paced product development. We help innovators turn ideas into tangible prototypes using precision CNC, wire EDM, and sheet metal processes. Whether it's a single test part or a small batch, we ensure rapid turnaround without compromising on material properties or tolerances.",
     description2: `

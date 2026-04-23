@@ -5,7 +5,7 @@ import InnerPageLayout from "@/components/InnerPageLayout";
 export default function FabricationPage() {
   const serviceData = {
     category: "Service" as const,
-    title: "Fabrication",
+    title: "Sheet Metal Fabrication",
     subtitle: "Complete metal fabrication solutions from laser cutting and bending to complex structural assembly.",
     description1: "Pinnacle provides comprehensive metal fabrication services including cutting, bending, welding, assembly, and finishing for a wide variety of metals and alloys. Using advanced CNC laser cutting, press brakes, robotic welding, and skilled craftsmanship, we deliver parts and assemblies with tight tolerances and consistent quality.",
     description2: `

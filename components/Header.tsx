@@ -29,10 +29,11 @@ const navLinks = [
     items: [
       { href: "/services/prototype-manufacturing", label: "Prototype Manufacturing" },
       { href: "/services/tool-design", label: "Tool Design" },
-      { href: "/services/precision-machining", label: "Precision Machining" },
-      { href: "/services/refurbishment", label: "Refurbishment" },
       { href: "/services/sheet-metal-fabrication", label: "Sheet Metal & Fabrication" },
-      { href: "/services/cnc-machining", label: "CNC Machining" },
+      { href: "/services/precision-machining", label: "CNC Machining" },
+      { href: "/services/refurbishment", label: "Refurbishment" },
+      { href: "/services/welding-expertise", label: "Welding Expertise" },
+      { href: "/services/special-processes", label: "Special Processes" },
     ],
   },
   {
