@@ -13,39 +13,57 @@ const fadeUp = (delay: number = 0) => ({
 
 const pillars = [
   {
-    title: "Aerospace Industry",
-    description: "End-to-end turnkey execution and high-precision component manufacturing for aerospace applications.",
+    title: "Integrated End-to-End Manufacturing",
+    description: "From concept design to final component assembly, we offer a seamless, vertically integrated production workflow.",
     icon: Target,
     theme: "bg-[#111827] text-white border border-white/5",
     iconBg: "bg-white/10",
-    metrics: ["MRO & GSE", "Structural Fabrications", "Aero Tooling Solutions"],
+    metrics: ["Concept to Component", "Turnkey Execution", "Structural Fabrication"],
     glow: "shadow-[20px_20px_50px_-15px_rgba(37,99,235,0.1)]",
   },
   {
-    title: "Oil & Gas",
-    description: "Manufacturing, maintenance, and comprehensive overhauling of critical valves, dampers, and sealing systems.",
-    icon: Activity,
-    theme: "bg-[#111827] text-white border border-white/5",
-    iconBg: "bg-white/10",
-    metrics: ["Valves & Dampers", "Refurbishment", "Overhauling & Spares"],
-    glow: "shadow-[20px_20px_50px_-15px_rgba(37,99,235,0.1)]",
-  },
-  {
-    title: "The Problem We Solve",
-    description: "We eliminate unplanned downtime from valve failures, resolving leakages in high-pressure systems.",
-    icon: Zap,
-    theme: "bg-[#111827] text-white border border-white/5",
-    iconBg: "bg-white/10",
-    metrics: ["Reduce OEM Lead Times", "Upgrade Aging Systems", "End Import Dependency"],
-    glow: "shadow-[20px_20px_50px_-15px_rgba(37,99,235,0.1)]",
-  },
-  {
-    title: "Turnkey Execution",
-    description: "Concept development, engineering design validation, and complete reliability assurance under one roof.",
+    title: "Engineering-Driven Approach",
+    description: "Advanced engineering validation and precision-first technical planning at every stage of the lifecycle.",
     icon: Workflow,
     theme: "bg-[#111827] text-white border border-white/5",
     iconBg: "bg-white/10",
-    metrics: ["Design Validation", "Traceability Control", "Inspection Reports"],
+    metrics: ["Design Validation", "Problem Solving", "CAD/CAM Accuracy"],
+    glow: "shadow-[20px_20px_50px_-15px_rgba(37,99,235,0.1)]",
+  },
+  {
+    title: "Multi-Process Capability",
+    description: "Diverse manufacturing capabilities spanning CNC machining, welding, and specialized surface treatments.",
+    icon: Activity,
+    theme: "bg-[#111827] text-white border border-white/5",
+    iconBg: "bg-white/10",
+    metrics: ["Machining & Milling", "TIG/MIG Welding", "Surface Treatments"],
+    glow: "shadow-[20px_20px_50px_-15px_rgba(37,99,235,0.1)]",
+  },
+  {
+    title: "Resilient Supply Chain Network",
+    description: "A robust logistics and material sourcing ecosystem designed to eliminate disruptions and lead time lag.",
+    icon: Layers,
+    theme: "bg-[#111827] text-white border border-white/5",
+    iconBg: "bg-white/10",
+    metrics: ["Reliable Sourcing", "Lead Time Control", "Global Logistics"],
+    glow: "shadow-[20px_20px_50px_-15px_rgba(37,99,235,0.1)]",
+  },
+  {
+    title: "Quality, Cost & Partnership Focus",
+    description: "Delivering industrial-grade precision with optimized cost structures and absolute client transparency.",
+    icon: Zap,
+    theme: "bg-[#111827] text-white border border-white/5",
+    iconBg: "bg-white/10",
+    metrics: ["Cost Optimization", "Quality Assurance", "Client Ownership"],
+    glow: "shadow-[20px_20px_50px_-15px_rgba(37,99,235,0.1)]",
+  },
+  {
+    title: "Digital Manufacturing & Scale",
+    description: "Leveraging Industry 4.0 technologies and automated workflows to transition rapidly from prototypes to volume production.",
+    icon: TrendingUp,
+    theme: "bg-[#111827] text-white border border-white/5",
+    iconBg: "bg-white/10",
+    metrics: ["Industry 4.0 Ready", "Rapid Scalability", "Real-time Monitoring"],
     glow: "shadow-[20px_20px_50px_-15px_rgba(37,99,235,0.1)]",
   },
 ];
@@ -182,9 +200,9 @@ export default function StrategicEcosystem() {
                 },
               },
             }}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pb-16 pt-4 sm:pt-8 w-full"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-20 pt-8 w-full"
           >
-              {pillars.slice(0, 2).map((pillar, i) => {
+              {pillars.map((pillar, i) => {
                 return (
                   <motion.div
                     key={pillar.title}

@@ -95,10 +95,10 @@ export default function CustomQuoteForm({ onClose }: Props) {
         >
           <option value="">What service are you looking for?</option>
           <option>Prototype Manufacturing</option>
-          <option>Tool Design & Development</option>
+          <option>Tool Design</option>
           <option>Precision CNC Machining</option>
           <option>Refurbishment Services</option>
-          <option>Fabrication & Welding</option>
+          <option>Sheet Metal & Fabrication</option>
           <option>Industrial Products (Valves/Dampers)</option>
           <option>Other / Custom Enquiry</option>
         </select>

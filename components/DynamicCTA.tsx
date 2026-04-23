@@ -16,10 +16,10 @@ export default function DynamicCTA({
 }: DynamicCTAProps) {
   const row1 = [
     { text: "Prototype Manufacturing", icon: Wrench },
-    { text: "Tool Design & Development", icon: Cog },
+    { text: "Tool Design", icon: Cog },
     { text: "Precision CNC Machining", icon: Factory },
     { text: "Refurbishment Services", icon: Wrench },
-    { text: "Fabrication & Welding", icon: Box },
+    { text: "Sheet Metal & Fabrication", icon: Box },
     { text: "Industrial Valves", icon: Factory },
   ];
 
@@ -61,7 +61,7 @@ export default function DynamicCTA({
             className="mb-4"
           >
             <span className="inline-block rounded-full bg-black/5 backdrop-blur-md px-5 py-2 text-[10px] font-black tracking-[0.2em] text-white">
-              READY TO SCALE?
+              Manufacturing Redefined
             </span>
           </motion.div>
 

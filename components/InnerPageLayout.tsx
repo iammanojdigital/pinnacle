@@ -213,10 +213,14 @@ export default function InnerPageLayout({
       <section className="mx-auto max-w-4xl px-4 sm:px-6 mt-20 sm:mt-40 pb-20">
         <div className="bg-gradient-to-br from-blue-600/30 to-orange-600/20 border border-white/10 rounded-[2.5rem] sm:rounded-[4rem] p-8 sm:p-16 text-center relative overflow-hidden group">
            <div className="relative z-10 flex flex-col items-center">
-              <h2 className="text-3xl sm:text-5xl font-black mb-6 sm:mb-8 tracking-tighter">Ready for Execution?</h2>
-              <button className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 sm:px-12 sm:py-5 rounded-full font-black transition-all flex items-center gap-3 text-base sm:text-lg shadow-2xl shadow-orange-500/20 active:scale-95">
-                 Start Consultation <ArrowRightIcon className="h-5 w-5 sm:h-6 sm:w-6" />
-              </button>
+              <h2 className="text-3xl sm:text-5xl font-black mb-6 sm:mb-8 tracking-tighter uppercase leading-tight">
+                Accelerated Growth. <br />
+                Radical Transparency. <br />
+                Complete Ownership.
+              </h2>
+              <a href="tel:+919481763083" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 sm:px-12 sm:py-5 rounded-full font-black transition-all flex items-center gap-3 text-base sm:text-lg shadow-2xl shadow-orange-500/20 active:scale-95">
+                 Let's Discuss <ArrowRightIcon className="h-5 w-5 sm:h-6 sm:w-6" />
+              </a>
            </div>
            <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: "radial-gradient(#fff 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
         </div>

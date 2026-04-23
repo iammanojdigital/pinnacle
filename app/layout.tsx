@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Metadata } from "next";
-import Chatbot from "@/components/Chatbot";
 import GlobalTouchEffect from "@/components/GlobalTouchEffect";
 
 export const metadata: Metadata = {
@@ -22,7 +21,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body suppressHydrationWarning>
         {children}
-        <Chatbot />
         <GlobalTouchEffect />
       </body>
     </html>

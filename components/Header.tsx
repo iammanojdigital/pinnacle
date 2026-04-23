@@ -28,10 +28,11 @@ const navLinks = [
     key: "services",
     items: [
       { href: "/services/prototype-manufacturing", label: "Prototype Manufacturing" },
-      { href: "/services/tool-design-development", label: "Tool Design & Development" },
+      { href: "/services/tool-design", label: "Tool Design" },
       { href: "/services/precision-machining", label: "Precision Machining" },
       { href: "/services/refurbishment", label: "Refurbishment" },
-      { href: "/services/fabrication", label: "Fabrication" },
+      { href: "/services/sheet-metal-fabrication", label: "Sheet Metal & Fabrication" },
+      { href: "/services/cnc-machining", label: "CNC Machining" },
     ],
   },
   {
@@ -191,11 +192,12 @@ export default function Header() {
                 <PhoneIcon className="h-4 w-4" />
               </a>
 
-              <button
+              <a
+                href="tel:+919481763083"
                 className={`rounded-full px-6 py-2.5 text-[14px] font-bold transition-all duration-300 backdrop-blur-md border border-orange-500/50 text-white hover:bg-orange-500/10 hover:shadow-[0_0_20px_rgba(249,115,22,0.2)] active:scale-95 shadow-orange-500/5`}
               >
-                Go to Call
-              </button>
+                Let's Discuss
+              </a>
             </div>
 
             {/* DESKTOP CTAs Removed */}

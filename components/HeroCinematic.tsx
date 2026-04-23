@@ -524,7 +524,7 @@ export default function HeroCinematic({ onCallbackClick }: HeroCinematicProps) {
       <PrecisionPartFlow />
 
       {/* ── INTERACTIVE MOUSE LAYER ── */}
-      <AdvancedHUDCursor />
+
 
       {/* ── MAIN CONTENT ── */}
       <div className="z-30 mx-auto max-w-7xl px-5 sm:px-6 lg:px-8">

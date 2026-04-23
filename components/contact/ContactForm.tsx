@@ -108,10 +108,10 @@ export default function ContactForm() {
               >
                 <option value="" disabled className="text-gray-400">Select a service...</option>
                 <option>Prototype Manufacturing</option>
-                <option>Tool Design & Development</option>
+                <option>Tool Design</option>
                 <option>Precision CNC Machining</option>
                 <option>Refurbishment Services</option>
-                <option>Fabrication & Welding</option>
+                <option>Sheet Metal & Fabrication</option>
                 <option>Industrial Products (Valves/Dampers)</option>
                 <option>Other / Custom Enquiry</option>
               </select>

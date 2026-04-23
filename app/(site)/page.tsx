@@ -24,10 +24,10 @@ const services = [
     href: "/services",
   },
   {
-    title: "Turning & Milling",
-    text: "Advanced CNC lathes equipped with live tooling capabilities alongside high-speed milling.",
+    title: "Tool Design",
+    text: "Custom tooling development, fixture design, and precision structural architecture for specialized industrial projects.",
     icon: "cog",
-    href: "/services",
+    href: "/services/tool-design",
   },
   {
     title: "Sheet Metal Fabrication",

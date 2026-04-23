@@ -25,7 +25,7 @@ const testimonials = [
   {
     source: "Industrial Systems",
     name: "Vikram Shah",
-    text: "Expert tool design and development. They helped us optimize our stamping process and reduced waste by 30%.",
+    text: "Expert tool design and development. They helped us optimize our precision component production and reduced lead times by 30%.",
     rating: 5,
   },
   {

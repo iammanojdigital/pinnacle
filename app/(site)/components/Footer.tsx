@@ -18,10 +18,10 @@ export default function Footer() {
             <h3 className="text-white text-lg font-bold mb-6 tracking-tight">Services</h3>
             <ul className="space-y-3">
               <li><Link href="/services/prototype-manufacturing" className="text-gray-400 hover:text-blue-500 transition-colors">Prototype Manufacturing</Link></li>
-              <li><Link href="/services/tool-design-development" className="text-gray-400 hover:text-blue-500 transition-colors">Tool Design & Development</Link></li>
+              <li><Link href="/services/tool-design" className="text-gray-400 hover:text-blue-500 transition-colors">Tool Design</Link></li>
               <li><Link href="/services/precision-machining" className="text-gray-400 hover:text-blue-500 transition-colors">Precision Machining</Link></li>
               <li><Link href="/services/refurbishment" className="text-gray-400 hover:text-blue-500 transition-colors">Refurbishment</Link></li>
-              <li><Link href="/services/fabrication" className="text-gray-400 hover:text-blue-500 transition-colors">Fabrication</Link></li>
+              <li><Link href="/services/sheet-metal-fabrication" className="text-gray-400 hover:text-blue-500 transition-colors">Sheet Metal & Fabrication</Link></li>
             </ul>
           </div>
 
@@ -41,11 +41,10 @@ export default function Footer() {
             <h3 className="text-white text-lg font-bold mb-6 tracking-tight">Contact Info</h3>
             <ul className="space-y-3">
               <li className="text-gray-400">
-                <span className="block font-bold text-white">Head Office:</span>
-                No. 329, Ashwathnagar, Shimoga, 577204
+                <span className="block font-bold text-white mb-2">Head Office:</span>
                 <p className="text-white font-bold mb-1">Pinnacle Design Solutions</p>
-                <p className="text-white/50 text-xs leading-relaxed">
-                  No.329, Ashwathnagar,<br />
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  No. 329, Ashwathnagar,<br />
                   Shimoga, Karnataka - 577204
                 </p>
               </li>

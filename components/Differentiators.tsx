@@ -195,10 +195,10 @@ export default function Differentiators() {
                 </div>
 
                 {[
-                  { label: "VMC", desc: "3 & 4 Axis" },
-                  { label: "Turning", desc: "CNC Lathes" },
-                  { label: "Drilling", desc: "Radial" },
-                  { label: "Welding", desc: "TIG/MIG" },
+                  { label: "Machining", desc: "VMC 3 & 4 Axis | CNC Lathes" },
+                  { label: "Welding", desc: "TIG/MIG & Fabrication" },
+                  { label: "Sheet Metal", desc: "Bending & Laser Cutting" },
+                  { label: "Tooling Solutions", desc: "Custom Engineering" },
                 ].map((item, i) => (
                   <motion.div
                     key={i}
@@ -232,58 +232,6 @@ export default function Differentiators() {
             </div>
           </motion.div>
 
-          {/* ── Card 3: Quality & Precision (lg: 7 cols) ── */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-50px" }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className={`${card} border-blue-100 hover:shadow-[0_24px_48px_rgba(59,130,246,0.08)] lg:col-span-7 will-change-transform transform-gpu`}
-          >
-            <div className="mb-5 inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-blue-100 text-blue-700 transition-transform group-hover:scale-110">
-              <LineChart className="h-5 w-5 sm:h-6 sm:w-6" />
-            </div>
-            <h3 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">Technical Specifications</h3>
-            <p className="mt-3 text-[17px] sm:text-[19px] leading-relaxed text-gray-500">
-              Engineered for extreme performance across Oil & Gas and Aerospace handling systems.
-            </p>
-            {/* Live Metrics */}
-            <div className="mt-6 sm:mt-8 space-y-5">
-              {[
-                {
-                  label: "Engine Tooling Solutions",
-                  points: ["Built to print solutions", "Surface treatment and coating for wear resistance and corrosion protection"]
-                },
-                {
-                  label: "Aircraft Ground Handling Equipment (GHE)",
-                  points: ["Structural fabrication of load-bearing frames and handling rigs", "Integration of hydraulic and mechanical actuation systems"]
-                },
-                {
-                  label: "Aerospace Jacks",
-                  points: ["Manufacturing of aircraft tripod and axle jacks", "High-precision screw or hydraulic actuation mechanisms"]
-                },
-                {
-                  label: "End-to-End Turnkey Execution",
-                  points: ["Concept development and engineering design validation", "Documentation, inspection reports and traceability control"]
-                },
-              ].map((item, i) => (
-                <div key={i} className="group/spec">
-                  <h4 className="text-[13px] font-black text-blue-500 uppercase tracking-widest mb-2 flex items-center gap-2">
-                    <div className="h-1.5 w-1.5 rounded-full bg-blue-500" />
-                    {item.label}
-                  </h4>
-                  <ul className="space-y-1.5 ml-3.5">
-                    {item.points.map((p, pi) => (
-                      <li key={pi} className="text-[15px] text-gray-500 font-medium leading-snug flex items-start gap-2">
-                        <span className="text-blue-300 mt-1.5">•</span>
-                        <span>{p}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </motion.div>
 
           {/* ── Card 4: Scalable Production (lg: 6 cols) ── */}
           <motion.div
@@ -291,7 +239,7 @@ export default function Differentiators() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-            className={`${card} border-orange-100 hover:shadow-[0_24px_48px_rgba(251,146,60,0.08)] lg:col-span-6 will-change-transform transform-gpu`}
+            className={`${card} border-orange-100 hover:shadow-[0_24px_48px_rgba(251,146,60,0.08)] lg:col-span-7 will-change-transform transform-gpu`}
           >
             <div className="mb-5 inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-orange-100 text-orange-700 transition-transform group-hover:scale-110">
               <Layers className="h-5 w-5 sm:h-6 sm:w-6" />
@@ -357,7 +305,7 @@ export default function Differentiators() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-            className={`${card} border-blue-100 hover:shadow-[0_24px_48px_rgba(59,130,246,0.08)] lg:col-span-6 will-change-transform transform-gpu`}
+            className={`${card} border-blue-100 hover:shadow-[0_24px_48px_rgba(59,130,246,0.08)] lg:col-span-12 will-change-transform transform-gpu`}
           >
             <div className="mb-5 inline-flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl bg-blue-100 text-blue-700 transition-transform group-hover:scale-110">
               <ShieldCheck className="h-5 w-5 sm:h-6 sm:w-6" />
